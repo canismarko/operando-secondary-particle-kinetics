@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 
 \input{drafting}
-\input{metadata.tex}
+\input{metadata}
 
 \begin{document}
 
@@ -21,7 +21,61 @@
 \section{Results}
 %%%%%%%%%%%%%%%%%%
 
-\Blindtext
+\begin{enumerate}
+  \item Hello
+\end{enumerate}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{ys-echem.png}
+  \caption{SoCs for ex-situ bulk XANES.}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{ys-xanes.png}
+  \caption{How to judge SoC from Ni K-edge XANES. The trend between
+    white line peak position and SoCs is not perfect linear, but we
+    still can estimate the oxidation states of Ni.}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{ys-xanes-fov.png}
+  \caption{(A) Field-of-view (FoV) for in-situ hard X-ray full-filed
+    transmission microscopy. (B) Electrochemical response of the
+    in-situ cell. Identical FoV was repeatedly visualized (OCV \& SoC I
+    ~ IX) during battery operation.}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{ys-soc-txm.png}
+  \caption{See text}
+  \label{ys-soc-txm}
+\end{figure}
+
+Figure \ref{ys-soc-txm}:
+
+(A) Isolated 2nd particle in the FoV. The crack (indicated as red
+arrow) suddenly appeared at the SoC VI (same sudden ``jumps'' position
+in Jordi's e-mail). (B) Geometrical scaling factor with respect to
+global SoCs. At ‘jump’ position, the volumes (1-dimensional scaling
+factor \textasciicircum3) of the 2nd particles shrank around 3\%. The 1-dimensional
+scaling factor was calculated by intensity-based image registration of
+identical particles with respect to different SoCs. The enhance
+robustness of analysis, 1-dimensional scaling factors were calculated
+at all energy points (I don't remember exact the number of points but
+it should be 30 ~ 40 points. Need to revisit the data) in imagespectra
+and STD of the calculated 1-dimensional scaling factors\^{}3 shown as
+error bars.  The shrinkage of the 2nd particles is smaller that
+crystallographic volume shrinkage of the unit cell (I don't remember
+exact number.) and cause the empty space inside (means microstructural
+defaces such as void and crack).  (C) and (D) Chemical heterogeneity
+of 2nd particle -> As Jordi mentioned, they are not the important
+point. : )
+
+(E) Averaged SoC of each 2nd particle with respect to global
+SoCs. The positions of ``jump'' are differed.  The definition of
+several SoC 1. Global SoC -> SoC of the entire in-situ cell (shown
+in Figure 3B) 2. SoC or averaged SoC -> SoC of each individual 2nd
+particle.
 
 %%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
