@@ -3,9 +3,13 @@
 
 \usepackage{natbib}
 \usepackage{graphicx}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage{booktabs}  % For making tables look nice
 
 \input{drafting}
 \input{metadata}
+\input{macros}
 
 \begin{document}
 
@@ -21,33 +25,29 @@
 \section{Results}
 %%%%%%%%%%%%%%%%%%
 
-\begin{enumerate}
-  \item Hello
-\end{enumerate}
-
 \begin{figure}
-  \includegraphics[width=\textwidth]{ys-echem.png}
-  \caption{SoCs for ex-situ bulk XANES.}
+  \includegraphics[width=\textwidth]{figures/ys-echem.png}
+  \caption{[YSY] SoCs for ex-situ bulk XANES.}
 \end{figure}
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{ys-xanes.png}
-  \caption{How to judge SoC from Ni K-edge XANES. The trend between
+  \includegraphics[width=\textwidth]{figures/ys-xanes.png}
+  \caption{[YSY] How to judge SoC from Ni K-edge XANES. The trend between
     white line peak position and SoCs is not perfect linear, but we
     still can estimate the oxidation states of Ni.}
 \end{figure}
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{ys-xanes-fov.png}
-  \caption{(A) Field-of-view (FoV) for in-situ hard X-ray full-filed
+  \includegraphics[width=\textwidth]{figures/ys-xanes-fov.png}
+  \caption{[YSY](A) Field-of-view (FoV) for in-situ hard X-ray full-filed
     transmission microscopy. (B) Electrochemical response of the
     in-situ cell. Identical FoV was repeatedly visualized (OCV \& SoC I
     ~ IX) during battery operation.}
 \end{figure}
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{ys-soc-txm.png}
-  \caption{See text}
+  \includegraphics[width=\textwidth]{figures/ys-soc-txm.png}
+  \caption{[YSY] See text}
   \label{ys-soc-txm}
 \end{figure}
 
@@ -76,6 +76,65 @@ SoCs. The positions of ``jump'' are differed.  The definition of
 several SoC 1. Global SoC -> SoC of the entire in-situ cell (shown
 in Figure 3B) 2. SoC or averaged SoC -> SoC of each individual 2nd
 particle.
+
+\begin{figure}
+\centering   
+  \includegraphics[width=\linewidth, height=\textheight, keepaspectratio]{figures/p1-3-xrd.png}
+  \caption{[BM] Diffraction patterns for \nca{} through charge (red)
+    and discharge (black) for a) P1, b) P2, and c) P3. Feature due to
+    \ce{Li} is denoted with a *.}
+  \label{fig:xrd-echem}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{figures/ind-peaks.png}
+  \caption{(003) (left) and (104) (right) reflections of P1, P2, and P3
+    (top to bottom) during the first charge.}
+  \label{fig:ind-peaks}
+\end{figure}
+
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{figures/cell-pars.png}
+  \caption{[BM] Unit cell parameters as a function of cell potential for a)
+  P1 a parameter b) P1 c parameter c) P2 a parameter and d) P2 c parameter}
+  \label{fig:cell-pars}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth, height=\textheight,keepaspectratio]{figures/rate-plots.png}
+  \caption{\ce{Li} content (x in
+    \ce{Li_xNi_{0.80}Co_{0.15}Al_{0.05}O2}) as a function of time
+    during the first cycle for P1 (a) and P2 (b). The charge-discharge
+    curve is shown below (c). \ce{Li} values were correlated with
+    equivalent values in ref. \cite{Robert2015}, for the a unit cell
+    parameter (red) and c unit cell parameter (blue). Charge is
+  represented by circles while discharge is represented by x markers.}
+  \label{fig:rates}
+\end{figure}
+
+
+\begin{table}
+  \centering
+  \input{figures/rates-table.tex}
+  \caption{Rates of \ce{Li} removal and corresponding \ce{Li} content during various time ranges of the
+    charge-discharge cycle for P1. Time ranges were selected due to linear
+    changes in \ce{Li} content.}
+  \label{table:rates}
+\end{table}
+
+\begin{table}
+  \centering
+  \input{figures/rates-table-p2.tex}
+  \caption{Rates of \ce{Li} removal and corresponding \ce{Li} content during various time ranges of the
+    charge-discharge cycle for P2. Time ranges were selected due to linear
+    changes in \ce{Li} content.}
+  \label{table:ratesp2}
+\end{table}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
