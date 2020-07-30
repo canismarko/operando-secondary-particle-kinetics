@@ -1,1 +1,9 @@
-\newcommand{\nca}{NCA}
+\newcommand{\nca}[1]{\ce{Li_{#1}Ni_{0.8}Co_{0.15}Al_{0.05}O_2}}
+\DeclareRobustCommand{\nmc}[2][]{%
+    \ifstrempty{#1}{%
+        \ce{Li_{#2}Ni_{y}Mn_{z}Co_{1-y-z}O2}}{}%
+    \ifstrequal{#1}{333}{%
+        \ce{Li_{#2}Ni_{1/3}Mn_{1/3}Co_{1/3}O2}}{}%
+    \ifstrequal{#1}{532}{%
+        \ce{Li_{#2}Ni_{0.5}Mn_{0.3}Co_{0.2}O2}}{}%
+}
