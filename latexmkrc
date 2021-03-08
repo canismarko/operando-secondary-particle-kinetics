@@ -1,4 +1,4 @@
-@default_files = ('main');
+@default_files = ('main', 'supplement');
 $pdflatex = 'pdflatex -halt-on-error %O %S';
 $pdf_mode = 1;
 
