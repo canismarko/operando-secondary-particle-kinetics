@@ -15,9 +15,20 @@
 \title{Supplemental Information: \mytitle}
 \makeatother
 
+% Make figures show up as "S1" etc.
+\renewcommand{\thefigure}{S\arabic{figure}}
+
 \begin{document}
 
 \maketitle
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\linewidth]{figures/2D-diffraction.png}
+  \caption{Exemplar 2D diffraction pattern for a single position
+    during charging.}
+  \label{fig:2Ddiffraction}
+\end{figure}
 
 \begin{figure}
   \includegraphics{figures/nmc_echem.pdf}
