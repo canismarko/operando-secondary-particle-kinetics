@@ -1,7 +1,11 @@
 % Drafting
+\usepackage{xcolor,soul}
 \usepackage{fullpage}
 \usepackage{setspace}
 \usepackage{blindtext}
 \doublespacing
 
-\newcommand{\todo}[1]{[TODO: #1]}
+\newcommand{\todo}[1]{\hl{[TODO: #1]}}
+\newcommand{\citeme}[1]{%
+  \ifstrempty{#1}{\textsuperscript{\hl{[citation needed]}}}{\textsuperscript{\hl{[cite: #1]}}}%
+}

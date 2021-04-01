@@ -23,211 +23,274 @@
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{itemize}
+\item \citeme{wang2020-6} -> Feng's TXM/XANES NMC-811 paper
+\item \citeme{chueh2021} -> Will Chueh's in-situ XRD/STXM NMC-333 paper
+\end{itemize}
 
+% NCA/NMC material
+Layered transition metal oxides represent the state-of-the-art of
+cathodes materials for electrochemical energy storage. In order to
+meet ever more ambitious performance targets, it will be necessary to
+improve their efficiency and reliability beyond current
+limitations. While layered cathodes provide high theoretical capacity,
+only \SI{\approx70}{\percent} is realistically achievable, with a
+steeper penalty imposed at higher rates\citeme{}. This observation
+points to kinetic barriers preventing full utilization of the
+cathode. Careful observation of local heterogeneity, combined with
+detailed simulation of the underlying electrochemical processes, can
+reveal details of the kinetic factors governing these reactions,
+ultimately leading to higher performing energy storage systems.
+
+% TXM/XRD background
+
+Synchrotron X-ray characterization provides several methods to
+evaluate heterogeneity within secondary particles of layered cathode
+materials. \Gls{uxrd} extends the structural characterization of
+conventional \gls{xrd} with improved spatial resolution. Incoming
+X-rays are focused to a sub-micron spot and scanned over individual
+secondary particles. At each mapping position, the diffraction pattern
+captured by an area detector provides details of the crystal
+structure, such as the unit-cell parameters, which can then be related
+to chemical states (e.g.\ extent of lithiation). A complementary
+technique, \Gls{txm}, produces projection micrographs showing the
+optical depth of the object with \SI{\approx30}{nm} spatial
+resolution, depending on the instrument configuration. The tunable
+nature of synchrotron X-ray sources allows micrographs of the same
+field of view to be captured at several energies. To produce chemical
+maps, images are collected at a range of energies spanning an X-ray
+absorption edge, producing a separate spectrum for each pixel in the
+field of view and, after data reduction, a chemical map with chemical
+significance (e.g.\ metal oxidation states). For both techniques,
+since the individual measurements are projections through the
+specimen, the resulting maps show the average state through the
+optical axis (perpendicular to the image plane).
+
+The high transmission provided by hard X-rays is conducive to making
+measurements inside an assembled cell (is-situ) and, ideally, while
+the cell is actively cycling (operando). In addition to avoiding
+relaxation effects, in-situ measurement allows the same object to be
+measured repeatedly at different states of charge. Tracking the same
+object during a (dis)charge cycle allows for a direct comparison
+between different states of charge and provides a clearer picture of
+how heterogeneity evolves.
+
+%% NCA/NMC background
+
+Ensemble \gls{xrd} has shown a mixture of phases in \nca{} electrodes
+during the first charge when stored in ambient conditions, in contrast
+with the solid-solution, single-phase transformation seen during
+subsequent charge cycles\cite{robert2015}. A possible origin is the
+presence of a lithium diffusion barrier arising from surface
+\ce{Li2CO3} formation upon exposure to \ce{CO2} and \ce{H2O} (Figure
+\ref{fig:grenier2017}). When pristine \nca{} was protected from
+ambient air exposure, a single-phase solid-solution reaction was
+observed during first charge. This observation led to the conclusion
+that the secondary particles contained an uneven coating of
+\ce{Li2CO3}, which must be broken electrochemically before the
+reaction can proceed. The need to break this coating would produce
+different timelines for reaction initiation in different particles,
+resulting in a bimodal distribution of oxidation states and the
+appearance of non-equilibrium heterogeneity by
+\gls{xrd}\cite{grenier2017}.
+
+The oxidation states of individual secondary particles were measured
+by operando \gls{txm} \gls{xas} and, indeed, particles were observed
+to be either in a pristine or partially oxidized state with more
+particles becoming oxidized at higher states of
+charge\cite{nowack2016}. While \ce{Li2CO3} clearly plays a role in the
+ability of lithium to penetrate into the secondary particle, it was
+also demonstrated that the presence of two phases by \gls{xrd} is
+suppressed by stronger compaction of the electrode during laminate
+preparation\cite{bobrikov2018}. A related layered cathode material,
+\nmc[333]{}, is less prone to \ce{Li2CO3} formation, even showing
+lower levels of \ce{Li2CO3} after one month of air exposure than those
+found in pristine \nca{}\cite{shizuka2007}. In-situ \gls{xrd} studies
+of \nmc[333]{} during first charge show a largely single-phase
+(solid-solution) transformation \cite{hulzen2018,ahn2017,zhou2016-2},
+though some studies reveal two crystallographic phases with a small
+difference in \emph{a} and \emph{c} unit-cell parameters and
+coexisting over a narrow range of delithiation compared to
+\nca{}\cite{yoon2006,hua2018}. The oxidation dynamics of these layered
+cathode materials warrant further study to clarify the nature of the
+chemical transformation, especially in view of locating the onset and
+progression of heterogeneity, within and between the secondary
+particles that typically compose a cathode. It is important to
+elucidate how general this behavior is among the general class of
+layered oxides that are leading candidates as battery materials.
+
+This work further examined the heterogeneities present in secondary
+particles of established layered cathode materials, namely \nca{},
+\nmc[333]{}, and \nmc[532]{}. A combination of operando \gls{uxrd} and
+\gls{txm} \gls{xas} experiments probed both the inter-particle
+heterogeneity. While the cell potential and prior reports of ensemble
+\gls{xas} indicated a smooth transition to higher oxidation state upon
+delithiation\cite{deb2005,muto2009}, individual particles exhibited a
+sharp and stochastic transition from an initial, latent state to one
+containing highly oxidized \ce{Ni}. \todo{Summarize the simulations.}
 
 %%%%%%%%%%%%%%%%%%
 \section{Results}
 %%%%%%%%%%%%%%%%%%
 
-\subsection{\Gls{uxrd} - Interparticle Dynamics}
+%% \subsection{\Gls{uxrd} - Interparticle Dynamics}
 
-For each particle of study, the individual 2D diffraction patterns
-collected at each X-Y mapping position were integrated to 1D
-patterns. The 1D patterns for each mapping position within a particle
-were subsequently summed for points collected during the reaction
-(Figures \ref{fig:uxrd}a,b and \ref{fig:xrd-echem}). These summations
-are useful to monitor the overall evolution of diffraction peaks
-during oxidation and reduction of the cathode material for each
-particle observed. The diffraction patterns for all three particles in
-the pristine condition match well with literature for \nca{}
+Lithiation of several secondary particles of \nca{} was tracked during
+first change and discharge using operando \gls{uxrd} mapping. For each
+particle, the individual area diffraction patterns collected at each
+X--Y mapping position were integrated to one-dimensional patterns, and
+subsequently summed for all points collected during the reaction
+(Figures \ref{fig:uxrd}a,b and \ref{fig:xrd-echem}). The diffraction
+patterns for all three particles in the pristine condition were
+consistent with those previously reported for \nca{}
 \cite{Robert2015a}. There was an extra feature that varied in
 intensity at Q\SI{\approx3.6}{\per\angstrom}, representative of
 metallic \ce{Li} (PDF \#00-001-1131). Small extraneous peaks occurred
 due to random aberrations in individual pixels on the diffraction
-detector.
+detector (Figure \ref{fig:xrd-echem}).
 
-The diffraction peaks for \gls{p1} began to shift at the onset of
-oxidation (Figure \ref{fig:uxrd}a). The shifts observed in \gls{p1}
-were consistent with similar observations of \emph{operando} XRD of
-the ensemble average, as opposed to individual particles in \nca{}
-electrodes, in prior work \cite{Robert2015, Grenier2017}. \gls{p2}
-(\ref{fig:xrd-echem}b) also had a change in XRD peak positions during
-cycling. While the peak positions of the extreme states (pristine,
-charged, discharged) were consistent with those of \gls{p1}, the peaks
-did not begin shifting until the cell was at a potential of
-\SI{\approx4.5}{\volt}. Both \gls{p1} and \gls{p2} discharged at
-approximately the same rate. \gls{p3} (\ref{fig:xrd-echem}c) had no
-apparent change in diffraction peak positions during charge or
-discharge. This may have been due to poor connection to the carbon and
-binder of the electrode.
+The diffraction peaks for \gls{p1} began to shift in $Q$ soon after
+the onset of oxidation (Figure \ref{fig:uxrd}a). The shifts observed
+in \gls{p1} were consistent with similar observations of
+\emph{operando} \gls{xrd} of the ensemble average\cite{Robert2015}, as
+opposed to individual particles in \nca{} electrodes, in prior
+work\cite{Grenier2017}. \gls{p2} (\ref{fig:xrd-echem}b) also exhibited
+changes in peak positions during cycling. While the peak positions of
+the extreme states (pristine, charged, discharged) were consistent
+with those of \gls{p1}, the peaks did not begin shifting until the
+cell had reached a higher potential \SI{\approx4.5}{\volt}. During
+discharge, peaks in both \gls{p1} and \gls{p2} shifted to lower $Q$ at
+approximately the same rate. \gls{p3} (\ref{fig:xrd-echem}c) showed no
+apparent changes in diffraction peak positions during charge or
+discharge, possibly due to poor electrical connection to the carbon
+and binder of the electrode.
 
-Consideration of individual peaks provides more detailed structural
-information. The (003) reflection had an initial decrease in $Q$
-(Figure \ref{fig:uxrd}a), corresponding to an expansion of the $c$
-axis of the structure of the oxide, which represents the stacking of
-the alternating transition metal and lithium layers. It was followed
-by a sudden opposite shift beyond the initial position, indicating
-shrinkage of the lattice along the same direction, while still during
-delithiation. This trend has been reported before. The initial
-expansion is attributed to electrostatic repulsion by the \ce{O^{2-}}
-ions when \ce{Li+} ions are initially removed between consecutive
-layers \cite{Robert2015}. In turn, the subsequent collapse is driven
-by steric effects, and reflect the complete removal of \ce{Li+} ions,
-which act as pillars of the layered framework. The (104) diffraction
-peak gradually shifted to higher $Q$, or lower $d$, upon removal of
-\ce{Li} from the material (Figure \ref{fig:uxrd}b). This shift
-reflects the balance between the trend along $c$ and the continuous
-decrease in the $a$ dimension. In this case, the decrease was
-attributed to the shortening of metal oxygen distances due to the
-oxidation of the transition metal ions (mainly \ce{Ni}), which
-decreased their ionic radius.
+Consideration of individual peaks provided more detailed structural
+information. The (003) reflection showed an initial decrease in $Q$
+(Figure \ref{fig:uxrd}a), representing an expansion of the $c$ axis
+due to stacking of the alternating transition metal and lithium
+layers\citeme{}. The initial decrease in $Q$ was followed by a sudden
+increase in $Q$ beyond the initial state, indicating contraction of
+the lattice along the $c$ axis during delithiation. This trend has
+been reported before. The initial expansion is attributed to
+electrostatic repulsion between \ce{O^{2-}} ions in neighboring layers
+once the shielding effect of deintercalated \ce{Li+} ions is no longer
+present\cite{Robert2015}. In turn, the subsequent collapse is driven
+by steric effects, and reflects the near complete removal of \ce{Li+}
+ions, which previously acted as pillars in the layered
+framework. Simultaneously, the (104) diffraction peak gradually
+shifted to higher $Q$ (lower $d$) upon removal of \ce{Li} from the
+material (Figure \ref{fig:uxrd}b). This shift reflected the balance
+between the trend along $c$ and the continuous decrease in the $a$
+dimension. In this case, the decrease was attributed to the shortening
+of metal--oxygen distances due to the oxidation of the transition
+metal ions (mainly \ce{Ni}), resulting in smaller ionic radii.
 
-Unit cell parameters for each diffraction pattern were extracted
-through Le Bail refinements and plotted as a function of cell
+Unit cell parameters for each particle were refined from diffraction
+patterns using the Le Bail method, and plotted as a function of cell
 potential for \gls{p1} and \gls{p2} (Figures \ref{fig:uxrd}d and
-\ref{fig:cell-pars}). The unit cell parameters reflected the trends
-observed in the diffractograms presented in Figures \ref{fig:uxrd}a,b
-and \ref{fig:xrd-echem}, as well as measurements of the ensemble
-average of an electrode available in the literature
-\cite{Robert2015a}. The cell parameters for \gls{p1} (\ref{fig:uxrd}d)
-began shifting at a cell potential between
-\SIrange{3.0}{3.8}{\volt}. The precise value is unknown as the
-temporal resolution of the experiment was insufficient to capture a
-full map during the rapid increase in potential at the beginning of
-the charge. The unit cell parameters for \gls{p2} began shifting at
-\SI{\approx4.5}{\volt}, consistent with the peak shifts in
-\ref{fig:xrd-echem}b. These results led to the qualitative conclusion
-that the rates of delithiation of each individual particle were
-different and not uniquely represented by the electrochemical response
-collected for the whole electrode.
+\ref{fig:cell-pars}). The refined unit cell parameters matched the
+qualitative trends described above in Figures \ref{fig:uxrd}a,b and
+\ref{fig:xrd-echem}, as well as measurements of the ensemble average
+of an electrode available in the literature\cite{Robert2015a}. The
+cell parameters for \gls{p1} began shifting at a cell potential
+somewhere between \SIrange{3.0}{3.8}{\volt} (Figure
+\ref{fig:uxrd}d). The precise value is unknown since the temporal
+resolution of the experiment was insufficient to capture a full map
+during the rapid increase in potential at the beginning of charge. The
+unit cell parameters for \gls{p2} began shifting at
+\SI{\approx4.5}{\volt} (\ref{fig:cell-pars}c,d), consistent with the
+peak shifts in \ref{fig:xrd-echem}b. These results led to the
+qualitative conclusion that the rates of delithiation of each
+individual particle were different and not uniquely represented by the
+electrochemical response collected for the whole electrode.
 
-\subsection{u-XRD - Rates of (De)lithiation}
+%% \subsection{u-XRD - Rates of (De)lithiation}
 
-Comparison of the \gls{xrd} patterns and unit cell parameters for
-individual particles during the first cycle demonstrated differences
-in rates of reaction. By estimating the amount of \ce{Li} present in
-the material at different points during the cathode oxidation, we can
-quantify the rate of delithiation. The \ce{Li} content can be directly
-related to the unit cell parameters of \gls{p1} and \gls{p2} at
-different points in time, by correlating them with \gls{xrd}
-measurements of the ensemble average of a \nca{} electrode during
-galvanostatic cycling from Robert et al\cite{Robert2015}. In this
-reference study, \nca{} was cycled twice with a cutoff potential of
-\SI{4.8}{\volt} and the cell parameters were associated to the average
-\ce{Li} content in the material calculated from the specific capacity,
-or charge passed, of the cell (i.e., coulometrically). During the
-first cycle, the overall \nca{} electrode underwent a heterogeneous
-transformation driven by kinetic limitations due to the presence of
-\ce{Li2CO3}, which is electronically insulating, on the particle
-surfaces. \ce{Li2CO3} is oxidized to \ce{CO2} during this first
-oxidation. As a result, in the second cycle, the electrode transformed
-via the expected pathways of a solid solution. We compared our data to
-the second cycle from the work by Robert et al., since we did not see
-any evidence of heterogeneous behavior in either the electrochemistry
-or XRD patterns of individual particles (\ref{fig:xrd-echem}). In
-order to directly compare trends in \ce{Li} content, the experimental
-unit cell parameters were shifted so that the unit cell parameters for
-the pristine state were equal to first value for the second charge of
-the reference data, which accounts for scalar discrepancies in the
-measurement.
+The rate of delithiation can be quantified by estimating the amount of
+\ce{Li} present in the material at different points during cathode
+oxidation based on unit-cell parameters reported for ensemble-average
+\gls{xrd} in Robert \emph{et al}\cite{Robert2015}. In this reference
+study, \nca{} was cycled twice with a cutoff potential of
+\SI{4.8}{\volt} and the cell parameters were associated with the
+average \ce{Li} content in the material based on coulometric
+calculations. During the first cycle, the overall \nca{} electrode
+underwent a heterogeneous transformation driven by kinetic limitations
+due to the presence of \ce{Li2CO3}, which is electronically
+insulating, on the particle surfaces. \ce{Li2CO3} is oxidized to
+\ce{CO2} during this first charge. As a result, in the second cycle,
+the electrode transformed via the expected solid-solution pathway. We
+compared our data to the second cycle from the work by Robert et al.,
+since we did not see any evidence of heterogeneity in either the
+electrochemistry or diffraction of individual particles
+(\ref{fig:xrd-echem}). In order to directly compare trends in \ce{Li}
+content, the experimental unit cell parameters were adjusted to ensure
+agreement between the pristine state presented here first value for
+the second charge of the reference data presented by Roberts et al.,
+accounting for scalar discrepancies in the measurement.
 
-\todo{Update the following text with $\frac{t}{t_c}$.}
-
-Figure \ref{fig:uxrd}e shows how the \ce{Li} content within \nca{}
-changed as a function of time during the charge-discharge cycle,
-calculated by measuring the variation in \ce{Li} content extracted
-from the measured change in \emph{c} parameter. Similar trends were
-observed when calculating \ce{Li} content using the \emph{a}
-parameter. For both \gls{p1} and \gls{p2} (\ref{fig:uxrd}e) the rate
-of delithiation was initially slow, followed by a sudden
-increase\todo{make this more precise re: negative rates}. In the case
-of \gls{p1}, the delithiation during the first \SI{\approx3}{\hour}
-proceeded at \SI{\approx0.025}{\ce{Li}\per\hour}, or C/40, followed by
-a deceleration until \SI{\approx9}{\hour} passed. After this period,
-the overall content of the particle was
+Figure \ref{fig:uxrd}e shows the \ce{Li} content in \nca{x} as a
+function of time during the first charge-discharge cycle, based on the
+measured change in \emph{c} parameter. Similar trends were observed
+when calculating \ce{Li} content using the \emph{a} parameter (Figure
+\ref{fig:rates}). To allow for easier comparison between experiments
+and simulation, lithiation was shown as a ratio of time passed to the
+total time to reach the cutoff potential ($t_c$). This measure is
+sensitive to experimental conditions, such as the choice of cut-off
+potential, and so absolute comparisons are only valid within an
+experiment. For both \gls{p1} and \gls{p2} the rate of delithiation
+was initially slow, followed by a sudden increase (Figure
+\ref{fig:uxrd}e). In the case of \gls{p1}, the delithiation during the
+first \SI{0.05}{t_c} proceeded at \SI{\approx0.025}{\ce{Li}\per\hour},
+or C/40, followed by a deceleration until \SI{0.2}{t_c} passed. After
+this period, the overall content of the particle was
 \ce{Li_{0.88}Ni_{0.80}Co_{0.15}Al_{0.05}O2}. At this point, the
 reaction dramatically accelerated nearly 10-fold from the initial
 rate, to \SI{\approx0.3}{\ce{Li}\per\hour}, or C/3.33 until an average
 composition \nca{0.53} where the rate decelerated again until the sign
 of the current was reverted. In the case of \gls{p2} there was very
-little delithiation for the first \SI{\approx27}{\hour} of the charge
-of the cell. Delithiation proceeded down to an average content of
-\nca{0.92} at \SI{\approx0.03}{\ce{Li}\per\hour}, or C/33, followed by
-a 20-fold increase in rate, to \SI{\approx0.66}{\ce{Li}\per\hour}, or
+little delithiation for the first \SI{0.8}{t_c}. Delithiation
+proceeded down to an average content of \nca{0.92} at
+\SI{\approx0.03}{\ce{Li}\per\hour}, or C/33, followed by a 20-fold
+increase in rate, to \SI{\approx0.66}{\ce{Li}\per\hour}, or
 C/1.5. When an average composition \nca{0.53} was again reached, the
-reaction slowed down, running below 0.1 \ce{Li}/h, or C/10, for the
-remainder of the oxidation. Particles relithiated rapidly during cell
-discharge, with no periods of slow activity. The states that were
-captured (negative values for \emph{Li removed/hour}) showed faster
-rates of relithiation earlier in the discharge for both \gls{p1} and
-\gls{p2}, reflecting the fastest rates at intermediate contents of
-\ce{Li} in \nca{x}, qualitatively consistent with the oxidation.
+reaction slowed down, running below \SI{0.1}{\ce{Li}\per\hour}, or
+C/10, for the remainder of the oxidation. Particles relithiated
+rapidly during cell discharge, with no periods of slow activity. The
+states that were captured showed faster rates of relithiation earlier
+in the discharge for both \gls{p1} and \gls{p2}, rivaling the fastest
+rates at intermediate contents of \ce{Li} in \nca{x}, qualitatively
+consistent with the oxidation. \todo{I don't understand this last
+  sentence}
 
-\gls{p1} and \gls{p2} both achieved the same level of delithiation at
-the end of the charge sequence, observed in Figure \ref{fig:uxrd}e and
-by the peak positions in Figures \ref{fig:uxrd}a,b and
-\ref{fig:ind-peaks}. Since \gls{p2} did not start delithiating until
-late in the charge sequence, its maximum rate of delithiation was more
-than double that of \gls{p1}. This observation has no precedent in the
-literature for reactions involving solid solutions, where homogeneity
-removes the activation barrier toward nucleation of two-phase
-mechanisms. It is particularly intriguing considering that the whole
-electrode was discharged at a low constant current. It can be
-hypothesized that it is due to subtle variations in overpotential
-between particles as a result of a different connectivity with the
-electrical circuit through the carbon additive (electrons) and the
-pores that contain electrolyte (ions). Particle size may have also had
-an impact. Since \gls{p2} was approximately half the size of \gls{p1},
-the \ce{Li} diffusion lengths out of the particle would have been
-shorter. Neither of these explanations is satisfactory to predict the
-change in rate for an individual particle. It is worth noting that the
-changes happen at approximately similar \ce{Li} contents for both
-particles studied, suggesting that the oxidation of the material
-changes its physical properties, such as electronic and ionic
-conductivity. Follow-up experiments are needed to evaluate this
-point. Both particles relithiated to \nca{x}, where $x$ was between
-\numrange{0.88}{0.97}.
+%% \subsection{TXM - \nmc{}}
 
-\subsection{TXM - \nmc{}}
+%% \subsubsection{\nmc[333]{} Inter-particle Dynamics}
 
-\subsubsection{\nmc[333]{} Inter-particle Dynamics}
-
-Dilute (20\%) \nmc[333]{} electrodes were assembled in modified
-coin-cells, and operando \gls{txm} \gls{xas} frame-sets were collected
-during the first galvanostatic charge/discharge cycle (Figure
-\ref{fig:txm-nmc}). Localized \gls{xas} K-edge spectra were produced
-from operando \gls{txm} frame-sets and then averaged over individual
-particles. Example \gls{txm} frames showing several particles in a
-field of view are shown in Figure \ref{fig:OD-frames}. Upon
+\Gls{txm} \gls{xas} was also used to characterize \nca{} secondary
+particles during charge, providing a direct, spatially resolved probe
+of \ce{Ni} oxidation states. Dilute (\SI{20}{\percent}) \nca{}
+electrodes were assembled in modified coin-cells, and operando
+\gls{txm} \gls{xas} frame-sets were collected during the first
+galvanostatic charge/discharge cycle (Figure
+\ref{fig:txm-nca}). Localized \gls{xas} K-edge spectra were produced
+from operando \gls{txm} frame-sets and then averaged over all pixels
+in secondary particle agglomerates. A \gls{txm} frame showing several
+particles in a field of view is shown in Figure \ref{txm-nca}a. Upon
 delithiation, a progressive increase was seen in the energy of the
 absorption edge and the associated whiteline (Figures
-\ref{fig:isobestic-point} and \ref{fig:kedges}). Comparison of the
-\ce{Ni} near-edge structure at increasing degrees of delithiation
-revealed an isobestic point at \SI{8351}{eV} (Figure
-\ref{fig:isobestic-point}a), often associated with the co-existence of
-two spectroscopic signals with varying contributions to the observed
-spectrum. Ideally, chemically pure reference samples are prepared for
-the two constituents and the observed spectra analyzed by linear
-combination fitting of the two reference spectra, as is done for
+\ref{fig:isobestic-point} and \ref{fig:kedges}). Ideally, chemically
+pure reference samples are prepared for the two chemical end-members,
+and the observed spectra analyzed by linear combination fitting of the
+two reference spectra, as is done for
 \ce{LiFePO4}\cite{wanli2016}. However, the absence of a miscibility
 gap for layered cathodes prevents the preparation of chemically pure
-reference samples. Instead, a more direct approach is used. Figure
-\ref{fig:isobestic-point}b shows spectral mixing of the two extremes
-from Figure \ref{fig:isobestic-point}a in ratios ranging from 0 to
-1. Since the whiteline peak is broad relative to the energy difference
-between the two components, the maximum of the linear combinations
-changes smoothly over the full range of spectral mixing (Figure
-\ref{fig:isobestic-point}c). This allows the whiteline position to be
-used directly as an approximation of \ce{Ni} oxidation. Instead of
-simply selecting the energy with maximum optical depth for a given
-pixel, the full spectrum at each \gls{txm} pixel was fit with a
-combination of a background line, arctangent function, and Gaussian
-peak (\ref{eq:kedge-fitting} and Figure
-\ref{fig:kedge-decomposition}), after which the whiteline energy was
-extracted from the fit parameters. In addition to providing a
-precision beyond the energy resolution of the instrument, this
-approach was more tolerant of noise in individual micrographs since
-the fitting routine relied on the entire spectrum as input.
+reference samples. Instead, a more direct approach is used. For
+layered transition-metal oxide cathodes, the energy of maximum
+absorbance, or whiteline, of the \ce{Ni} K-edge increases as
+\ce{Ni^{3+}} oxidizes to \ce{Ni^{4+}}. Therefore, whiteline energy was
+used as a proxy for \ce{Ni} oxidation, which is the dominant redox
+process in \nca{}.
 
 \todo{Update this text to use $\frac{t}{t_c}$.}
 
@@ -238,56 +301,26 @@ the fitting routine relied on the entire spectrum as input.
   charge.}
 
 Fields of view containing multiple secondary particles were selected
-from within the coin-cell window (Figure \ref{fig:txm-nmc}a), allowing
-comparison of the dynamics between separate particles. Since different
-layered materials have different starting \ce{Ni} oxidation states and
-therefore different whiteline positions (Table
-\ref{tab:bulk-xas-extraction} and Figure
-\ref{fig:bulk-xas-extraction}), whiteline energies were compared to
-the lowest value observed for any particle in the field of view during
-the operando experiment, reported here as \textDelta{}whiteline. The
-mean energies for several \nmc[333]{} secondary particles are shown in
-Figure \ref{fig:nmc-particles}a,b. Initially, the whiteline energies
+from within the coin-cell window (Figure \ref{fig:txm-nca}a), allowing
+comparison of the dynamics between separate particles. Additionally,
+several cells were prepared at select states of delithiation and
+measured by ex-situ ensemble \gls{xas} (Figure
+\ref{fig:txm-nca}c). This allowed a comparison between whiteline
+position and average state-of-charge for each particle as a function
+of time (Figure \ref{fig:txm-nca}d). Initially, the whiteline energies
 were constant, indicating no \ce{Ni} oxidation. After
-\SI{\approx10}{\hour}, the whiteline energy increased rapidly by
-\SI{\approx3.75}{eV} over a period of \SI{5}{\hour}. Five out of the
-six particles underwent this rapid oxidation simultaneously, while the
-remaining particle transitioned within the next \SI{2}{\hour}. Over
-the remaining \SI{15}{\hour} of the charge cycle, the particle
-whiteline positions increased gradually by an additional
-\SI{0.6}{eV}. This particle-level behavior is in contrast with the
-that seen by in-situ ensemble-average \gls{xas}\cite{deb2005}, which
-shows a gradual increase in whiteline position over the full range of
-delithiation (Table \ref{tab:bulk-xas-extraction} and Figure
-\ref{fig:bulk-xas-extraction}a). The total change in whiteline energy
-for all observed secondary particles was \SI{>4}{eV} (Figure
-\ref{fig:txm-nmc}d). While ensemble \gls{xas}
-studies\cite{deb2005,muto2009} did not reach the \SI{4.7}{V} cell
-cut-off potential needed for full lithium extraction and hence full
-\ce{Ni} oxidation, extrapolation of the trend in Table
-\ref{tab:bulk-xas-extraction} and Figure
-\ref{fig:bulk-xas-extraction}a predicts a change in whiteline energy
-upon full delithiation of \SI{\approx3}{eV}. This discrepancy between
-particle-level and ensemble average \ce{Ni} oxidation suggests that an
-appreciable portion of the particles in the specimens measured by
-ensemble \gls{xas} had not reached their fully oxidized states. During
-discharge (Figure \ref{fig:nmc-particles}a), the particles' whitelines
-gradually moved to lower energies, indicating gradual reduction of
-\ce{Ni}. The whiteline energy did not return to the pristine starting
-point, demonstrating that the particles did not reach fully reduced
-\ce{Ni} when discharged to \SI{3.3}{V}.
+\SIrange{0.4}{0.6}{t_c}, the whiteline energies increased rapidly,
+reaching \SIrange{75}{100}{\percent} state-of-charge. Several sets
+particles oxidized simultaneously, though no clear primary set
+emerged. This particle-level behavior is in contrast with the that
+seen by in-situ ensemble-average \gls{xas}\cite{deb2005}, which showed
+a gradual increase in whiteline position over the full range of
+delithiation. This rapid oxidation behavior was in agreement with that
+observed by \gls{uxrd} (Figure \ref{fig:uxrd}).
 
-A second experiment was conducted during the first charge cycle, but
-optimized for time resolution (Figure \ref{fig:txm-nmc}d). The
-same initial latent phase and subsequent rapid oxidation were seen,
-however individual particles underwent the rapid oxidation
-asynchronously over the \SI{5}{\hour} window (Figure
-\ref{fig:nmc-particles}c). Once rapid oxidation had occurred, the
-subsequent gradual increase to \SI{4.1}{eV} was again observed. In
-both experiments, the peak in the rate of change of the potential
-($\dedt$, Figure \ref{fig:echem-derivatives}a,b) occurred once all
-particles had undergone that rapid transition in oxidation state
-(Figure \ref{fig:nmc-particles}a,c).
+During discharge (Figure \ref{fig:nmc-particles}a), the
+particles' whitelines gradually moved to lower energies, indicating
+gradual reduction of \ce{Ni}.
 
 \begin{table}
   \begin{tabular}{c c c | c c c}
@@ -310,7 +343,51 @@ particles had undergone that rapid transition in oxidation state
   \label{tab:bulk-xas-extraction}
 \end{table}
 
-\subsubsection{\nmc[532]{}}
+%% \subsubsection{\nmc[532]{}}
+
+Instead of simply selecting the energy with maximum
+optical depth for a given pixel, the full spectrum at each \gls{txm}
+pixel was fit, after which the whiteline energy was extracted from the
+fit parameters. This approach was more tolerant of noise, and provided
+higher precision than the energy resolution of the instrument.
+
+A second experiment was conducted during the first charge cycle, but
+optimized for time resolution (Figure \ref{fig:txm-nmc}d). The
+same initial latent phase and subsequent rapid oxidation were seen,
+however individual particles underwent the rapid oxidation
+asynchronously over the \SI{5}{\hour} window (Figure
+\ref{fig:nmc-particles}c). Once rapid oxidation had occurred, the
+subsequent gradual increase to \SI{4.1}{eV} was again observed. In
+both experiments, the peak in the rate of change of the potential
+($\dedt$, Figure \ref{fig:echem-derivatives}a,b) occurred once all
+particles had undergone that rapid transition in oxidation state
+(Figure \ref{fig:nmc-particles}a,c).
+
+Since different
+layered materials have different starting \ce{Ni} oxidation states and
+therefore different whiteline positions, whiteline energies were
+compared to the lowest value observed for any particle in the field of
+view during the operando experiment, reported here as
+\textDelta{}whiteline.
+
+Five out of the six
+particles underwent this rapid oxidation simultaneously, while the
+remaining particle transitioned within the next \SI{2}{\hour}. Over
+the remaining \SI{15}{\hour} of the charge cycle, the particle
+whiteline positions increased gradually by an additional
+\SI{0.6}{eV}.
+
+The total change in whiteline energy for all observed
+secondary particles was \SI{>4}{eV} (Figure \ref{fig:txm-nmc}d). While
+ensemble \gls{xas} studies\cite{deb2005,muto2009} did not reach the
+\SI{4.7}{V} cell cut-off potential needed for full lithium extraction
+and hence full \ce{Ni} oxidation, extrapolation of the trend in Table
+\ref{tab:bulk-xas-extraction} and Figure
+\ref{fig:bulk-xas-extraction}a predicts a change in whiteline energy
+upon full delithiation of \SI{\approx3}{eV}. This discrepancy between
+particle-level and ensemble average \ce{Ni} oxidation suggests that an
+appreciable portion of the particles in the specimens measured by
+ensemble \gls{xas} had not reached their fully oxidized states.
 
 Operando \gls{txm} \gls{xas} was also performed using a dilute
 (\SI{20}{\percent}) \nmc[532]{} cathode in a modified coin-cell
@@ -339,6 +416,32 @@ rate of change of potential at \SI{12}{\hour} (Figure
 %%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 %%%%%%%%%%%%%%%%%%%%%
+
+\gls{p1} and \gls{p2} both achieved the same level of delithiation at
+the end of the charge sequence, observed in Figure \ref{fig:uxrd}e and
+by the peak positions in Figures \ref{fig:uxrd}a,b and
+\ref{fig:ind-peaks}. Since \gls{p2} did not start delithiating until
+late in the charge sequence, its maximum rate of delithiation was more
+than double that of \gls{p1}. This observation has no precedent in the
+literature for reactions involving solid solutions, where homogeneity
+removes the activation barrier toward nucleation of two-phase
+mechanisms. It is particularly intriguing considering that the whole
+electrode was discharged at a low constant current. It can be
+hypothesized that it is due to subtle variations in overpotential
+between particles as a result of a different connectivity with the
+electrical circuit through the carbon additive (electrons) and the
+pores that contain electrolyte (ions). Particle size may have also had
+an impact. Since \gls{p2} was approximately half the size of \gls{p1},
+the \ce{Li} diffusion lengths out of the particle would have been
+shorter. Neither of these explanations is satisfactory to predict the
+change in rate for an individual particle. It is worth noting that the
+changes happen at approximately similar \ce{Li} contents for both
+particles studied, suggesting that the oxidation of the material
+changes its physical properties, such as electronic and ionic
+conductivity. Follow-up experiments are needed to evaluate this
+point. Both particles relithiated to \nca{x}, where $x$ was between
+\numrange{0.88}{0.97}.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
@@ -369,7 +472,7 @@ carbonate. Glass fiber served as the separator.
 Diffraction maps were collected at the microprobe beamline at sector
 34 at the Advanced Photon Source (APS), Argonne National Laboratory
 (ANL). An incoming monochromatic beam at \SI{25}{\kilo\electronvolt}
-(\SI{0.4959}{\angstrom}) with a size of approximately 0.5 x
+(\SI{0.4959}{\angstrom}) with a size of approximately \num{0.5} x
 \SI{0.5}{\micro\meter} was shone through the AMPIX cell onto the
 sample. The intensity of the diffracted beam was collected in
 transmission geometry by a MAR165 CCD detector, with 4096 x 4096
