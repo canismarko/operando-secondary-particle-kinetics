@@ -292,14 +292,6 @@ absorbance, or whiteline, of the \ce{Ni} K-edge increases as
 used as a proxy for \ce{Ni} oxidation, which is the dominant redox
 process in \nca{}.
 
-\todo{Update this text to use $\frac{t}{t_c}$.}
-
-\todo{We'll probably re-write portions of this to be for NCA, instead
-  of NMC.}
-
-\todo{Update this text to indicate that the NMC-333 is showing second
-  charge.}
-
 Fields of view containing multiple secondary particles were selected
 from within the coin-cell window (Figure \ref{fig:txm-nca}a), allowing
 comparison of the dynamics between separate particles. Additionally,
@@ -310,17 +302,20 @@ position and average state-of-charge for each particle as a function
 of time (Figure \ref{fig:txm-nca}d). Initially, the whiteline energies
 were constant, indicating no \ce{Ni} oxidation. After
 \SIrange{0.4}{0.6}{t_c}, the whiteline energies increased rapidly,
-reaching \SIrange{75}{100}{\percent} state-of-charge. Several sets
-particles oxidized simultaneously, though no clear primary set
-emerged. This particle-level behavior is in contrast with the that
-seen by in-situ ensemble-average \gls{xas}\cite{deb2005}, which showed
-a gradual increase in whiteline position over the full range of
-delithiation. This rapid oxidation behavior was in agreement with that
-observed by \gls{uxrd} (Figure \ref{fig:uxrd}).
-
-During discharge (Figure \ref{fig:nmc-particles}a), the
-particles' whitelines gradually moved to lower energies, indicating
-gradual reduction of \ce{Ni}.
+reaching \SIrange{75}{100}{\percent} state-of-charge. Although some
+particles oxidized simultaneously with one another, there was no clear
+preference for when particles began rapid oxidation. Not all of the
+particles measured reached the full \SI{100}{\percent}
+state-of-charge. Additionally, upon reaching full their maximum
+state-of-charge, some particles subsequently exhibited \ce{Ni}
+reduction, presumably due to oxygen loss resulting in conversion to a
+cubic rock-salt-like phase\citeme{}. This stochastic particle-level
+behavior was in contrast with the that seen by in-situ
+ensemble-average \gls{xas}\cite{deb2005}, which showed a gradual
+increase in whiteline position over the full range of
+delithiation. Overall, this inter-particle rapid oxidation was in
+agreement with the observations made by \gls{uxrd} described above
+(Figure \ref{fig:uxrd}).
 
 \begin{table}
   \begin{tabular}{c c c | c c c}
@@ -345,43 +340,43 @@ gradual reduction of \ce{Ni}.
 
 %% \subsubsection{\nmc[532]{}}
 
-Instead of simply selecting the energy with maximum
-optical depth for a given pixel, the full spectrum at each \gls{txm}
-pixel was fit, after which the whiteline energy was extracted from the
-fit parameters. This approach was more tolerant of noise, and provided
-higher precision than the energy resolution of the instrument.
-
-A second experiment was conducted during the first charge cycle, but
-optimized for time resolution (Figure \ref{fig:txm-nmc}d). The
-same initial latent phase and subsequent rapid oxidation were seen,
-however individual particles underwent the rapid oxidation
-asynchronously over the \SI{5}{\hour} window (Figure
-\ref{fig:nmc-particles}c). Once rapid oxidation had occurred, the
-subsequent gradual increase to \SI{4.1}{eV} was again observed. In
-both experiments, the peak in the rate of change of the potential
-($\dedt$, Figure \ref{fig:echem-derivatives}a,b) occurred once all
-particles had undergone that rapid transition in oxidation state
-(Figure \ref{fig:nmc-particles}a,c).
-
-Since different
-layered materials have different starting \ce{Ni} oxidation states and
-therefore different whiteline positions, whiteline energies were
-compared to the lowest value observed for any particle in the field of
-view during the operando experiment, reported here as
-\textDelta{}whiteline.
-
-Five out of the six
-particles underwent this rapid oxidation simultaneously, while the
-remaining particle transitioned within the next \SI{2}{\hour}. Over
-the remaining \SI{15}{\hour} of the charge cycle, the particle
-whiteline positions increased gradually by an additional
-\SI{0.6}{eV}.
-
-The total change in whiteline energy for all observed
-secondary particles was \SI{>4}{eV} (Figure \ref{fig:txm-nmc}d). While
-ensemble \gls{xas} studies\cite{deb2005,muto2009} did not reach the
-\SI{4.7}{V} cell cut-off potential needed for full lithium extraction
-and hence full \ce{Ni} oxidation, extrapolation of the trend in Table
+To evaluate the similarity in the oxidation behavior of \nca{} other
+layered cathode compositions, similar \gls{txm} \gls{xas} experiments
+were performed on cells containing dilute \nmc[333]{} and \nmc[532]{}
+layered cathodes (Figure \ref{fig:txm-nmc}). Compared to \nca{}
+(Figure \ref{fig:txm-nca}a), \nmc{} particle were less spherical in
+shape (Figures \ref{fig:txm-nmc}a and \ref{}). Since no
+ensemble-average measurements were performed, the mean optical depth
+for all foreground pixels in the frame was used for evaluating overall
+oxidation (Figures \ref{fig:txm-nmc}b,c). Similarly to \nca{}, spectra
+for both \nmc{} cathodes showed an increase in the whiteline
+energy. \nmc[333]{} exhibited a lower initial whiteline energy. The
+\ce{Mn{3+}/Mn{4+}} redox couple has a higher reduction potential than
+the \ce{Ni{2+}/Ni{3+}} couple, which resulted in the spontaneous
+formation of \ce{Ni^{2+}} limited by the concentration of manganese
+(lower in the case of \nmc[532]). Rather than calculate an average
+state-of-charge, as was done when ensemble-average spectra were
+available (Figure \ref{txm-nca}d), whiteline energies were compared to
+the lowest value observed for any particle in the field of view during
+the operando experiment, reported here as \textDelta{}whiteline. A
+parametric function was fit to each pixel's full spectrum, and the
+whiteline energies were extracted from the fit parameters. This
+approach provided higher precision and was more tolerant of noise
+between frames, allowing for faster time resolution. For both \nmc{}
+materials, the same initial latent phase and subsequent rapid
+oxidation were seen (Figures \ref{fig:txm-nmc}d,e). The initial rapid
+\ce{Ni} oxidation resulted in changes in whiteline energy for
+\nmc[333] of \SI{\approx3}{\electronvolt} and \nmc[532]{} of
+\SI{\approx2.5}{\electronvolt}, reflecting the lower starting
+concentration of \ce{Ni^{2+}} in \nmc[532]{}. The experiment using
+\nmc[532]{} did not reach the same overall state of charge. For
+\nmc[333]{}, once rapid oxidation had occurred, a subsequent gradual
+increase to \SI{4.1}{eV} was observed for \nmc[333]{}. The total
+change in whiteline energy for all observed secondary particles was
+\SI{>4}{eV} (Figure \ref{fig:txm-nmc}d). While ensemble \gls{xas}
+studies\cite{deb2005,muto2009} did not reach the \SI{4.7}{V} cell
+cut-off potential needed for full lithium extraction and hence full
+\ce{Ni} oxidation, extrapolation of the trend in Table
 \ref{tab:bulk-xas-extraction} and Figure
 \ref{fig:bulk-xas-extraction}a predicts a change in whiteline energy
 upon full delithiation of \SI{\approx3}{eV}. This discrepancy between
@@ -389,29 +384,7 @@ particle-level and ensemble average \ce{Ni} oxidation suggests that an
 appreciable portion of the particles in the specimens measured by
 ensemble \gls{xas} had not reached their fully oxidized states.
 
-Operando \gls{txm} \gls{xas} was also performed using a dilute
-(\SI{20}{\percent}) \nmc[532]{} cathode in a modified coin-cell
-(Figure \ref{fig:txm-nmc}e). The galvanostatic charge profile (Figure
-\ref{fig:nmc532-particles}) showed the expected initial slow change in
-potential, followed by a slight increase in the rate of change of
-potential after \SI{12}{\hour}, similar to \nmc[333]{} (Figure
-\ref{fig:nmc-particles}b,d). However, the \nmc[532]{} cathode showed
-almost no initial peak in cell potential at \SI{2}{\hour}, as was
-observed for \nmc[333]{} cathodes. During the first half of the charge
-cycle, particles again exhibited an initial latent phase followed by
-rapid increase in whiteline energy (Figure \ref{fig:txm-nmc}c,e),
-consistent with the particle-level dynamics observed in \nmc[333]{}
-(Figure \ref{fig:txm-nmc}b,d). X-ray micrographs were not collected
-beyond \SI{10.5}{\hour} due to scheduled facility maintenance, and so
-the values calculated for $\frac{t}{t_c}$ in Figure \ref{fig:txm-nmc}e
-should not be considered as a measure of the time to complete a full
-charge, but rather the time fraction of the actual charge applied. All
-but one particle had entered this rapid transition before the last
-operando \gls{txm} frame-set was collected and the increase in the
-rate of change of potential at \SI{12}{\hour} (Figure
-\ref{fig:echem-derivatives}f).
-
-
+\todo{Do we want to discuss the relationship between rapid oxidation and the e-chem kink?}
 
 %%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
@@ -637,13 +610,13 @@ using matplotlib\cite{matplotlib}.
 
 \begin{figure}
   \includegraphics{figures/nmc_txm.pdf}
-  \caption{Operando \gls{txm} of \nmc[333]{} and \nmc[532]{} during
-    first charge. (a) Mean optical depth frame of \nmc[333]{}
+  \caption{Operando \gls{txm} \gls{xas} of \nmc[333]{} and \nmc[532]{}
+    during first charge. (a) Mean optical depth frame of \nmc[333]{}
     particles. (b,c) Median optical depth spectra of active material
     during (b) second charge of \nmc[333]{} and (c) first charge of
-    \nmc[532]{}. (d,e) Changes in median whiteline energies relative
-    to start of charging for individual particles of (d) \nmc[333]{}
-    during second charge and (e) \nmc[532]{} during first charge.}
+    \nmc[532]{}. (d,e) Changes in median whiteline energies during
+    first charge relative to start of charging for individual
+    particles of (d) \nmc[333]{} (e) \nmc[532]{}.}
   \label{fig:txm-nmc}
 \end{figure}
 
