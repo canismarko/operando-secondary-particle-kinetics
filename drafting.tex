@@ -5,7 +5,26 @@
 \usepackage{blindtext}
 \doublespacing
 
-\newcommand{\todo}[1]{\hl{[TODO: #1]}}
+\definecolor{mwcolor}{HTML}{8af67d}
+\definecolor{vgcolor}{HTML}{c88bff} % MPL purple
+\definecolor{citecolor}{HTML}{c696f0} % MPL purple
+
+% Tools for leaving todo notes around
+\usepackage[colorinlistoftodos]{todonotes}
 \newcommand{\citeme}[1]{%
-  \ifstrempty{#1}{\textsuperscript{\hl{[citation needed]}}}{\textsuperscript{\hl{[cite: #1]}}}%
+  \todo[color=citecolor]{%
+  \ifstrempty{#1}{[citation needed]}{[cite: #1]}%
+  }%
+}
+\newcommand{\mw}[2]{%
+  \sethlcolor{mwcolor}\hl{#2}\sethlcolor{yellow}%
+  \ifstrempty{#1}{}{%
+    \todo[color=mwcolor]{#1 [MW]}%
+  }%                  
+}
+\newcommand{\vg}[2]{%
+  \sethlcolor{vgcolor}\hl{#2}\sethlcolor{yellow}%
+  \ifstrempty{#1}{}{%
+    \todo[color=vgcolor]{#1 [VG]}%
+  }%                  
 }
