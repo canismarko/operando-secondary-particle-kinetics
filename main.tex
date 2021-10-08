@@ -1,5 +1,10 @@
- \documentclass{article}
+\documentclass{article}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+
+\input{drafting}
 
 \usepackage{graphicx}
 \usepackage[version=4]{mhchem}
@@ -9,10 +14,9 @@
 \usepackage{xr} % For cross-referencing wit the supplemental information
 \usepackage{textgreek}
 
-\input{drafting}
-\input{metadata}
 \input{macros}
 \input{acronyms}
+\input{metadata}
 
 \myexternaldocument{supplement}
 
@@ -132,7 +136,12 @@ heterogeneity. While the cell potential and prior reports of ensemble
 \gls{xas} indicated a smooth transition to higher oxidation state upon
 delithiation\cite{deb2005,muto2009}, individual particles exhibited a
 sharp and stochastic transition from an initial, latent state to one
-containing highly oxidized \ce{Ni}. \todo{Summarize the simulations.}
+containing highly oxidized \ce{Ni}. Physics simulations were then
+conducted to determine the role of fundamental electrochemical
+processes in generating this rapid delithiation behavior, determined
+to result from a rapid rise in the exchange current density covering
+several orders of magnitude over a narrow range of lithium
+compositions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Operando Characterization}
@@ -338,7 +347,7 @@ reaching \SIrange{75}{100}{\percent} state-of-charge. Although some
 particles oxidized simultaneously with one another, there was no clear
 preference for when particles began rapid oxidation. Not all of the
 particles measured reached the full \SI{100}{\percent}
-state-of-charge. Additionally, upon reaching full their maximum
+state-of-charge. Additionally, upon reaching their maximum
 state-of-charge, some particles subsequently exhibited \ce{Ni}
 reduction, presumably due to oxygen loss resulting in conversion to a
 cubic rock-salt-like phase\citeme{}. This stochastic particle-level
@@ -384,21 +393,21 @@ oxidation (Figures \ref{fig:txm-nmc}b,c). Similarly to \nca{}, spectra
 for both \nmc{} cathodes showed an increase in the whiteline
 energy. \nmc[333]{} exhibited a lower initial whiteline energy. The
 \ce{Mn{3+}/Mn{4+}} redox couple has a higher reduction potential than
-the \ce{Ni{2+}/Ni{3+}} couple, which resulted in the spontaneous
+the \ce{Ni{2+}/Ni{3+}} couple, which results in the spontaneous
 formation of \ce{Ni^{2+}} limited by the concentration of manganese
-(lower in the case of \nmc[532]). Rather than calculate an average
+(lower in the case of \nmc[532]{}). Rather than calculate an average
 state-of-charge, as was done when ensemble-average spectra were
-available (Figure \ref{fig:txm-nca}d), whiteline energies were
-compared to the lowest value observed for any particle in the field of
-view during the operando experiment, reported here as
-\textDelta{}whiteline. A parametric function was fit to each pixel's
-full spectrum, and the whiteline energies were extracted from the fit
-parameters. This approach provided higher precision and was more
-tolerant of noise between frames, allowing for faster time
+available (as presented for \nca{} above, Figure \ref{fig:txm-nca}d),
+whiteline energies were compared to the lowest value observed for any
+particle in the field of view during the operando experiment, reported
+here as \textDelta{}whiteline. A parametric function was fit to each
+pixel's full spectrum, and the whiteline energies were extracted from
+the fit parameters. This approach provided higher precision and was
+more tolerant of noise between frames, allowing for faster time
 resolution. For both \nmc{} materials, the same initial latent phase
 and subsequent rapid oxidation were seen (Figures
 \ref{fig:txm-nmc}d,e). The initial rapid \ce{Ni} oxidation resulted in
-changes in whiteline energy for \nmc[333] of
+changes in whiteline energy for \nmc[333]{} of
 \SI{\approx3}{\electronvolt} and \nmc[532]{} of
 \SI{\approx2.5}{\electronvolt}, reflecting the lower starting
 concentration of \ce{Ni^{2+}} in \nmc[532]{}. The experiment using
@@ -417,7 +426,21 @@ particle-level and ensemble average \ce{Ni} oxidation suggests that an
 appreciable portion of the particles in the specimens measured by
 ensemble \gls{xas} had not reached their fully oxidized states.
 
-\todo{Write a transition paragraph that sets up the need for simulations.}
+In summary, all layered cathode chemistries studied exhibited
+punctuated rapid delithiation at the secondary particle level. This
+behavior was observed when measurements were made with independent
+mapping techniques (\gls{uxrd} and \gls{txm}) and with both low-energy
+(\SI{\approx8}{\kilo\electronvolt}) and high-energy
+(\SI{25}{\kilo\electronvolt}) X-rays, and with varying carbon content
+in the electrode composite. The persistent of this phenomena across
+observations suggest that this behavior is inherent to layered cathode
+materials rather than an artifact of the technique, further supported
+by previous reports\cite{chueh2021}\citeme{rao2021 and others?}. These
+results do not by themselves provide an explanation for why rapid
+delithiation occurs between secondary particles. Detailed models of
+delithiation dynamics are needed to link the observed behavior to
+fundamental electrochemical processes, which are presented in the next
+section.
 
 \section{Dynamics Simulations}
 
@@ -426,236 +449,229 @@ ensemble \gls{xas} had not reached their fully oxidized states.
 
 To identify the origin of the experimentally observed sequential
 accelerated delithiation of individual \nca{} particles during the
-galvanostatic charging of the electrode, we performed electrochemical
-dynamics simulations. In particular, we conducted particle-level
-simulations of an \nca{}/Li cell with 8 particles, ranging from
-\SIrange{4}{11}{\micro\meter} in diameter.
+galvanostatic charging of the electrode, electrochemical dynamics
+simulations were performed on an \nca{}/Li cell model with 8
+particles, ranging from \SIrange{4}{11}{\micro\meter} in diameter.
 
-The electrodes used in the experiments were \vg{@Mark, please confirm
-  this.}{highly porous} and had high carbon additive
-content. Furthermore, the experimental C-rate was set to
-\SI{0.05}{\ampere\per\ampere\per\hour}. Under these conditions, it is
-reasonable to assume that the no electrolyte transport limitations and
-electronic conduction limitations exist in the system. Therefore, the
-accelerated delithiation could either be attributed to the exchange
-current density, $i_0$, at the NCA/electrolyte interface or Li
-diffusivity in NCA, $D_S$.
+Since the electrodes used in the experiments were highly porous, they
+are unlikely to be limited by electrolyte transport. Furthermore,
+rapidly accelerating delithiation was observed in electrodes with both
+\SI{60}{\percent} (\gls{txm}) and \SI{20}{\percent} (\gls{uxrd})
+levels of carbon additive, so electronic conduction limitations are
+also not a good candidate for explaining the observed
+behavior. Therefore, the accelerated delithiation is attributed to
+either the exchange current density, $i_0$, at the
+particle/electrolyte interface, or \ce{Li^{+}} diffusivity in \nca{},
+$D_S$.
 
-To further narrow down the underlying cause, we performed sensitivity
-analyses with respect to both $i_0$ and $D_S$ at different
-C-rates. The results for the sensitivity analyses at C/20 are
-summarized below, while the results at other C-rates are provided in
-the \mw{ref to specific section}{Supporting Information}. More details
-about the model, including the governing equations and the complete
-set of parameters employed, can also be found in the \mw{ref to
-  specific section}{Supplementary Information}.
+To further narrow down the underlying cause, sensitivity analyses were
+performed for both $i_0$ and $D_S$ at different C-rates. The results
+of these analyses at C/20 are summarized below, while the results at
+other C-rates are provided in the \mw{ref to specific
+  section}{Supporting Information}. More details about the model,
+including the governing equations and the complete set of parameters
+employed, can also be found in the \mw{ref to specific
+  section}{Supplementary Information}.
 
 %% sensitivity analysses with respect to i_0
 
 In this section, we report the results of the sensitivity studies with
-respect to different forms of $i_0$. We note that we set
+respect to different forms of $i_0$. \ce{Li^+} diffusivity was set to
 $D_S>\SI{5e-15}{\meter\squared\per\second}$ for all simulations in
 this section to avoid solid-state limitation in the simulated system.
 
 %% Selection of i_0 function
 
-Traditionally, $i_0$ is considered to be directly proportional to
+Traditionally, $i_0$ has been presumed to be directly proportional to
 $X_{\rm{Li}}^{0.5}\left(1-X_{\rm{Li}}\right)^{0.5}$, where
-$X_{\rm{Li}}$ is the Li site fraction in the active
+$X_{\rm{Li}}$ is the \ce{Li^+} site fraction in the active
 material\cite{newman1994-2,newman1993,newman1996,newman1995-2}. This
-functional form results from the theoretical consideration that Li
-exists in a solid solution state in the active material. However,
-recent studies have shown that such a dependence is not applicable for
-materials like \nca{}\cite{chueh2021} and
+functional form results from the theoretical consideration that
+\ce{Li^+} exists in a solid solution state in the active
+material. However, recent studies have shown that such a dependence is
+not applicable for materials like \nca{}\cite{chueh2021} and
 \nmc{}\cite{mukherjee2017,chiang2020,tsai2018}. For example, Park et
 al.\cite{chueh2021}\ reported an exponential dependence of $i_0$ on
-$X_{\rm{Li}}$\cite{chueh2021}. Other studies show that $i_0$ is a
-monotonically decreasing function of
+$X_{\rm{Li}}$\cite{chueh2021}. Other studies have shown that $i_0$ is
+a monotonically decreasing function of
 $X_{\rm{Li}}$\cite{mukherjee2017,chiang2020,tsai2018}. Thus, the
 dependence of $i_0$ on $X_{\rm{Li}}$ is not precisely
-known. Furthermore, the literature is missing the data for
+known. Furthermore, the literature is missing similar analysis for
 $X_{\rm{Li}} > 0.92$.
 
-To work with the uncertain form of $i_0$, we ran two sets of
-simulations. In the first set of the simulations, we employed the
-traditional form of $i_0$, which is shown in Figure
-\ref{fig:i0_profiles}. In the second set of simulations, we used a
-model form of $i_0$, which is also shown in Figure
-\ref{fig:i0_profiles}. The model form is setup to have a smooth step
-function of $X_{\rm{Li}}$; the step in the function is denoted by a
-cubic spline.
+To work with the uncertain form of $i_0$, two sets of simulations were
+run. In the first set of the simulations, the traditional form of
+$i_0$ is used (Figure \ref{fig:i0_profiles}). In the second set of
+simulations, a model form of $i_0$ is used (Figure
+\ref{fig:i0_profiles}). The model form was chosen to have a smooth
+step function of $X_{\rm{Li}}$, generated by a cubic spline.
 
 The traditional form only has the max value of $i_0$,
-$i_{0,\rm{max}}$, as a tunable parameter, whereas the model form has
-four parameters: $i_{0,\rm{min}}$, the minimum value of $i_0$,
-$i_{0,\rm{max}}$, $X_{\rm{Li}}^?$, the value of where the transition
-begins from $i_{0,\rm{min}}$ to $i_{0,\rm{max}}$, and $\Delta
-X_{\rm{Li}}$, the width of the transition zone. The presence of
-additional parameters enables the model function of $i_0$ to represent
-most of the aforementioned-literature-reported functions. Since the
-values of $i_{0,\rm{max}}$ reported in the
-literature\cite{tsai2018,dees2008} do not vary widely, we selected an
-intermediate value, $i_0 = \SI{1}{\ampere\per\meter\squared}$. The
-comparison of the literature values, traditional and model functions
-of $i_0$ is provided in Figure \ref{fig:i0_profiles}.
+$i_{0,\rm{max}}$, as a tunable parameter, whereas the model form uses
+four parameters: $i_{0,\rm{min}}$, the minimum value of $i_0$;
+$i_{0,\rm{max}}$; $X_{\rm{Li}}^{\star}$, the value of $X_{\rm{Li}}$
+where the transition begins from $i_{0,\rm{min}}$ to $i_{0,\rm{max}}$;
+and $\Delta X_{\rm{Li}}$, the width of the transition zone. The
+presence of additional parameters enables the model function of $i_0$
+to represent most of the aforementioned functions from the
+literature. Since the values of $i_{0,\rm{max}}$ reported in the
+literature\cite{tsai2018,dees2008} do not vary widely, an intermediate
+value of $i_0 = \SI{1}{\ampere\per\meter\squared}$ was selected. A
+comparison of the $i_0$ values used in the traditional and model
+functions to those from the literature is provided in Figure
+\ref{fig:i0_profiles}.
 
 %% Effects of i_0 on the dilithiation dynamics
-The evolution of the volume average Li-site fraction,
+The evolution of the volume-averaged Li-site fraction,
 $\left<X_{\rm{Li}}\right>$, for the first set of simulations, i.e.,
-with the traditional form of $i_0$ at \SI{0.05}{\per\hour} are
-provided in Figure \ref{fig:i0_basic}. As can be seen, for this case,
-none of the particles exhibit the accelerated delithiation behavior,
-and all the particles delithiate at the same rate.
+with the traditional form of $i_0$ at \SI{0.05}{\per\hour} is provided
+in Figure \ref{fig:i0_basic}. In this case, none of the particles
+exhibit the accelerated delithiation behavior, and all the particles
+delithiate at the same rate.
 
 For the second set of simulations, the evolution results are presented
 individually for the sensitivity analyses with respect to
-$i_{0,\rm{min}}$, $X_{Li}^?$, and $\Delta X_{\rm{Li}}$. The results
-corresponding to $i_{0,\rm{min}}$ are provided here and the remaining
-results are provided in the \mw{ref to specific section}{Supporting
-  Information}.
+$i_{0,\rm{min}}$, $X_{Li}^{\star}$, and $\Delta X_{\rm{Li}}$. The
+results corresponding to $i_{0,\rm{min}}$ are provided here and the
+remaining results are provided in the \mw{ref to specific
+  section}{Supporting Information}.
 
-We chose four different values of $i_{0,\rm{min}}$ ranging from
-\SIrange{0.01}{0.001}{\ampere\per\meter\squared}, while setting the
-values of other parameters as $i_{0,\rm{max}} =
-\SI{1}{\ampere\per\meter\squared}$, $X_{\rm{Li}}^{\star} = 0.9$, and
-$\Delta X_{\rm{Li}} = 0.05$.  The comparison of different $i_0$
-functions that differ in terms of $i_{0,\rm{min}}$ is provided in
-Figure \ref{fig:i0_profiles}. The corresponding results for the
-evolution of $\left<X_{\rm{Li}}\right>$ are provided in Figure
-\ref{i0_models}. It can be seen that all particles exhibit accelerated
-delithiation for all values of $i_{0,\rm{min}}$. Furthermore, it can
-be observed that as $i_{0,\rm{min}}$ is decreased, the
-$\left<X_{\rm{Li}}\right>$ value at which the accelerated delithiation
-of each particle halts also decreases, which will hereafter be denoted
+Four different values of $i_{0,\rm{min}}$ were chosen, ranging from
+\SIrange{0.01}{0.001}{\ampere\per\meter\squared}, with other
+parameters as $i_{0,\rm{max}} = \SI{1}{\ampere\per\meter\squared}$,
+$X_{\rm{Li}}^{\star} = 0.9$, and $\Delta X_{\rm{Li}} = 0.05$. A
+comparison of $i_0$ functions that differ in terms of $i_{0,\rm{min}}$
+is provided in Figure \ref{fig:i0_profiles}. The corresponding results
+for the evolution of $\left<X_{\rm{Li}}\right>$ are provided in Figure
+\ref{fig:i0_models}. All particles exhibit accelerated delithiation for
+all values of $i_{0,\rm{min}}$ (Figure
+\ref{fig:i0_models}. Furthermore, as $i_{0,\rm{min}}$ is decreased,
+the $\left<X_{\rm{Li}}\right>$ value at which the accelerated
+delithiation of each particle halts also decreases, hereafter denoted
 as $\left<X_{\rm{Li}}\right>^\dagger$. Since the $i_{0,\rm{min}}$
-value of \SI{0.001}{\ampere\per\meter\squared} resulted in a similar
-value of $\left<X_{\rm{Li}}\right>^\dagger$ as the experiments, we
-selected this $i_{0,\rm{min}}$ value as the nominal value.
+value of \SI{0.001}{\ampere\per\meter\squared} results in a similar
+value of $\left<X_{\rm{Li}}\right>^\dagger$ as the experiments, this
+$i_{0,\rm{min}}$ value was selected as the nominal value.
 
-The oscillations in $\left<X_{\rm{Li}}\right>$ in a few cases
+In some cases, the oscillations in $\left<X_{\rm{Li}}\right>$
 originate because of the large difference between $i_{0,\rm{min}}$ and
-$i_{0,\rm{max}}$, that causes a particle undergoing the transition
-between these values to deliver more than the applied current, which
-induces other more delithiated particles to lithiate slightly. Whether
-such oscillations occur in a physical system is difficult to determine
-as our experimental measurements have limited chemical and temporal
-resolution. These oscillations reduce in amplitude in a system with
-larger number of particles (as shown in later sections). We also
-observe a reduction in the amplitudes as the C-rate is increased at
-\vg{}{(see section xx in the Supporting Information)}.
+$i_{0,\rm{max}}$, which causes a particle undergoing the transition
+between these values to deliver more than the applied current and
+consequently induces other more delithiated particles to relithiate
+slightly. Whether such oscillations occur in a physical system is
+difficult to determine as experimental measurements have insufficient
+chemical or temporal resolution. These oscillations reduce in
+amplitude in a system with more particles, as will be described in
+later sections. A reduction in the amplitudes was also seen as the
+applied current increased \vg{}{(see section xx in the Supporting
+  Information)}.
 
 Similar analyses were conducted with respect to $X_{\rm{Li}}^{\star}$
 and $\Delta X_{\rm{Li}}$. The results are provided in the \mw{ref to
-  actual SI section}{Supporting Information (Figure xx)}. In
-summary, it was found that $X_{\rm{Li}}^{\star}$ controlled the onset
-of the accelerated delithiation, for instance, for
-$X_{\rm{Li}}^{\star} = 0.8$, the accelerated delithiation in a
-particle would occur at $\left<X_{\rm{Li}}\right> = 0.8$. Whereas
-$\Delta X_{\rm{Li}}$ controlled the rate of accelerated delithiation;
-larger $\Delta X_{\rm{Li}}$ resulted in smaller
+  actual SI section}{Supporting Information (Figure xx)}. These
+analyses revealed that $X_{\rm{Li}}^{\star}$ controlled the onset of
+the accelerated delithiation. For example, for $X_{\rm{Li}}^{\star} =
+0.8$, the accelerated delithiation in a particle occurred at
+$\left<X_{\rm{Li}}\right> = 0.8$. In contrast, $\Delta X_{\rm{Li}}$
+controlled the rate of accelerated delithiation: a larger value of
+$\Delta X_{\rm{Li}}$ resulted in a smaller
 $\frac{d\left<X_{\rm{Li}}\right>}{dt}$ and vice versa.
 
-The results from the sensitivity analyses show that the $i_0$ function
-must have a sufficiently large difference between $i_{0,\rm{min}}$ and
-$i_{0,\rm{max}}$, along with a sufficiently sharp transition between
-these two values in order to reproduce the accelerated delithiation
-observed in experiments. Such a function enables a particle that has a
-composition in the transition zone from $i_{0,\rm{min}}$ to
-$i_{0,\rm{max}}$, to rapidly delithiate and deliver increasing amount
-of current as $i_0$ increases rapidly. This acceleration causes the
-particle to contribute majority of the applied current, thereby
-resulting in a substantial decrease in the delithiation rate of the
-other particles, which have a smaller $i_0$ value. By the time the
-particle ends its accelerated delithiation, another particle (mostly
-likely the next largest particle) undergoes this transition, and thus,
-accelerated delithiation. This cycle repeats till the last particle
-undergoes accelerated delithiation.
+The results from these sensitivity analyses show that the $i_0$
+function must have a sufficiently large difference between
+$i_{0,\rm{min}}$ and $i_{0,\rm{max}}$, along with a sufficiently sharp
+transition between these two values in order to reproduce the
+accelerated delithiation observed in experiments. Such a function
+enables a particle that has a composition in the transition zone from
+$i_{0,\rm{min}}$ to $i_{0,\rm{max}}$ to rapidly delithiate and deliver
+increasing amounts of current as $i_0$ increases rapidly. This
+acceleration causes the particle to contribute a majority of the
+applied current, resulting in a substantial decrease in the
+delithiation rate of the other particles, which have a smaller $i_0$
+value. By the time the given particle ends its accelerated
+delithiation, another particle (most likely the next \mw{Make sure we
+  have the size discussion in here or else take this out}{largest
+  particle}) undergoes this transition, and thus, accelerated
+delithiation. This cycle repeats until most particles have undergone
+accelerated delithiation.
 
 %% Sensitivity analyses with respect to $D_s$
 
-For the sensitivity analyses with respect to $D_s$ , we selected two
-forms of $D_s$ : a) the literature reported form, which was obtained
-from \vg{}{Ref xx. [ref]} and b) the model form. Both the forms are
-shown in \vg{}{Figure xx}. It should be noted that the model form is
-similar to the smooth step functional form used for $i_0$ . Furthermore,
-the traditional form of $i_0$ is used for the simulations in this
-section.
+For the sensitivity analyses with respect to $D_s$ , two forms of
+$D_s$ were selected: a) the literature reported form, which was
+obtained from \vg{}{Ref xx. [ref]}, and b) the model form similar to
+the smooth step functional form used for $i_0$ (Figure \vg{}{Figure
+  xx}). The traditional form of $i_0$ was used for the simulations in
+this section.
 
-The results for the delithiation dynamics for both the cases are
-presented in \vg{}{Figure xx}. As can be seen, no accelerated
-delithiation is observed in both cases. This is because for a particle
-to exhibit accelerated delithiation, the flux at the
-particle/electrolyte interface needs to increase rapidly in a short
-duration of time. Such an increase in the flux cannot be realized even
-if the diffusion function has a step-function like dependence on
-$X_{\rm{Li}}$ (the model form) because even with such a dependence,
-the diffusivity (hence, diffusion flux) only increases in the shell of
-the particle close to the particle surface; the particle bulk
-continues to have the low diffusivity value. In other words, the
-entire particle does not undergo rapid delithiation; instead, only the
-shell close to the particle surface exhibits such behavior, as shown
-in \vg{}{Figure xx}.
+The results for the delithiation dynamics for both cases are presented
+in \vg{}{Figure xx}. No accelerated delithiation is observed in either
+case. For a particle to exhibit accelerated delithiation, the
+\ce{Li^+} flux at the particle/electrolyte interface must increase
+rapidly in a short period of time. Such an increase in flux cannot be
+realized even if diffusion has a step-like dependence on $X_{\rm{Li}}$
+(the model form), because even with such a dependence the diffusivity
+only increases in the shell of the particle close to the particle
+surface; the particle bulk continues to have the low diffusivity
+value. In other words, the entire particle does not undergo rapid
+delithiation; instead, only the shell close to the particle surface
+exhibits such behavior (\vg{}{Figure xx}).
 
 %% \subsection{Large-Scale Simulation}
 
 To confirm that the conclusions made in the previous section hold
-valid for a larger system, we performed a simulation at C/20 for a
-30-particle system using the model function of $i_0$, for which the
-parameters were identified above. Furthermore, the simulation was
-configured to follow the experimental setup where possible, including
-the particle-size (diameter) distribution as well as the configuration
-of the electrode. More information about the simulation setup can be
-found in the \mw{ref to actual section}{Supporting Information}.
+valid for a larger system, an additional simulation was performed at
+\SI{0.05}{\ampere\per\ampere\per\hour} for a 30-particle system using
+the model function of $i_0$, for which the parameters were described
+above. Furthermore, the simulation was configured to follow the
+experimental setup where possible, including the particle-size
+distribution as well as the configuration of the electrode. More
+information about the simulation setup can be found in the \mw{ref to
+  actual section}{Supporting Information}.
 
 The results from the simulation are shown in Figure
 \ref{fig:30_particles}. All the particles exhibit the sequential
 accelerated delithiation. Moreover, the oscillations around
-$\left<X_{\rm{Li}}\right>^\dagger$ also reduced significantly for the
-30-particle system. Thus, we conclude that our analyses above also
-stand valid for larger ensembles of particles, which represent the
-experimental conditions more closely.
+$\left<X_{\rm{Li}}\right>^\dagger$ also reduces significantly for the
+30-particle system. Thus, the analyses described above for the
+8-particle system are likely valid for larger ensembles of particles,
+more closely resembling a true electrode.
 
 \vg{We can remove/modify this para if we feel that it dilutes our
-  message.}{Finally}, we note that these analyses are only applicable
-for low C-rate operations. At high C-rates, there exist electrode
-level inhomogeneities in the electrochemical reaction distribution due
-to electrolyte transport limitation\cite{dasgupta2020} or electronic
-conduction limitation\cite{liu2019-2}. Under such conditions, the
-delithiation behavior of particles would be influenced by their
-position in the electrode.  Furthermore, the presence of a
-sufficiently thick cathode electrolyte interphase layer can also alter
-the order in which the particles delithiate. All these effects can be
-captured by properly developing an electrode level model, which is
-beyond the scope of this study.
+  message.}{Finally}, we note that at high cycling rates, additional
+electrode level heterogeneities may exist due to limitations in
+electrolyte transport \cite{dasgupta2020} and electronic
+conduction\cite{liu2019-2}. The delithiation behavior of secondary
+particles would then be further influenced by their positions in the
+electrode. Additionally, the presence of a sufficiently thick cathode
+electrolyte interphase layer may alter the order in which particles
+delithiate. Capturing these effects would require the development of
+an electrode level model, which is beyond the scope of this study.
 
 %% \subsection{Conclusion of the Modeling Study}
 
 Based on the insights generated above, we conclude that the
-accelerated delithiation in \nca{} particle is controlled by the
-surface reaction kinetics instead of bulk Li diffusion dynamics in the
-active material. Moreover, we need $i_0$ to have a large ($\frac{
+accelerated delithiation in \nca{} particle is controlled by surface
+charge-transfer kinetics instead of bulk \ce{Li^+} diffusion dynamics
+in the active material. Moreover, $i_0$ must have a large ($\frac{
   i_{0,\rm{max}} }{ i_{0,\rm{min}} } \approx 1000$) and sharp ($\Delta
 X_{\rm{Li}} \approx 0.05$) change around $X_{\rm{Li}} = 0.9$ to
 reproduce the experimentally observed accelerated delithiation. We
 note that these values are just suggestive of the orders of magnitude
-for each quantity and should not be considered as
-precise. Furthermore, we conclude that the results obtained from an
-8-particle model are still valid for a larger system with 30
-particles, which is more representative of the actual electrode used
-in the experiments.
-
-The results from our modeling study agrees well with the report by
-Park et al.\cite{chueh2021}, where the authors showed that the
-accelerated delithiation or electro-autocatalysis, in their terms, is
-controlled by the surface reaction and not the solid-state
-diffusion. Furthermore, the authors also reported a rapid increase in
-the exchange current at the \nca{} particle surface as the
-delithiation progresses.
+for each quantity and should not be considered precise. These results
+agree well with the report by Park et al.\cite{chueh2021}, where the
+authors show that the accelerated delithiation (or
+electro-autocatalysis, in their terms) \mw{So what did we add then? We
+  need to distinguish our work better}{is controlled by the surface
+  reaction and not the solid-state diffusion}. Furthermore, the
+authors also reported a rapid increase in the exchange current at the
+\nca{} particle surface as the delithiation progresses.
 
 %%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 %%%%%%%%%%%%%%%%%%%%%
 
+\todo{Write a conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Materials and Methods}

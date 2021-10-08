@@ -1,4 +1,7 @@
 % Drafting
+
+\usepackage[latexmk]{lwarp}
+
 \usepackage{xcolor,soul}
 \usepackage{fullpage}
 \usepackage{setspace}
@@ -9,8 +12,11 @@
 \definecolor{vgcolor}{HTML}{c88bff} % MPL purple
 \definecolor{citecolor}{HTML}{c696f0} % MPL purple
 
+
 % Tools for leaving todo notes around
 \usepackage[colorinlistoftodos]{todonotes}
+%% \renewcommand{\todo}{}
+%% \renewcommand{\hl}[1]{#1}
 \newcommand{\citeme}[1]{%
   \todo[color=citecolor]{%
   \ifstrempty{#1}{[citation needed]}{[cite: #1]}%
