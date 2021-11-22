@@ -18,6 +18,9 @@
 \input{acronyms}
 \input{metadata}
 
+\newlength{\figwidth}
+\setlength{\figwidth}{3.5in}
+
 \myexternaldocument{supplement}
 
 \begin{document}
@@ -498,8 +501,9 @@ employed, can also be found in the \mw{ref to specific
 
 In this section, we report the results of the sensitivity studies with
 respect to different forms of $i_0$. \ce{Li^+} diffusivity was set to
-$D_S>\SI{5e-15}{\meter\squared\per\second}$ for all simulations in
-this section to avoid solid-state limitation in the simulated system.
+$D_S>\SI{5e-15}{\meter\squared\per\second}$ (obtained from
+\cite{amin2015}) for all simulations in this section to avoid
+solid-state limitation in the simulated system.
 
 %% Selection of i_0 function
 
@@ -621,13 +625,16 @@ accelerated delithiation.
 For the sensitivity analyses with respect to $D_s$ , two forms of
 $D_s$ were selected: a) the literature reported form, which was
 obtained from \vg{}{Ref xx. [ref]}, and b) the model form similar to
-the smooth step functional form used for $i_0$ (Figure \vg{}{Figure
+the smooth step functional form used for $i_0$ (Figure \vg{will send}{Figure
   xx}). The traditional form of $i_0$ was used for the simulations in
 this section.
 
-The results for the delithiation dynamics for both cases are presented
-in \vg{}{Figure xx}. No accelerated delithiation is observed in either
-case. For a particle to exhibit accelerated delithiation, the
+The results for the delithiation dynamics for the first case
+(literature reported $D_S$, tradition form of $i_0$) have been
+presented in Figure \ref{fig:i0_basic}, and those for the second case
+(model for of $D_S$, traditional form of $i_0$) are shown in Figure
+\ref{fig:Ds_profiles}. No accelerated delithiation is observed in
+either case. For a particle to exhibit accelerated delithiation, the
 \ce{Li^+} flux at the particle/electrolyte interface must increase
 rapidly in a short period of time. Such an increase in flux cannot be
 realized even if diffusion has a step-like dependence on $X_{\rm{Li}}$
@@ -636,7 +643,7 @@ only increases in the shell of the particle close to the particle
 surface; the particle bulk continues to have the low diffusivity
 value. In other words, the entire particle does not undergo rapid
 delithiation; instead, only the shell close to the particle surface
-exhibits such behavior (\vg{}{Figure xx}).
+exhibits such behavior (Figure \ref{fig:Ds_profiles}).
 
 %% \subsection{Large-Scale Simulation}
 
@@ -967,6 +974,21 @@ using matplotlib\cite{matplotlib}.
     order of their size. The inset shows the orientation of particles
     in the electrode.}
   \label{fig:30_particles}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\figwidth]{figures/Ds_profiles.jpg}
+  \caption{}
+  \label{fig:Ds_profiles}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\figwidth]{figures/Ds_comparison.pdf}
+  \caption{Log scale comparison of the two $D_S$ functions used in the
+    sensitivity analyses. The dashed lines for the literature reported
+    function represent constant extrapolation used to determine the
+    $D_S$ values beyond the range reported in the literature.}
+  \label{fig:Ds_comparison}
 \end{figure}
 
 
