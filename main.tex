@@ -54,14 +54,6 @@
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{itemize}
-\item \citeme{wang2020-6} -> Feng's TXM/XANES NMC-811 paper
-\item \citeme{chueh2021} -> Will Chueh's in-situ XRD/STXM NMC-333 paper
-\item \citeme{rao2021} -> iSCAT of LCO particles during cycling: saw
-  individual particles going and maybe linked it to diffusion? (check
-  that last part)
-\end{itemize}
-
 % NCA/NMC material
 Layered transition metal oxides represent the state-of-the-art of
 cathodes materials for electrochemical energy storage. In order to
@@ -458,8 +450,10 @@ mapping techniques (\gls{uxrd} and \gls{txm}) and with both low-energy
 (\SI{25}{\kilo\electronvolt}) X-rays, and with varying carbon content
 in the electrode composite. The persistent of this phenomena across
 observations suggest that this behavior is inherent to layered cathode
-materials rather than an artifact of the technique, further supported
-by previous reports\cite{chueh2021}\citeme{rao2021 and others?}. These
+materials rather than an artifact of the technique, consistent with
+previous reports using other techniques on related \nmc{} and
+\ce{LiCoO2} layered
+materials\cite{chueh2021,rao2021,wang2020-6}. These experimental
 results do not by themselves provide an explanation for why rapid
 delithiation occurs between secondary particles. Detailed models of
 delithiation dynamics are needed to link the observed behavior to
@@ -679,21 +673,37 @@ an electrode level model, which is beyond the scope of this study.
 %% \subsection{Conclusion of the Modeling Study}
 
 Based on the insights generated above, we conclude that the
-accelerated delithiation in \nca{} particle is controlled by surface
+accelerated delithiation in \nca{} particles is controlled by surface
 charge-transfer kinetics instead of bulk \ce{Li^+} diffusion dynamics
 in the active material. Moreover, $i_0$ must have a large ($\frac{
-  i_{0,\rm{max}} }{ i_{0,\rm{min}} } \approx 1000$) and sharp ($\Delta
+  i_{0,\rm{max}} }{ i_{0,\rm{min}} } \sim 10^3$) and sharp ($\Delta
 X_{\rm{Li}} \approx 0.05$) change around $X_{\rm{Li}} = 0.9$ to
-reproduce the experimentally observed accelerated delithiation. We
-note that these values are just suggestive of the orders of magnitude
-for each quantity and should not be considered precise. These results
-agree well with the report by Park et al.\cite{chueh2021}, where the
-authors show that the accelerated delithiation (or
-electro-autocatalysis, in their terms) \mw{So what did we add then? We
-  need to distinguish our work better}{is controlled by the surface
-  reaction and not the solid-state diffusion}. Furthermore, the
-authors also reported a rapid increase in the exchange current at the
-\nca{} particle surface as the delithiation progresses.
+reproduce the experimentally observed accelerated
+delithiation. Several other studies have shown rapid delithiation
+kinetics. Park et al.\cite{chueh2021} used operando ensemble \gls{xrd}
+to infer accelerated delithiation in \nmc{} secondary particles,
+supported by ex-situ \gls{txm}--\gls{xas}, and also attributed this
+behavior to changes in exchange current density. The results shown
+here are entirely consistent with those from Park et al.\ and provide
+further insight into this phenomenon by way of operando
+\gls{txm}--\gls{xas} and \gls{uxrd} used to build detailed models of
+the delithiation kinetics, as well as including \nca{} in the cathode
+materials exhibiting this behavior. Merryweather et
+al.\cite{rao2021}\ showed rapid delithiation in \ce{LiCoO2} single
+crystal particles through \gls{iscat}, though attributed this behavior
+to changes in \ce{Li^+} diffusion rather than exchange current
+density. Similarly, Ge et al.\cite{wang2020-6}\ showed rapid
+delithiation in \nmc{} single crystal particles using operando
+\gls{txm}--\gls{xas}, and attributed this to \ce{Li^+} diffusion
+limitations by way of finite element analysis. Their models and those
+described here (Figure \mw{X}) both predict spatial heterogeneity in
+the diffusion limited case\cite{wang2020-6}, which is not observed for
+polycrystalline secondary particles, neither in this work nor that of
+Park et al\cite{chueh2021}. This difference between polycrystalline
+and single crystal cathode behavior implies that \ce{Li^+} diffusion
+may be the limiting factor in the case of large single crystal
+particles, but that poly-crystalline secondary particles are instead
+limited by charge-transfer kinetics.
 
 %%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
