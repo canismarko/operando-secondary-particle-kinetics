@@ -10,7 +10,11 @@
 
 \definecolor{mwcolor}{HTML}{8af67d}
 \definecolor{vgcolor}{HTML}{c88bff} % MPL purple
-\definecolor{citecolor}{HTML}{c696f0} % MPL purple
+\definecolor{jccolor}{HTML}{00ced1} % Dark turquoise
+\definecolor{ktcolor}{HTML}{8b008b} % Dark magenta
+\definecolor{yscolor}{HTML}{cb4154} % Brick red
+\definecolor{citecolor}{HTML}{ffff00} % Highlighter yellow
+%% \definecolor{citecolor}{HTML}{c696f0} % MPL purple
 
 
 % Tools for leaving todo notes around
@@ -32,5 +36,23 @@
   \sethlcolor{vgcolor}\hl{#2}\sethlcolor{yellow}%
   \ifstrempty{#1}{}{%
     \todo[color=vgcolor]{#1 [VG]}%
+  }%                  
+}
+\newcommand{\jc}[2]{%
+  \sethlcolor{jccolor}\hl{#2}\sethlcolor{yellow}%
+  \ifstrempty{#1}{}{%
+    \todo[color=jccolor]{#1 [JC]}%
+  }%                  
+}
+\newcommand{\kt}[2]{%
+  \sethlcolor{ktcolor}\hl{#2}\sethlcolor{yellow}%
+  \ifstrempty{#1}{}{%
+    \todo[color=ktcolor]{#1 [KT]}%
+  }%                  
+}
+\newcommand{\ysy}[2]{%
+  \sethlcolor{yscolor}\hl{#2}\sethlcolor{yellow}%
+  \ifstrempty{#1}{}{%
+    \todo[color=yscolor]{#1 [YSY]}%
   }%                  
 }
