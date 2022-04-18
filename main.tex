@@ -11,7 +11,7 @@
 \usepackage{siunitx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{glossaries}
-\usepackage{xr} % For cross-referencing wit the supplemental information
+\usepackage[xr,user]{zref} % For cross references to supplemental figures
 \usepackage{textgreek}
 
 \input{macros}
@@ -21,7 +21,7 @@
 \newlength{\figwidth}
 \setlength{\figwidth}{3.5in}
 
-\myexternaldocument{supplement}
+\myexternaldocument[si:]{supplement}
 
 \begin{document}
 
@@ -435,7 +435,7 @@ studies\cite{deb2005,muto2009} did not reach the \SI{4.7}{V} cell
 cut-off potential needed for full lithium extraction and hence full
 \ce{Ni} oxidation, extrapolation of the trend in Table
 \ref{tab:bulk-xas-extraction} and Figure
-\ref{fig:bulk-xas-extraction}a predicts a change in whiteline energy
+\ref{si:fig:bulk-xas-extraction}a predicts a change in whiteline energy
 upon full delithiation of \SI{\approx3}{eV}. This discrepancy between
 particle-level and ensemble average \ce{Ni} oxidation suggests that an
 appreciable portion of the particles in the specimens measured by
@@ -887,7 +887,7 @@ sub-pixel resolution by using an iterative registration method with
 intensity-base automatic image alignments \cite{lee2019-3}. The
 chemical composition of each pixel was estimated by the position of
 the whiteline peak, which is proportional to the state of charge
-(Figure \ref{fig:bulk-xas-extraction}). The positions of the whiteline
+(Figure \zref{fig:bulk-xas-extraction}). The positions of the whiteline
 peaks were determined by the Gaussian fits together with 7 nearest
 points near the highest \gls{od} position.
 

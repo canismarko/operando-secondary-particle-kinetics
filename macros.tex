@@ -26,9 +26,9 @@
 
 \newcommand*{\myexternaldocument}[2][]{%
   \ifstrempty{#1}{%
-    \externaldocument{#2}%
+    \zexternaldocument*{#2}%
   }{%
-    \externaldocument[#1]{#2}%
+    \zexternaldocument*[#1]{#2}%
   }%
   \addFileDependency{#2.tex}%
   \addFileDependency{#2.aux}%
