@@ -10,7 +10,7 @@ SUPPJOBNAME=${BASE}-supplement-${BRANCH}-${VERSION}-${HASH}
 LWARP=lwarpmk
 FIGDIR=figures
 BIBFILE=refs.bib
-FULL_BIBFILE=${HOME}/research/literature/refs.bib
+FULL_BIBFILE=${HOME}/Documents/literature/refs.bib
 
 .PHONY: deploy clean cleanall docx all
 
