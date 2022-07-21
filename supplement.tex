@@ -62,9 +62,9 @@ as\cite{newman1993,newman1994}
   \label{eq:1a}
 \end{equation}
   
-where $c_p$ is the Li concentration in the electrode particles, $t$ is
-time, $r$ is the radial distance, $D_p$ is the Li diffusivity in
-\nca{}. The subscript $k$ represents the particle number from hereon.
+where $c_p$ is the \gls{xLi} in the electrode particles, $t$ is time,
+$r$ is the radial distance, $D_p$ is the Li diffusivity in \nca{}. The
+subscript $k$ represents the particle number from hereon.
 
 The boundary conditions for Equation \ref{eq:1a} are as
 follows\cite{newman1993,newman1994}
@@ -77,7 +77,7 @@ follows\cite{newman1993,newman1994}
 \end{subequations}
 
 where $R_{p,k}$ represents the particle radius. Furthermore, all the
-particles are set to have an initial concentration of $c_p^0$.
+particles are set to have an initial \gls{xLi} of $c_p^0$.
 
 The electrochemical reaction flux ($J_k$) at the \nca{}/electrolyte
 interface for each particle is calculated using the Butler-Volmer
@@ -263,7 +263,8 @@ parameters for individual particle, $\psi{}_k$:
 
 where $r$ is the radius of this particle, $d$ is the distance to the
 particle center, $\delta$ determines the interfacial thickness and we
-\vg{units?}{$\delta = \SI[parse-numbers=false]{\sqrt{2}}{\micro\meter}$} .
+used \vg{units?}{$\delta =
+  \SI[parse-numbers=false]{\sqrt{2}}{\micro\meter}$} .
 
 Figure \ref{fig:30-particle-box} shows the particle size distributions obtained by
 stratified sampling\cite{parsons2017} and the computational domain for
@@ -342,8 +343,8 @@ The remaining model parameters are described in Table \ref{tab:model-parameters}
     Electronic conductivity of Li, $\sigma_{\mathrm{Li}}$ & \num{1e5} & \si{\siemens\per\meter} & --  \\
     Exchange current density of Li, $i'_0$ & \num{9.65e1} & \si{\ampere\per\meter\squared} & Literature \cite{moshtev1984} \\
     \gls{ocv} of Li metal, $U_{\mathrm{Li}}^0$ & 0 & \si{\volt} & -- \\
-    Max Li concentration in NCA, $c_p^{\mathrm{max}}$ & \num{4.8e4} & \si{\mole\per\meter\cubed} & Assumed based on the range reported in the literature \cite{sauer2015,sauer2018,bund2018} \\
-    Initial Li concentration in NCA, $c_p^0$ & $0.99\times c_p^{\mathrm{max}}$ & \si{\mole\per\meter\cubed} & Assumed \\
+    Max \gls{xLi} in NCA, $c_p^{\mathrm{max}}$ & \num{4.8e4} & \si{\mole\per\meter\cubed} & Assumed based on the range reported in the literature \cite{sauer2015,sauer2018,bund2018} \\
+    Initial \gls{xLi} in NCA, $c_p^0$ & $0.99\times c_p^{\mathrm{max}}$ & \si{\mole\per\meter\cubed} & Assumed \\
     Initial electrolyte salt concentration, $c_e^0$ & \num{1e3} & \si{\mole\per\meter\cubed} & Experiment \\
     Temperature & \num{2.98e2} & \si{\kelvin} & Experiment \\
     1C current density & \num{1.164} & \si{\ampere\per\meter\squared} & Experiment \\
@@ -433,9 +434,9 @@ $x^{\ast}$, and $\Delta x$.
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{8-particle-evolution.pdf}
-  \caption{Evolution of $\langle x \rangle$ for the 8-particle system obtained using
-    the tradition function of \gls{ecd}. All the particles delithiate
-    at the same rate.}
+  \caption{Evolution of $\langle x \rangle$ for the 8-particle system
+    obtained using the traditional function of \gls{ecd}. All the
+    particles delithiate at the same rate.}
   \label{fig:x-evolution}
 \end{figure}
 

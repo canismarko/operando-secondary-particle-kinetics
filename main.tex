@@ -36,65 +36,70 @@
   measure delithiation \textit{in operando} at the scale of secondary
   particle agglomerates in \nca{} and \nmc{} cathodes during
   charge. After an initial latent phase, individual secondary
-  particles undergo rapid, stochastic, and largely uniform
-  delithiation, which is in contrast with the gradual increase in
-  potential measured for the whole cell. These results provide direct
-  evidence that the apparent two-phase transition is emergent from
-  kinetic limitations governing a population of secondary
-  particles. Physics-based modeling further shows that to reproduce
-  the experimental results, an increase in \gls{ecd} over three orders
-  of magnitude is required during delithiation.  The specifics and
+  particles undergo rapid, \vg{By stochastic do we mean random
+    particles? [MW: yes]}{stochastic}, and largely uniform
+  delithiation, which is in contrast with the gradual increase in cell
+  potential. These results provide direct evidence that the apparent
+  two-phase transition emerges from kinetic limitations experienced by
+  a population of secondary particles. Physics-based modeling shows
+  that, to reproduce the experimental results, \gls{ecd} must depend
+  on \gls{xLi}, and that \gls{ecd} should increase rapidly over three
+  orders of magnitude when $\gls{xLi} \approx 0.9$. The specifics and
   implications of this jump in \gls{ecd} are crucial to understanding
   the charge-storage reaction of Li-ion battery cathodes.
 \end{abstract}
 
-\listoftodos
+% \listoftodos
+
+\mw{Include this paper: https://pubs.acs.org/doi/pdf/10.1021/acs.nanolett.2c01818}{}
+\mw{Include this paper: https://onlinelibrary.wiley.com/doi/10.1002/anie.202205394}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%
 
 % NCA/NMC material
-Layered transition metal oxides represent the state-of-the-art of
-cathodes materials for electrochemical energy storage. In order to
-meet ever more ambitious performance targets, it will be necessary to
+Layered transition metal oxides represent the state-of-the-art
+cathode materials for electrochemical energy storage. In order to
+meet ever more ambitious performance targets, it is necessary to
 improve their efficiency and reliability beyond current
 limitations. While layered cathodes provide high theoretical capacity,
 only \SI{\approx70}{\percent} is realistically achievable, with a
-steeper penalty imposed at higher rates\citeme{}. This observation
-points to kinetic barriers preventing full utilization of the
-cathode. Careful observation of local heterogeneity, combined with
-detailed simulation of the underlying electrochemical processes, can
-reveal details of the kinetic factors governing these reactions,
-ultimately leading to higher performing energy storage systems. 
+steeper penalty imposed at higher rates of charge and
+discharge\citeme{}. This observation points to kinetic barriers
+preventing full utilization of the cathode. Careful observation of
+local heterogeneity, combined with detailed simulation of the
+underlying electrochemical processes, can reveal details of the
+kinetic factors governing these reactions, ultimately leading to
+energy storage systems with superior performance.
 
 % TXM/XRD background
 
 Synchrotron X-ray characterization provides several methods to
 evaluate heterogeneity within secondary particles of layered cathode
-materials. \Gls{uxrd} extends the structural characterization of
-conventional \gls{xrd} with improved spatial resolution. Incoming
-X-rays are focused to a sub-micron spot and scanned over individual
-secondary particles. At each mapping position, the diffraction pattern
-captured by an area detector provides details of the crystal
-structure, such as the unit-cell parameters, which can then be related
-to chemical states (e.g.\ extent of lithiation). A complementary
-technique, \Gls{txm}, produces projection micrographs showing the
-optical depth of the object with \SI{\approx30}{nm} spatial
-resolution, depending on the instrument configuration. The tunable
-nature of synchrotron X-ray sources allows micrographs of the same
-field of view to be captured at several energies. To produce chemical
-maps, images are collected at a range of energies spanning an X-ray
-absorption edge, producing a separate spectrum for each pixel in the
-field of view and, after data reduction, a chemical map with chemical
-significance (e.g.\ metal oxidation states). For both techniques,
-since the individual measurements are projections through the
-specimen, the resulting maps show the average state through the
-optical axis (perpendicular to the image plane).
+materials. \Gls{uxrd} extends the structural characterization
+capability of conventional \gls{xrd} with improved spatial
+resolution. Incoming X-rays are focused to a sub-micron spot and
+scanned over individual secondary particles. At each mapping position,
+the diffraction pattern captured by an area detector provides details
+of the crystal structure, like the lattice parameters, which can then
+be related to chemical states (e.g.\ extent of lithiation). A
+complementary technique, \Gls{txm}, produces projection micrographs
+showing the optical depth of the object with \SI{\approx30}{nm}
+spatial resolution, depending on the instrument configuration. The
+tunable nature of synchrotron X-ray sources allows micrographs of the
+same field of view to be captured at several energies. To produce
+chemical maps, images are collected at a range of energies spanning an
+X-ray absorption edge, which produce a separate spectrum for each
+pixel in the field of view and a chemical map with chemical
+significance (e.g.\ metal oxidation states) after data reduction. For
+both techniques, since the individual measurements are projections
+through the specimen, the resulting maps show the average state
+through the optical axis (perpendicular to the image plane).
 
-The high transmission provided by hard X-rays is conducive to making
-measurements inside an assembled cell (is-situ) and, ideally, while
-the cell is actively cycling (operando). In addition to avoiding
+The long penetration depth provided by hard X-rays is conducive to
+making measurements inside an assembled cell (in-situ) and, ideally,
+while the cell is actively cycling (operando). In addition to avoiding
 relaxation effects, in-situ measurement allows the same object to be
 measured repeatedly at different states of charge. Tracking the same
 object during a (dis)charge cycle allows for a direct comparison
@@ -103,26 +108,28 @@ how heterogeneity evolves.
 
 %% NCA/NMC background
 
-Ensemble \gls{xrd} has shown a mixture of phases in \nca{} electrodes
-during the first charge when stored in ambient conditions, in contrast
-with the solid-solution, single-phase transformation seen during
-subsequent charge cycles\cite{robert2015}. A possible origin is the
-presence of a lithium diffusion barrier arising from surface
-\ce{Li2CO3} formation upon exposure to \ce{CO2} and \ce{H2O}. When
-pristine \nca{} was protected from ambient air exposure, a
-single-phase solid-solution reaction was observed during first
-charge\cite{grenier2017}. This observation led to the conclusion that
-the secondary particles contained an uneven coating of \ce{Li2CO3},
-which must be broken electrochemically before the reaction can
-proceed. The need to break this coating would produce different
-timelines for reaction initiation in different particles, resulting in
-a bimodal distribution of oxidation states and the appearance of
-non-equilibrium heterogeneity by \gls{xrd}.
-
-The oxidation states of individual secondary particles were measured
-by operando \gls{txm} \gls{xas} and, indeed, particles were observed
-to be either in a pristine or partially oxidized state with more
-particles becoming oxidized at higher states of
+\vg{The overall discussion [in these 2 paragraphs] gave me an
+  impression that the Li2CO3 is the main reason behind the two-phase
+  transformation. We might want to highlight that shortcomings of this
+  explanation a bit more clearly.}{Ensemble} \gls{xrd} has shown a
+mixture of phases in \nca{} electrodes during the first charge when
+stored in ambient conditions, unlike the single-phase (solid solution)
+transformation seen during subsequent charge
+cycles\cite{robert2015}. A possible origin is the presence of a
+lithium diffusion barrier arising from surface \ce{Li2CO3} formation
+upon exposure to \ce{CO2} and \ce{H2O}. When pristine \nca{} was
+protected from ambient air exposure, a single-phase (solid solution)
+reaction was observed during first charge\cite{grenier2017}. This
+observation led to the conclusion that the secondary particles
+contained an uneven coating of \ce{Li2CO3}, which must be broken
+electrochemically before the reaction can proceed. The need to break
+this coating would produce different timelines for reaction initiation
+in different particles, resulting in a bimodal distribution of
+oxidation states and the appearance of non-equilibrium heterogeneity
+by \gls{xrd}. The oxidation states of individual secondary particles
+were measured by operando \gls{txm} \gls{xas} and particles were
+indeed observed to be either in a pristine or partially oxidized state
+with more particles becoming oxidized at higher states of
 charge\cite{nowack2016}. While \ce{Li2CO3} clearly plays a role in the
 ability of lithium to penetrate into the secondary particle, it was
 also demonstrated that the presence of two phases by \gls{xrd} is
@@ -130,38 +137,40 @@ suppressed by stronger compaction of the electrode during laminate
 preparation\cite{bobrikov2018}. A related layered cathode material,
 \nmc[333]{}, is less prone to \ce{Li2CO3} formation, even showing
 lower levels of \ce{Li2CO3} after one month of air exposure than those
-found in pristine \nca{}\cite{shizuka2007}. In-situ \gls{xrd} studies
-of \nmc[333]{} during first charge show a largely single-phase
-(solid-solution) transformation \cite{hulzen2018,ahn2017,zhou2016-2},
-though some studies reveal two crystallographic phases with a small
-difference in \emph{a} and \emph{c} unit-cell parameters and
-coexisting over a narrow range of delithiation compared to
-\nca{}\cite{yoon2006,hua2018}. The oxidation dynamics of these layered
-cathode materials warrant further study to clarify the nature of the
-chemical transformation, especially in view of locating the onset and
-progression of heterogeneity, within and between the secondary
-particles that typically compose a cathode. It is important to
-elucidate how general this behavior is among the general class of
-layered oxides that are leading candidates as battery materials.
+found in pristine \nca{}\cite{shizuka2007}. For the most part, in-situ
+\gls{xrd} studies of \nmc[333]{} during first charge show a
+transformation that is primarily single-phase (solid
+solution)\cite{hulzen2018,ahn2017,zhou2016-2}, though some studies
+reveal two crystallographic phases with a small difference in \emph{a}
+and \emph{c} lattice parameters coexisting over a narrow range of
+delithiation compared to \nca{}\cite{yoon2006,hua2018}. The oxidation
+dynamics of these layered cathode materials warrant further study to
+clarify the nature of the chemical transformation, especially in view
+of locating the onset and progression of heterogeneity, within and
+among the secondary particles that typically compose a cathode. It is
+important to elucidate how general this behavior is among the general
+class of layered oxides that are leading candidates as battery
+materials.
 
 This work further examined the heterogeneities present in secondary
 particles of established layered cathode materials, namely \nca{},
 \nmc[333]{}, and \nmc[532]{}. A combination of operando \gls{uxrd} and
-\gls{txm} \gls{xas} experiments probed both the inter-particle
+\gls{txm} \gls{xas} experiments probed the inter-particle
 heterogeneity. While the cell potential and prior reports of ensemble
 \gls{xas} indicated a smooth transition to higher oxidation state upon
 delithiation\cite{deb2005,muto2009}, individual particles exhibited a
 sharp and stochastic transition from an initial, latent state to one
-containing highly oxidized \ce{Ni}. Physics-based simulations were
-then conducted to determine the role of fundamental electrochemical
+containing highly oxidized \ce{Ni}. We refer to this phenomenon rapid
+or accelerated delithiation. Physics-based simulations were then
+conducted to determine the role of fundamental electrochemical
 processes in generating this rapid delithiation behavior, which showed
-that this behavior due to a significant increase in the \gls{ecd}
-covering several orders of magnitude during delithiation. These
-observations highlight the decoupling and interaction between single
-particle dynamics and the macroscopic response in battery electrodes
-even when they follow mechanisms of solid solution. The identification
-of \gls{ecd} as controlling parameter in these materials redirects
-models away from a focus on mass diffusion.
+that this behavior due to a significant increase in \gls{ecd} covering
+several orders of magnitude during delithiation. These observations
+highlight the decoupling between single-particle dynamics and the
+macroscopic response in battery electrodes even when they follow
+mechanisms of solid solution. The identification of \gls{ecd} as
+controlling parameter in these materials redirects models away from a
+focus on mass diffusion.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Operando observations of single particle dynamics}
@@ -169,154 +178,196 @@ models away from a focus on mass diffusion.
 
 %% \subsection{\Gls{uxrd} - Interparticle Dynamics}
 
-Secondary particles of \nca{} were tracked during their first change
+Secondary particles of \nca{} were tracked during their first charge
 and discharge using operando \gls{uxrd} mapping. Dilute
-(\SI{20}{\percent}) \nca{} electrodes were use to isolate the response
-of individual particles from each other. For each X--Y mapping
-position, the individual 2D diffraction signals were integrated to
-one-dimensional patterns. While data was collected at resolutions,
-~500 nm, below the size of the particles, for the purpose of our
-analyses, all patterns from the same individual particle at a given
-time stamp during the reaction were summed (Figures \ref{fig:uxrd}a,b
-and \zref{si:fig:xrd-echem}). In all cases, the pristine state matched
-the literature results for \nca{} \cite{novak2015}, with the exception
-of an extra feature at $Q\approx\SI{3.6}{\per\angstrom}$ due to
+(\SI{20}{\percent} w/w) \nca{} electrodes were used to isolate the
+response of individual particles from each other. For each X--Y
+mapping position, the individual 2D diffraction signals were
+integrated to one-dimensional patterns and converted from angular
+domain ($2\theta$) to the \gls{q} domain. While data were collected
+with \SI{\approx500}{\nano\meter} spatial resolution, smaller than the
+particle agglomerates, all patterns from the same particle agglomerate
+at a given time stamp during the reaction were summed for the analyses
+presented here (Figures \ref{fig:uxrd}a,b and
+\zref{si:fig:xrd-echem}). In all cases, the pristine state matched the
+literature results for \nca{} \cite{novak2015}, with the exception of
+an extra feature at $\gls{q}\approx\SI{3.6}{\per\angstrom}$ due to
 metallic \ce{Li} (PDF \#00-001-1131). Small extraneous peaks occurred
 due to random aberrations in individual pixels on the diffraction
 detector (Figure \zref{si:fig:xrd-echem}).
 
-The diffraction peaks for \gls{p1} began to shift in $Q$ soon after
-the onset of oxidation (Figure \ref{fig:uxrd}a), following the same
-overall trajectory as reported for the ensemble
+During (de)lithiation, the crystal structure of the cathode expands
+and contracts in response to transition metal oxidation states and
+lithium site fraction. Each diffraction peak corresponds to a spacing
+between planes in the crystal lattice, referred to as \gls{d}, where
+$d=\frac{2\pi}{\vert\vec{q}\vert}$. The value of \gls{d} for a given
+peak is related to the lattice parameters through the hkl indices for
+the corresponding plane. For example, \gls{d} for the (003) peak is
+determined solely by the $c$ lattice parameter, while \gls{d} for the
+(104) peak is based on both the $a$ and $c$ lattice parameters. This
+allows lattice parameters to be extracted from the \gls{d} values of
+the diffraction peaks.
+
+The diffraction peaks for \gls{p1} began to shift in \gls{q} soon
+after the onset of oxidation (Figure \ref{fig:uxrd}a), following the
+same overall trajectory as reported for the ensemble
 average\cite{robert2015}. This similarity and the absence of peak
 splitting indicates that individual particles followed a rather single
 phase mechanism, with no fictitious phase separation induced by
 surface impurities \cite{grenier2017}. The most characteristic changes
 can be observed at the (003) and (104) reflections. The former showed
-an initial decrease in $Q$ (higher $d$) (Figure \ref{fig:uxrd}a),
-followed by a sudden increase in $Q$ beyond the initial state,
-representing an expansion then contraction along the $c$ axis during
-delithiation\citeme{}. The (104) diffraction peak gradually shifted to
-higher $Q$ (lower $d$) upon removal of \ce{Li} (Figure
-\ref{fig:uxrd}b), reflecting the balance between the trend along $c$
-and the continuous decrease in the $a$ dimension.\cite{robert2015}
-While the peak positions of \gls{p2} (\zref{si:fig:xrd-echem}b) underwent
-similar changes, the peaks did not begin shifting until the
-electrochemical cell had reached a higher potential
-\SI{\approx4.5}{\volt}. During discharge, peaks in both \gls{p1} and
-\gls{p2} shifted to lower $Q$ at approximately the same rate.
+an initial decrease in \gls{q} (higher \gls{d}) (Figure
+\ref{fig:uxrd}a), followed by a sudden increase in \gls{q} beyond the
+initial state, representing an expansion then contraction along the
+$c$ axis during delithiation\citeme{}. The (104) diffraction peak
+gradually shifted to higher \gls{q} (lower \gls{d}) upon removal of
+\ce{Li} (Figure \ref{fig:uxrd}b), reflecting the balance between the
+trend along $c$ and the continuous decrease in the $a$
+dimension.\cite{robert2015} While the peak positions of \gls{p2}
+(Figure \zref{si:fig:xrd-echem}b) underwent similar changes, the peaks
+did not begin shifting until the electrochemical cell had reached a
+higher potential \SI{\approx4.5}{\volt}. During discharge, peaks in
+both \gls{p1} and \gls{p2} shifted to lower \gls{q} at approximately
+the same rate.
 
-The evolution of the unit cell parameters for each particle as a
+The evolution of the lattice parameters for each particle as a
 function of cell potential were extracted from refinements of the
 diffraction patterns (Figures \ref{fig:uxrd}d and
-\zref{si:fig:cell-pars}). Both particles reached cell parameters at
-the end of charge and discharge mostly consistent with full
-delithiation and relithiation, respectively.\cite{novak2015} The
-trends followed by the cell parameters during the reaction again
-agreed with measurements of the ensemble average in the
-literature\cite{novak2015}, but their correlation with potential
-differed. The cell parameters for \gls{p1} and \gls{p2} began
-shifting, respectively at a cell potential below
+\zref{si:fig:cell-pars}). Both particles exhibited lattice parameters
+at the end of charge and discharge consistent with full delithiation
+and relithiation, respectively\cite{novak2015}. The trends followed by
+the lattice parameters during the reaction again agreed with
+measurements of the ensemble average in the
+literature\cite{novak2015}, but \mw{differed from what}{their
+  correlation with potential differed}. The lattice parameters for
+\gls{p1} and \gls{p2} began shifting at cell potentials below
 \SIrange{3.0}{3.8}{\volt} and at \SI{\approx4.5}{\volt}, respectively
 (Figure \ref{fig:uxrd}d). All in all, the rates of delithiation of
 each individual particle were different from the electrochemical
 response collected for the whole electrode. Both \gls{p1} and \gls{p2}
 achieved the same level of delithiation at the end of the charge
 sequence, observed in Figure \ref{fig:uxrd}e and by the peak positions
-in Figures \ref{fig:uxrd}a,b and \zref{si:fig:ind-peaks}. Since \gls{p2}
-did not start delithiating until late in the charge sequence, its
-maximum rate of delithiation was more than double that of
+in Figures \ref{fig:uxrd}a,b and \zref{si:fig:ind-peaks}. Since
+\gls{p2} did not start delithiating until late in the charge sequence,
+its maximum rate of delithiation was more than double that of
 \gls{p1}. This observation has no precedent in the literature for
-reactions involving solid solutions, where homogeneity removes the
-activation barrier toward nucleation of two-phase mechanisms.
+reactions involving solid solutions, \vg{I think we should provide a
+  brief explanation in the difference between the phase-transformation
+  led heterogeneity (like in LFP) vs. the heterogeneity observed here
+  in the introduction.}{}\kt{I don't understand this sentence.  It's
+  not that homogeneity removes the barrier.  The thermodynamic free
+  energy of a solid solution systems do not possess such a barrier, so
+  nothing to ``remove''. [MW: maybe a question for Brian]}{where
+  homogeneity removes the activation barrier toward nucleation of
+  two-phase mechanisms.}
 
 %% \subsection{u-XRD - Rates of (De)lithiation}
 
-Further insight into rates during the reaction was extracted from the
-relationship between x in \nca{x} and unit cell parameters available
-in the literature. The most comprehensive study was by Robert et
-al.\cite{robert2015} This relationship holds as long as single phases
-are observed, as in Figure \ref{fig:uxrd}a. Therefore, we leveraged it
-to evaluate the rates of delithiation undergone by each particle. We
+Further insight into rates of delithiation during the reaction was
+extracted from the relationship between \gls{xLi} in \nca{x} and
+lattice parameters available in the literature. The most comprehensive
+study was by Robert et al\cite{robert2015}.\ \kt{Are you demonstrating
+  this in this work, or is this from Robert et al?  If latter, I would
+  combine this sentence with the previous one by …, whose relationship
+  holds…. (MW: Another Brian question)}{This relationship holds as
+  long as single phases are observed}, as in Figure
+\ref{fig:uxrd}a. Therefore, we apply it to quantify the extent of
+lithiation of each particle (Figure \ref{fig:uxrd}e), which can then
+provide an estimate of the delithiation rates of each particle. We
 extracted a calibration curve from the second cycle in Robert et
-al.\cite{robert2015} because it was free from interference due to a
-fictitious heterogeneous transformation driven by kinetic limitations
-(\zref{si:fig:xrd-echem}). Figure \ref{fig:uxrd}e shows the \ce{Li}
-content in each \nca{x} particle obtained from the \emph{c} parameter
-during the first charge-discharge cycle. We chose to plot time stamps
-where reliable changes in cell parameter where observed, rather than
-all data points in Figure \ref{fig:uxrd}d. Similar trends were
-observed when calculating \ce{Li} content using the \emph{a} parameter
-(Figure \zref{si:fig:rates}). To allow for easier comparison between
-experiments and simulation, and given the lack of synchronization
-between macroscopic electrochemical signals and particle activity, the
-Li content was plotted against the ratio of time passed to the total
-time to reach the cutoff potential ($t_c$) to extract an effective
-rate of reaction.
+al\cite{robert2015}.\ because it was free from interference due to a
+heterogeneous transformation due to kinetic limitations (Figure
+\zref{si:fig:xrd-echem}). Figure \ref{fig:uxrd}e shows the \ce{Li}
+content obtained from the \emph{c} lattice parameter for each of the
+two \nca{x} particles during the first charge-discharge cycle. We
+selected data points for which \kt{This statement does not seem to be
+  consistent with the plot.  There are points where changes are very
+  little from a point to another.  Maybe it's not “change” but
+  “value”?}{reliable changes in lattice parameters were observed},
+rather than all data points in Figure \ref{fig:uxrd}d. Similar trends
+were observed when calculating \ce{Li} content using the \emph{a}
+parameter (Figure \zref{si:fig:rates}). In these plots, to allow for
+an easier comparison between experiments and simulation, the Li
+content was plotted against the ratio of time passed since current was
+applied to the total time to reach the cutoff potential ($t_c$).
 
 For both \gls{p1} and \gls{p2} the rate of delithiation, estimated
-from the slope in Figure \ref{fig:uxrd}e, was initially slow,
+from the slope in Figure \ref{fig:uxrd}e, was initially low,
 proceeding at \SI{\approx0.025}{\ce{Li}\per\hour}, or C/40. Once the
-overall content of the particle reached
-\ce{Li_{0.9}Ni_{0.80}Co_{0.15}Al_{0.05}O2}, the reaction dramatically
-accelerated nearly 10-fold, to \SI{\approx0.3}{\ce{Li}\per\hour}, or
-C/3, until an average composition \nca{0.5}, followed by renewed
-deceleration, to \SI{0.1}{\ce{Li}\per\hour}, or C/10, and rather small
-changes until the sign of the current was reverted. In the case of
-\gls{p2} there was very little delithiation for the first
-\SI{0.8}{t_c}. However, once started, delithiation proceeded
-similarly, with an 20-fold acceleration at \nca{0.9} to
-\SI{\approx0.66}{\ce{Li}\per\hour}, or C/1.5, which lasted until an
-average particle composition \nca{0.5}, where a slowdown to below
-\SI{0.1}{\ce{Li}\per\hour}, or C/10, took place for the remainder of
-the oxidation. Upon discharge of the cell, after \SI{1.0}{t_c}, both
-particles relithiated quickly at the initial stages, so that too few
-data points were captured for a reliable quantification. When the cell
-parameters reached values assigned to
-\ce{Li_{0.8}Ni_{0.80}Co_{0.15}Al_{0.05}O2}, the rates slowed down to
-\SI{\approx0.025}{\ce{Li}\per\hour}, or C/40. The behavior was
-qualitatively comparable to the first charge, including \gls{p1}
-reacting earlier than \gls{p2}.
+overall content of the particle reached \Li{0.9}, the reaction
+dramatically accelerated nearly 10-fold, to
+\SI{\approx0.3}{\ce{Li}\per\hour}, or C/3, until an average
+composition \Li{0.5}, followed by renewed deceleration, to
+\SI{0.1}{\ce{Li}\per\hour}, or C/10, leading to a rather small change
+in Li fraction until the sign of the current was reversed. In the case
+of \gls{p2} there was very little delithiation for the first
+\SI{0.8}{t_c}. However, once it began rapid delithiation, the Li
+fraction evoled in a similar manner as \gls{p1}, with a 20-fold
+acceleration at \Li{0.9} to \SI{\approx0.66}{\ce{Li}\per\hour}, or
+C/1.5, which lasted until an average particle composition \Li{0.5},
+after which the rate fell below \SI{0.1}{\ce{Li}\per\hour}, or C/10,
+for the remainder of the delithiation process. Upon discharge of the
+cell, i.e.\ after \SI{1.0}{t_c}, both particles relithiated quickly at
+the initial stages, with the consequence that too few data points were
+captured for a reliable quantification. When the lattice parameters
+reached values corresponding to \Li{0.8}, the rates fell to
+\SI{\approx0.025}{\ce{Li}\per\hour}, or C/40. \kt{Just to make sure,
+  you are saying the discharge process is similar to the charge
+  process?  I think it's best to provide more details since I don't
+  usually think of the discharge process to be comparable to charge
+  process (it's opposite).  I had to read this paragraph many times to
+  try to understand it, and I think it could be clearer. (MW:
+  Brian?)}{The behavior was qualitatively comparable to the first
+  charge, including} \gls{p1} delithiating earlier than \gls{p2}.
 
 
 %% \subsection{TXM - \nmc{}}
 
 %% \subsubsection{\nmc[333]{} Inter-particle Dynamics}
 
-A second independent set of experiments was pursued to evaluate the
-reproducibility of the varying reaction rates observed among particles
-by the operando \gls{uxrd} mapping. For this purpose, we resorted to
-operando \Gls{txm} \gls{xas} of \nca{} secondary particles during
-charging, which probed \ce{Ni} oxidation states at high spatial
-resolution. Frame-sets containing multiple particles were collected
+A second set of independent experiments was pursued to evaluate the
+reproducibility of the varying delithiation rates observed among
+particles by the operando \gls{uxrd} mapping. In particular, we
+employed operando \Gls{txm} \gls{xas} of \nca{} secondary particles
+during charging to probed \ce{Ni} oxidation states at high spatial
+resolution. Framesets containing multiple particles were collected
 during the first galvanostatic charge (Figure
 \ref{fig:txm-nca}a). Localized \gls{xas} K-edge spectra were averaged
 over all pixels in a single secondary particle. Upon delithiation, a
 progressive increase was seen in the energy of the absorption edge and
-the associated whiteline (Figures \zref{si:fig:isobestic-point} and
-\zref{si:fig:kedges}). For layered transition-metal oxide cathodes,
-the energy of maximum absorbance, or whiteline, of the \ce{Ni} K-edge
-increases as \ce{Ni^{3+}} oxidizes to \ce{Ni^{4+}}. Therefore,
-whiteline energy was used as a proxy for \ce{Ni} oxidation, which is
-the dominant redox process in \nca{}, using calibration data extracted
-from ex situ experiments (Figure \ref{fig:txm-nca}c). The result were
-plots of average state-of-charge for each particle as a function of
-time (Figure \ref{fig:txm-nca}d).
+the associated energy of maximum absorbance, or whiteline (Figures
+\zref{si:fig:isobestic-point} and \zref{si:fig:kedges}). For layered
+transition-metal oxide cathodes, energy of the the \ce{Ni} K-edge
+whiteline increases as \ce{Ni^{2+}} oxidizes to \ce{Ni^{3+}} and then
+\ce{Ni^{4+}}. Therefore, the whiteline energy was used as a proxy for
+\ce{Ni} oxidation, which is the dominant redox process in \nca{} and
+\nmc{}. Figure \ref{fig:txm-nca}c shows the changes in
+ensemble-average \ce{Ni} K-edge \gls{xas} spectra for \nca{} across
+known states of delithiation; these spectra were used as calibration
+data for the in-situ experiments. The resulting plots of average
+state-of-charge for each particle as a function of time are shown in
+Figure \ref{fig:txm-nca}d.
 
-Initially, the whiteline energies were constant, indicating no \ce{Ni}
-oxidation. At \SIrange{0.4}{0.6}{t_c}, the whiteline energies
-increased rapidly for all particles, reaching
-\SIrange{75}{100}{\percent} state-of-charge. Although some particles
-oxidized simultaneously with one another, there was no clear
-preference for when particles began rapid oxidation. Not all of the
-particles measured reached the full \SI{100}{\percent}
-state-of-charge. Additionally, upon reaching their maximum
-state-of-charge, some particles subsequently exhibited \ce{Ni}
-reduction, presumably due to side reactions of oxygen loss due to the
-instability of such high oxidation states of Ni\citeme{}. This
-stochastic particle-level behavior was in contrast with the that seen
-by in-situ ensemble-average \gls{xas}\cite{deb2005}, which showed a
-gradual increase in whiteline position over the full range of
+Initially, the mean whiteline energies of the particles studied did
+not change, indicating no \ce{Ni} oxidation. Between
+\SIrange{0.4}{0.6}{t_c}, the whiteline energies increased rapidly for
+all particles, reaching \SIrange{75}{100}{\percent} \kt{When working
+  with cathode and lithium site fraction, I prefer using depth of
+  discharge instead so that 0 and 1 do not need to be flipped.  Or
+  just stick with lithium site fraction rather than going back and
+  forth.  SOC and DOD sounds more like it's about cell, so it might be
+  better to stick with site fraction. [MW: I agree, we need to find
+    out from YS how he defines 100\% SOC in order to translate to Li
+    fraction]}{state-of-charge}. Although some particles oxidized
+concurrently, there was no clear preference for \vg{}{when particles
+  began rapid oxidation}. Not all of the particles measured reached
+the full \SI{100}{\percent} state-of-charge. Additionally, upon
+reaching their maximum state-of-charge, some particles subsequently
+exhibited \ce{Ni} reduction, presumably due to the instability of
+\ce{Ni} in high oxidation states\citeme{}, resulting in oxygen
+loss. This stochastic, particle-level behavior was in contrast with
+that seen by in-situ ensemble-average \gls{xas}\cite{deb2005}, which
+showed a gradual increase in whiteline position over the full range of
 delithiation. Overall, this inter-particle rapid oxidation was in
 agreement with the observations made by \gls{uxrd} described above
 (Figure \ref{fig:uxrd}).
@@ -333,147 +384,14 @@ agreement with the observations made by \gls{uxrd} described above
     0.257 & 8356.43 & 2.66 & 0.00 & 8351.16 & 2.32 \\
   \end{tabular}
   \caption{Reported energies of \ce{Ni} K-edge whiteline. In-situ
-    \gls{xas} of \nmc[333]{} (Ref.\ \cite{deb2005}) and ex-situ
-    \gls{xas} \nca{} (Ref.\ \cite{muto2009}). Data extracted from
+    \gls{xas} of \nmc[333]{x} (Ref.\ \cite{deb2005}) and ex-situ
+    \gls{xas} \nca{x} (Ref.\ \cite{muto2009}). Data extracted from
     published figures using
     WebPlotDigitizer\cite{webplotdigitizer}. Relative shifts in
     whiteline energy (\textDelta{}) calculated as difference from
-    fully lithiated state (x=1).}
+    fully lithiated state ($x=1$).}
   \label{tab:bulk-xas-extraction}
 \end{table}
-
-
-
-\section{Simulation of single particle dynamics}
-
-%% Electrochemical dynamics simulations to identify the origin of the
-%% accelerated delithiation
-
-Our experiments clearly show that changes in rate of delithiation
-occur at similar Li contents for both particles (P1 and P2),
-suggesting that the fundamental electrochemical properties are
-strongly dependent on the state of charge. To obtain further insight
-into the observed rapid delithiation, we performed physics-based
-particle-level simulations of \nca{}. For the simulations we
-considered 8 particles with diameter ranging from
-\SIrange{4}{11}{\micro\meter} in the cathode and a thin Li metal layer
-as the anode. More details on the model geometry, equations, and
-parameters are provided in the Supporting Information.
-
-The delithiation process of the cathode particles involves (a)
-transport of Li ions in the electrolyte, (b) transport of Li in the
-active material particles, (c) electrochemical reaction at the active
-material surface, and (d) transport of electrons in the cathode. Due
-to the large volume fractions of the pore phase and the carbon
-additive in the cathode, we can ignore the effects of mechanisms (a)
-and (d). The effect of (b) can be studied using the exchange current
-density, $i_0$, of the electrochemical reaction that occurs on the
-particle surface. Similarly, the effect of (c) can be studied using Li
-diffusivity in particles, $D_s$. Both of these quantities are
-dependent on the Li concentration in the particles. Therefore, we
-performed sensitivity analyses with respect to various functional
-forms of $i_0$ and $D_s$, including the ones reported in literature
-and constructed for this work to qualitatively reproduce rapid
-delithiation. The details of these forms are provided in the
-Supporting Information. Our sensitivity analyses generated two major
-insights: first, rapid delithiation is a reaction-controlled
-phenomenon; second, this phenomenon is strongly observed only when
-$i_0$ changes more than two orders of magnitude during charging
-. Furthermore, a similar change in $D_s$ does not exhibit rapid
-delithiation without a large change in $i_0$. In the following, we
-discuss these insights in a greater detail.
-
-Figure \ref{fig:model-1}b shows the evolution of volume-averaged Li
-concentration, $\left\langle x \right\rangle$, of the 8 particles for
-C/20 charging obtained using a model form of $i_0$ that was
-constructed based on the recent studies of \nca{} \cite{chueh2021} and
-NMC \cite{tsai2018, mukherjee2017, chiang2020}. Figure
-\ref{fig:model-1}a shows the dependence of the model form of $i_0$ on
-$x$ that exhibited rapid delithiation similar to the experiment. The
-model $i_0$ is a smoothed step function with a significant increase in
-the value with decreasing x around a transition point
-($x\approx0.9$). As can be seen in Figure \ref{fig:model-1}b, all the
-particles exhibit rapid delithiation. When a particle reaches
-$\left\langle x\right\rangle\approx0.9$, $i_0$ begins to increase
-rapidly and thereby causing the particle to experience accelerated
-reaction rate as it is further delithiated. This acceleration causes
-the particle to contribute majority of the applied current, which
-stagnates the delithiation rate of other particles that have not
-reached the transition point under galvanostatic conditions. By the
-time the particle completes its accelerated delithiation, another
-particle (most likely the next larger particle) undergoes this
-transition and thus rapid delithiation. This cycle repeats until the
-last particle undergoes rapid delithiation.  We note that no rapid
-delithiation was observed when the traditional form of $i_0$
-($\propto\sqrt{x(1-x)}$ \cite{newman1993, newman1994, newman1995,
-  newman1996}) is used, as shown in Figure \todo{xx} in the Supporting
-Information.
-
-We note that oscillations observed in $\left\langle x\right\rangle$ in
-Figure \ref{fig:model-1}b arise due to the large difference between
-minimum and maximum values of $i_0$ used in these simulations. This
-large difference can cause a particle undergoing the aforementioned
-transition to deliver more than the applied current, which induces
-already delithiated particles to lithiate slightly. Such phenomena
-under a galvanostatic condition have also been observed in
-\ce{Li_{x}FePO_{4}}, for which the acceleration occurs due to the
-thermodynamics of the phase-separating material
-\cite{thornton2015}. Whether such oscillations occur in a physical
-system is difficult to determine as our experimental measurements have
-limited chemical and temporal resolution. To further test the origin
-of these oscillations, we performed a simulation with 30 particles;
-the details of the simulation are provided in the Supporting
-Information. The results are provided in Figure \ref{fig:model-1}c;
-two observations can be drawn from the figure. First, rapid
-delithiation is observed for all of the particles even in a larger
-system, which shows that such behavior is likely intrinsic to the
-material. Second, the amplitudes of the oscillations decrease in the
-simulation with 30 particles as compared to the 8-particle system,
-which suggests that oscillations may not occur in very large systems
-such as practical electrodes.
-
-Next, we studied the effect of a model $D_s$ form that has the same
-form as the model $i_0$ above, as shown in Figure
-\ref{fig:model-2}a. Note that the traditional form of $i_0$ was used
-for this simulation and initial $\left\langle x\right\rangle$ is set
-to 0.95 instead of 0.99 in this simulation to avoid unphysical
-situations such as $\left\langle x\right\rangle$ > 1, which can arise
-from numerical inaccuracies associated with the step form of
-$D_s$. Figure \ref{fig:model-2}b shows the evolution of $\left\langle
-x \right\rangle$ during C/20 charging of the 8-particle system with
-the model $D_s$. Although accelerated delithiation is observed for
-smaller particles, its extent is much smaller than that observed
-above. This happens because for a particle to exhibit rapid
-delithiation, the flux at the particle-electrolyte interface needs to
-increase rapidly in a short duration of time. Such an increase in the
-flux cannot be realized even if the diffusion function has a
-step-function-like dependence on $x$ because the diffusivity (hence,
-diffusion flux) only increases in the shell of the particle close to
-the particle surface; the particle bulk continues to have the low
-diffusivity value. In other words, the entire particle does not
-undergo rapid delithiation; instead, only the shell close to the
-particle surface exhibits such behavior. Furthermore, the experimental
-measurements (see Figure \todo{xx} in the Supporting Information) show that
-the Li concentration within the particle is uniform during charging,
-which suggests that Li diffusion is not the limiting mechanism. Hence
-we can rule out $D_s$ as the underlying cause of rapid delithiation.
-
-Based on the insights generated above, we conclude that rapid
-delithiation in \nca{} particle is controlled by the surface reaction
-kinetics instead of bulk Li diffusion dynamics in the active
-material. Furthermore, we demonstrate that the results obtained from
-the 8-particle model are still valid for a larger system with 30
-particles, which is more similar to a practical electrode. The results
-from our deterministic modeling study agrees well with the stochastic
-simulations performed by Park et al.\cite{chueh2021}, where the
-authors showed that the accelerated delithiation (termed
-electro-autocatalysis by the authors) is controlled by the surface
-reaction and not the solid-state diffusion. Furthermore, the authors
-also reported a rapid increase in the exchange current at the \nca{}
-particle surface as the delithiation progresses, albeit with an
-exponential dependence.
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -482,39 +400,44 @@ exponential dependence.
 
 %% \subsubsection{\nmc[532]{}}
 
-To evaluate the similarity in the oxidation behavior of \nca{} to
-other layered cathode compositions, similar \gls{txm} \gls{xas}
+To evaluate the similarity between the oxidation behavior of \nca{}
+and other layered cathode compositions, similar \gls{txm} \gls{xas}
 experiments were performed on cells containing dilute \nmc[333]{} and
-\nmc[532]{} layered cathodes (Figure \ref{fig:txm-nmc}). Compared to
-\nca{} (Figure \ref{fig:txm-nca}a), \nmc{} particle were less
-spherical in shape (Figure \ref{fig:txm-nmc}a). In this case, the mean
+\nmc[532]{} layered cathodes (Figure \ref{fig:txm-nmc}). We note that
+\nmc{} particles (Figure \ref{fig:txm-nmc}a) were less spherical in
+shape as compared to \nca{} (Figure \ref{fig:txm-nca}a). The mean
 optical depth for all foreground pixels in the frame was used for
-evaluating overall oxidation (Figures
-\ref{fig:txm-nmc}b,c). \nmc[333]{} exhibited a lower initial whiteline
-energy than \nca{}, as expected\cite{deb2005,muto2009}. Similarly to
-\nca{}, spectra for both \nmc{} cathodes showed an increase in the
-whiteline energy, in agreement with the literature. To estimate the
-state of charge, the evolution of the whiteline was compared to the
-lowest value observed for any particle in the field of view during the
+evaluating overall oxidation (Figures \ref{fig:txm-nmc}b,c). As
+expected, \nmc[333]{} exhibited a lower initial whiteline energy than
+\nca{}\cite{deb2005,muto2009}. Similar to \nca{}, spectra for both
+\nmc{} cathodes showed an increase in the whiteline energy, which is
+in agreement with the literature\citeme{}. To estimate the state of
+charge, the evolution of the whiteline was compared to the lowest
+value observed for any particle in the field of view during the
 operando experiment, reported here as \textDelta{}whiteline. A
 parametric function was fit to each pixel's full spectrum, and the
-whiteline energies were extracted from the fit parameters. This
-approach provided higher precision and was more tolerant of noise
-between frames, allowing for faster time resolution. For both \nmc{}
-materials, the same initial latent phase and subsequent rapid
-oxidation were seen (Figures \ref{fig:txm-nmc}d,e). The initial rapid
-\ce{Ni} oxidation resulted in changes in whiteline energy for
-\nmc[333]{} of \SI{\approx3}{\electronvolt} and \nmc[532]{} of
+whiteline energies were extracted from the fit parameters. \kt{If so,
+  why was it not applied in the previous case?  You probably want to
+  offer some explanation. [MW: Real answer: because two different
+    people did the analyses. You bring up a good point, though. Any
+    thoughts on how to answer this?]}{This approach provided higher
+  precision and was more tolerant of noise between frames, allowing
+  for faster time resolution.} For both \nmc{} materials, the same
+initial latent phase and subsequent rapid oxidation were seen (Figures
+\ref{fig:txm-nmc}d,e). The initial rapid \ce{Ni} oxidation resulted in
+changes in whiteline energy for \nmc[333]{} of
+\SI{\approx3}{\electronvolt} and \nmc[532]{} of
 \SI{\approx2.5}{\electronvolt}, reflecting the lower starting
 concentration of \ce{Ni^{2+}} in \nmc[532]{}. The experiment using
-\nmc[532]{} did not reach the same overall state of charge. For
-\nmc[333]{}, once rapid oxidation had occurred, a subsequent gradual
-increase to \SI{4.1}{eV} was observed. The total change in whiteline
-energy for all observed secondary particles was \SI{>4}{eV} (Figure
+\nmc[532]{} did not reach the same overall state of charge as those
+using \nmc[333]{} and \nca{} due to loss of X-rays. For \nmc[333]{},
+once rapid oxidation had occurred, a subsequent gradual increase to
+\SI{4.1}{eV} was observed. The total change in whiteline energy for
+all observed secondary particles was \SI{>4}{eV} (Figure
 \ref{fig:txm-nmc}d). While ensemble \gls{xas}
 studies\cite{deb2005,muto2009} did not reach the \SI{4.7}{V} cell
-cut-off potential needed for full lithium extraction and hence full
-\ce{Ni} oxidation, extrapolation of the trend in Table
+cut-off potential needed for full lithium extraction (hence full
+\ce{Ni} oxidation), extrapolation of the trend in Table
 \ref{tab:bulk-xas-extraction} and Figure
 \zref{si:fig:bulk-xas-extraction}a predicts a change in whiteline
 energy upon full delithiation of \SI{\approx3}{eV}. This discrepancy
@@ -522,18 +445,173 @@ between particle-level and ensemble average \ce{Ni} oxidation suggests
 that an appreciable portion of the particles in the specimens measured
 by ensemble \gls{xas} had not reached their fully oxidized states.
 
-In summary, all layered cathode chemistries studied exhibited
-punctuated rapid delithiation at the secondary particle level. This
-behavior was observed when measurements were made with independent
-mapping techniques (\gls{uxrd} and \gls{txm}) and with both low-energy
+In summary, all layered cathode chemistries studied here exhibited
+indivudual secondary particles undergoing rapid delithiation at
+various times during galvanostatic delithiation. This behavior was
+observed experimentally by two independent mapping techniques
+(\gls{uxrd} and \gls{txm}), with both low-energy
 (\SI{\approx8}{\kilo\electronvolt}) and high-energy
-(\SI{25}{\kilo\electronvolt}) X-rays, and with varying carbon content
-in the electrode composite. The persistent of this phenomena across
-observations suggest that this behavior is inherent to layered cathode
-materials rather than an artifact of the technique, consistent with
-previous reports using other techniques on related \nmc{} and
-\ce{LiCoO2} layered
+(\SI{25}{\kilo\electronvolt}) X-rays, \kt{Where do you we discuss the
+  effect of this parameter? Please clarify.}{and with varying carbon
+  content in the electrode composite}. The persistence of this
+phenomena across observations suggests that this behavior is inherent
+to layered cathode materials rather than being an artifact of the
+techniques, and is consistent with previous reports using other
+techniques on related \nmc{} and \ce{LiCoO2} layered
 materials\cite{chueh2021,rao2021,wang2020-6}.
+
+
+\section{Simulation of single particle dynamics}
+
+%% Electrochemical dynamics simulations to identify the origin of the
+%% accelerated delithiation
+
+Our experiments clearly show that changes in rate of delithiation
+occur at similar Li contents for both particles (\gls{p1} and
+\gls{p2}), suggesting that the fundamental electrochemical properties
+are strongly dependent on the state of charge. While the observed
+phenomenon of accelerated delithiation is reminiscent of the
+interparticle phase separation predicted in lithium iron phosphate
+\citeme{VG/KT?}, it does not apply here because the system under
+investigation is not a two-phase system in thermodynamic
+equilibrium. To gain further insight into the observed accelerated
+delithiation, we performed physics-based particle-level simulations of
+\nca{x}. While the computational expense (resulting from large changes
+in properties with varying x) does not allow a parametric study of
+many-particle simulations, it was sufficient to consider 8 particles
+with diameters ranging from \SIrange{4}{11}{\micro\meter} in the
+cathode and a thin Li metal layer as the anode to survey the parameter
+space and support the finding with one larger (30-particle)
+simulation. More details on the model geometry, equations, and
+parameters are provided in the \ref{sec:methods} Section and the
+Supporting Information.
+
+%% The delithiation process of the cathode particles involves (a)
+%% transport of Li ions in the electrolyte, (b) transport of Li in the
+%% active material particles, (c) electrochemical reaction at the active
+%% material surface, and (d) transport of electrons in the cathode. Due
+%% to the large volume fractions of the pore phase and the carbon
+%% additive in the cathode, we can ignore the effects of mechanisms (a)
+%% and (d).
+The effect of the electrochemical reaction that occurs at the
+interface between the active material and the electrolyte phase can be
+studied using the \gls{ecd}. Similarly, the effect of the transport of
+\ce{Li+} can be studied using the \gls{D_s}. Both of these quantities
+are dependent on the \gls{xLi} in the particles. Therefore, we
+performed sensitivity analyses with respect to various functional
+forms and values of \gls{ecd} and \gls{D_s}, including the ones
+reported in literature and constructed for this work to qualitatively
+reproduce rapid delithiation. The details of these forms are provided
+in the Supporting Information. %% Our sensitivity analyses generated
+two
+%% major insights: first, rapid delithiation is a reaction-controlled
+%% phenomenon; second, this phenomenon is strongly observed only when
+%% $i_0$ changes more than two orders of magnitude during charging
+%% . Furthermore, a similar change in $D_s$ does not exhibit rapid
+%% delithiation without a large change in $i_0$. In the following, we
+%% discuss these insights in a greater detail.
+
+Figure \ref{fig:model-1}b shows the evolution of volume-averaged
+Li-site fraction, $\left\langle \gls{xLi} \right\rangle$, of the 8
+particles for \SI{0.05}{\ampere\per\ampere\hour} (C/20) charging
+obtained using a model form of \gls{ecd} that was constructed based on
+the recent studies of \nca{} \cite{chueh2021} and NMC \cite{tsai2018,
+  mukherjee2017, chiang2020}. Figure \ref{fig:model-1}a shows the
+dependence of the model form of \gls{ecd} on \gls{xLi} that exhibited
+rapid delithiation similar to the experiment. The model \gls{ecd} is a
+smoothed step function with a significant increase in the value with
+decreasing x around a transition point ($\gls{xLi}\approx0.9$). As can
+be seen in Figure \ref{fig:model-1}b, all the particles exhibit rapid
+delithiation. When a particle reaches $\left\langle \gls{xLi}
+\right\rangle\approx0.9$, \gls{ecd} begins to increase rapidly and
+thereby causes the particle to experience an accelerated reaction rate
+as it is further delithiated. This acceleration causes the particle to
+contribute the majority of the applied current, which stagnates the
+delithiation rate of other particles that have not reached the
+transition point under galvanostatic conditions. By the time the
+particle completes its accelerated delithiation, another particle
+undergoes this transition and thus rapid delithiation. This cycle
+repeats until the last particle undergoes rapid delithiation.  We note
+that no rapid delithiation was observed when the traditional form of
+\gls{ecd} ($\propto\sqrt{gls{xLi}(1-\gls{xLi})}$ \cite{newman1993,
+  newman1994, newman1995, newman1996}) is used, as shown in Figure
+\zref{si:fig:x-evolution}.
+
+The oscillations observed in $\left\langle \gls{xLi} \right\rangle$ in
+Figure \ref{fig:model-1}b arise due to the large difference between
+minimum and maximum values of \gls{ecd} used in these
+simulations. This large difference can cause a particle undergoing the
+aforementioned transition to deliver more than the applied current,
+which induces already delithiated particles to lithiate slightly. Such
+phenomena under a galvanostatic condition have also been observed in
+\ce{Li_{x}FePO_{4}}, for which the acceleration occurs due to the
+thermodynamics of the phase-separating material
+\cite{thornton2015}\citeme{KT: Vishwas, I will provide them; please
+  add.}. The ensure that the results from the 8-particle simulations
+are not artificially affects by the small number of particles
+simulated, we performed a simulation with 30 particles; the details of
+the simulation are provided in the Supporting Information. The results
+are provided in Figure \ref{fig:model-1}c. First, rapid delithiation
+is observed for all of the particles even in a larger system, which
+shows that such behavior is likely intrinsic to the material. Second,
+the amplitudes of the oscillations decrease in the simulation with 30
+particles as compared to the 8-particle system, which suggests that
+oscillations may not occur in very large systems such as practical
+electrodes.  Confirming whether or not such oscillations occur in a
+physical system would require higher chemical and temporal resolutions
+than what is possible with today's experimental techniques.
+
+Next, we studied the effect of a model \gls{D_s} form that has the
+same form as the model \gls{ecd} above, as shown in Figure
+\ref{fig:model-2}a. Note that the traditional form of \gls{ecd} was
+used for this simulation and initial $\left\langle \gls{xLi}
+\right\rangle$ is set to \num{0.95} instead of \num{0.99} in this
+simulation to avoid unphysical situations such as $\left\langle
+\gls{xLi} \right\rangle > 1$, which can arise from a numerical error
+caused by a rapid change in \gls{D_s} with respect to
+\gls{xLi}. Figure \ref{fig:model-2}b shows the evolution of
+$\left\langle \gls{xLi} \right\rangle$ during charging of the
+8-particle system at \SI{0.05}{\ampere\per\ampere\hour} (C/20) with
+the model \gls{D_s}. Although accelerated delithiation is observed for
+smaller particles, its extent is much smaller than that observed
+above. For a particle to exhibit rapid delithiation, the flux at the
+particle-electrolyte interface needs to increase rapidly in a short
+duration of time. Such an increase in the flux cannot be realized even
+if the diffusion function has a step-function-like dependence on
+\gls{xLi} because the diffusivity (hence, diffusion flux) only
+increases in the shell of the particle close to the particle surface;
+the particle bulk continues to have the lower diffusivity. In other
+words, the entire particle does not undergo rapid delithiation;
+instead, only the shell close to the particle surface exhibits such
+behavior. Furthermore, the experimental measurements show that the
+Li-site fractions within the particles are spatially uniform during
+charging (\kt{Which figure [VG: Maybe S15]}{Figure} \todo{Sxx}), which
+suggests that Li diffusion is not the limiting mechanism in the
+experiment. Indeed, the simulation result also shows \todo{XXXX} for
+the values of \gls{D_s} obtained from the literature, as well as the
+step form of \gls{D_s} having \todo{XXX} smaller value (\vg{I will
+  make this edit post the revision from Mark and Jordi. }{or something
+  like this -- Vishwas, please edit}). Hence we can rule out a strong
+dependence of \gls{D_s} on \gls{xLi} as the underlying cause of rapid
+delithiation.
+
+Based on the insights generated above, we conclude that rapid
+delithiation in \nca{} particles is controlled by the surface reaction
+kinetics, rather than the bulk \ce{Li+} diffusion dynamics in the
+active material. Furthermore, \kt{Can we say that the rate of the
+  rapid delithiation is unaltered?  If it's [VG: I need to see if I
+    have the data from Sicen for this.]}{the rapid delithiation
+  observed} in the 8-particle model is also observed in a larger
+system with 30 particles, which demonstrates that it is not an
+artifact of the small number of particles simulated. The results from
+our deterministic modeling study agrees well with the stochastic
+simulations performed by Park et al.\cite{chueh2021}, where the
+authors showed that the accelerated delithiation (termed
+electro-autocatalysis by the authors) is controlled by the surface
+reaction and not the solid-state diffusion. Furthermore, the authors
+reported a rapid increase in \gls{ecd} at the \nca{} particle surface
+as the delithiation progresses, albeit with an exponential dependence.
+
 
 %%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
@@ -544,36 +622,46 @@ Li-ion cells showed rapid and stochastic oxidation within the cathode
 at the level of secondary particle agglomerates. This behavior was
 consistent across cathodes with several transition metal compositions,
 in both high and low carbon content electrodes, and when measured by
-two distinct X-ray characterization modalities. The robustness of this
-effect demonstrates it to be inherent to layered cathode
-materials. Subsequent modeling of the electrochemical dynamics showed
-the origins of this rapid delithiation to be the result of a dramatic
-increase over three orders of magnitude in the \gls{ecd} upon initial
-delithiation to \nca{0.9}. Rapid stochastic delithiation explains the
-apparent two-phase behavior reported by conventional \gls{xrd} as an
-emergent property resulting from the ensemble-average nature of the
-technique rather than a fundamental feature of layered
-cathodes. Furthermore, comparison of the spectromicroscopy results
-presented here and ensemble \gls{xas} reveals that individual
-particles reach a higher state of charge than the global average,
-highlighting the value of experimental techniques that combine spatial
-and chemical resolutions.
+two distinct X-ray characterization modalities. The robustness with
+which this effect was measured demonstrates it to be inherent to
+layered cathode materials. Subsequent modeling of the electrochemical
+dynamics showed the origins of this rapid delithiation to be the
+result of a dramatic increase in the \gls{ecd}. It was found that a
+change of three orders of magnitude in \gls{ecd} at $\gls{xLi}\approx
+0.9$ to reproduce the experimental results. Rapid stochastic
+delithiation explains the apparent two-phase behavior reported by
+conventional \gls{xrd}: it is an emergent property resulting from the
+ensemble-average nature of the technique rather than being inherent to
+the thermodynamics of layered cathodes. Furthermore, comparison of the
+spectromicroscopy results presented here and ensemble \gls{xas}
+reveals that individual particles reach a higher state of charge than
+the global average, highlighting the heterogeneity within the
+electrode and the need for experimental techniques such as those
+applied here that provide spatial, temporal and chemical resolutions.
 
-These results show that the energy storage reaction during discharge
-of layered cathodes is kinetically limited by reactions at the surface
-of the secondary particles. At a given lithium composition, the
-difference between the equilibrium reduction potential and the applied
-potential represents an thermodynamic irreversibility in the system,
-and thus a reduction in the energy storage efficiency relative to the
-theoretical limit. Furthermore, the observation that some particles
-remain lithiated relative for the ensemble average equates to a
-reduction in the usable capacity of the battery. Both of these factors
-present areas of improvement for the performance of layered cathode
-materials, which could be realized with further research into the
-origin of the significant increase in \gls{ecd} during charging.
+\kt{Do we know that this is generically true?  The work examined two
+  systems and there are many?  Some may be two phase systems.}{These
+  results show that the electrochemical reaction during discharge of
+  layered cathodes is kinetically limited by reactions at the surface
+  of the secondary particles.} \kt{?? I don't think this was
+  discussed?  If so, maybe it was too brief.  Please expand it within
+  the text (before the summary).}{At a given Li composition, the
+  difference between the equilibrium reduction potential and the
+  applied potential represents a thermodynamic irreversibility in the
+  system, and thus a reduction in the energy storage efficiency
+  relative to the theoretical limit.} \kt{I don't think this was
+  discussed or demonstrated — theoretically, this just means that it
+  will be utilized at a later time.}{Furthermore, the observation that
+  some particles remain lithiated relative for the ensemble average
+  equates to a reduction in the usable capacity of the battery.} Both
+of these factors present areas of improvement for the performance of
+layered cathode materials, which could be realized with further
+research into the origin of the significant increase in \gls{ecd}
+during charging.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Materials and Methods}
+\label{sec:methods}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{\gls{uxrd} Mapping}
@@ -639,8 +727,8 @@ TOPAS software developed by Bruker to produce plots of unit cell as a
 function of charge-discharge for each particle as a whole.
 
 \subsection*{\textit{Ex-situ} X-ray absorption spectroscopy - \nca{}}
-To get the standard spectra of \nca{} (NAT-1050) with respect to the
-state-of-charges, dense composite electrodes were fabricated by mixing
+To obtain standard spectra of \nca{} (NAT-1050) with respect to the
+states-of-charge, dense composite electrodes were fabricated by mixing
 the pristine \nca{} with acetylene black and polyvinylidene difluoride
 (PVDF) in 80:10:10 ratio in N-methylpyrrolidone. The resulting slurry
 was cast onto a pre-weighed Al foil disk, dried at room temperature,
@@ -651,8 +739,8 @@ electrode, and Celgard 2400 separator soaked in a 45:55 mixture of
 ethylenecarbonate and dmiethyl carbonate containing \SI{1}{\molar}
 \ce{LiPF6} as electrolyte. All cell assembly and sample manipulation
 was performed in an Ar-filled glovebox. Galvanostatic cycling at a
-\SI{0.05}{\ampere\per\ampere\per\hour} (C/20) rate (defined as the current
-density for full delithiation of \nca{} in \SI{20}{\hour}) was
+\SI{0.05}{\ampere\per\ampere\per\hour} (C/20) rate (defined as the
+current density for full delithiation of \nca{} in \SI{20}{\hour}) was
 performed between \SIrange{3.0}{4.8}{\volt} vs.\ \ce{Li+/Li^0} using a
 Bio-Logic VSP potentiostat/galvanostat. The reference powders for
 \nca{} were harvested from Li metal half cells charged to specific
@@ -685,9 +773,9 @@ thinner composite electrodes were fabricated by mixing the pristine
 onto a pre-weighed Al foil disk with a thickness of
 \SI{30}{\micro\meter}, dried at room temperature, followed by a heat
 treatment at \SI{120}{\celsius} under vacuum for \SI{12}{\hour}. The
-composite electrodes were assembled in \todo{modified how?} modified
-2032 coin cells using lithium foil as both counter and
-pseudo-reference electrode, and Celgard 2400 separator soaked in a
+composite electrodes were assembled in \mw{modified how?
+  YSY?}{modified} 2032 coin cells using lithium foil as both counter
+and pseudo-reference electrode, and Celgard 2400 separator soaked in a
 45:55 mixture of ethylenecarbonate and dmiethyl carbonate containing 1
 M \ce{LiPF6} as electrolyte. To ensure sufficient transparence to the
 X-ray beam, holes were punched in the cell cases. After cell assembly,
@@ -814,10 +902,34 @@ using matplotlib\cite{matplotlib}.
 
 \subsection*{Simulations}
 
-All the details about the models used for simulations are provided in the Supporting Information. 
+\vg{Describe the source parameters}
 
-\todo{Write simulations M\&M section once we get detailed SI
-  information from Sicen.}
+To understand how different particles undergo the delithiation
+process, we constructed particle-level models based on \citeme{}. In
+particular, we considered two models, one with 8 particles, and
+another with 30 particles. In the first model (8-particle), we
+simulate the (1) transport of \ce{Li+} in the electrolyte, (2)
+transport of electrons in the cathode, (3) transport of \ce{Li+} in
+the active material particles, and (4) electrochemical reaction at the
+active material surface. However, due to the large volume fractions of
+the pore phase and the carbon additive in the cathode, we ignored the
+effects of mechanisms (1) and (2) in the second model
+(30-particle). We simulated the first model using the finite elements
+method in COMSOL 5.6, and for simulating the second model, we employed
+the smoothed boundary method \citeme{10.1088/0965-0393/20/7/075008}
+together with the finite difference method in our in-house developed
+Fortran code. Some of the material parameters, such as the ionic
+diffusivity, conductivity, transference number, thermodynamic factor,
+and electronic conductivity of the \nca{} electrode were obtained
+directly from the literature\citeme{Electrochim. Acta,
+  53(22):6356–6365, sep 2008., J. Electrochem. Soc., 155(4):A320,
+  2008.}, while others were either sourced from experiments or
+constructed for this work, as listed in Table
+\zref{si:tab:model-parameters} and explained in the Supporting
+Information. Additional details about these models such as model
+equations and geometry are also provided in the Supporting
+Information.
+
 
 \section*{Acknowledgments}
 
@@ -835,7 +947,9 @@ New York, Binghamton for \gls{ocv} values during first charge of
 
 \begin{figure}[!h]
   \includegraphics{figures/NCA_xrd.png}
-  \caption{Operando \gls{uxrd} of \nca{} secondary particle
+  \caption{\todo[inline]{KT: Can we use colors that are more
+      contrasting (e.g., blue and red, rather than blue and green)?
+      [MW: Brian?]} Operando \gls{uxrd} of \nca{} secondary particle
     agglomerates during first charge and discharge. Diffraction peaks
     corresponding to (a) (003) and (b) (104) reflections. (c)
     Galvanostatic charge/discharge profile. (d) \textit{a} and
@@ -876,14 +990,31 @@ New York, Binghamton for \gls{ocv} values during first charge of
 \newpage
 \begin{figure}[!h]
     \includegraphics[scale =0.7]{figures/modeling_figure_1.pdf}
-    \caption{Simulation results for C/20 galvanostatic charging. (a) The model form of \gls{ecd} vs. $x$ used for the simulation. The evolution of the volume-averaged Li concentration in individual particle, $\langle x \rangle$, for (b) the 8-particle system and (c) 30-particle system.}
+    \caption{\todo[inline]{KT: Please match the fonts with the style
+        used in experimental plots.  The fonts are too different in
+        size, so if they are shrunk so that the axis labels are small
+        enough, other fonts will be too small to read.  Please use the
+        same font as well.} Simulation results for C/20 galvanostatic
+      charging. (a) The model form of \gls{ecd} vs.\ \gls{xLi} used
+      for the simulation. The evolution of the volume-averaged
+      \gls{xLi} in individual particle, $\langle x \rangle$, for (b)
+      the 8-particle system and (c) 30-particle system.}
     \label{fig:model-1}
 \end{figure}
+
 
 \newpage
 \begin{figure}[!h]
     \includegraphics[scale =0.7]{figures/modeling_figure_2_with_Ds_1000_cs_0.95.pdf}
-    \caption{Simulation results for C/20 galvanostatic charging. (a) The model form of $D_s$ vs. $x$ used for the simulation. Note that the form is the same in terms of the ratio between minimum and maximum values and the transition-zone width as that of \gls{ecd} shown above. (b) The evolution of the volume-averaged Li concentration in individual particle, $\langle x \rangle$, for the 8-particle system. The inset shows the zoomed in version of the section highlighted using the dashed box.}
+    \caption{\todo[inline]{KT: same} Simulation results for C/20
+      galvanostatic charging. (a) The model form of \gls{D_s}
+      vs.\ \gls{xLi} used for the simulation. Note that the form is
+      the same in terms of the ratio between minimum and maximum
+      values and the transition-zone width as that of \gls{ecd} shown
+      above. (b) The evolution of the volume-averaged \gls{xLi} in
+      individual particle, $\langle x \rangle$, for the 8-particle
+      system. The inset shows the zoomed in version of the section
+      highlighted using the dashed box.}
     \label{fig:model-2}
 \end{figure}
 
