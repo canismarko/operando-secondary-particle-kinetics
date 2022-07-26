@@ -108,69 +108,101 @@ the evolution of heterogeneity.
 
 %% NCA/NMC background
 
-\vg{The overall discussion [in these 2 paragraphs] gave me an
-  impression that the Li2CO3 is the main reason behind the two-phase
-  transformation. We might want to highlight that shortcomings of this
-  explanation a bit more clearly.}{Ensemble} \gls{xrd} has shown a
-mixture of phases in \nca{} electrodes during the first charge when
-stored in ambient conditions, unlike the single-phase (solid solution)
-transformation seen during subsequent charge
-cycles\cite{robert2015}. A possible origin is the presence of a
-lithium diffusion barrier arising from surface \ce{Li2CO3} formation
-upon exposure to \ce{CO2} and \ce{H2O}. When pristine \nca{} was
-protected from ambient air exposure, a single-phase (solid solution)
-reaction was observed during first charge\cite{grenier2017}. This
-observation led to the conclusion that the secondary particles
-contained an uneven coating of \ce{Li2CO3}, which must be broken
-electrochemically before the reaction can proceed. The need to break
-this coating would produce different timelines for reaction initiation
-in different particles, resulting in a bimodal distribution of
-oxidation states and the appearance of non-equilibrium heterogeneity
-by \gls{xrd}. The oxidation states of individual secondary particles
-were measured by operando \gls{txm} \gls{xas} and particles were
-indeed observed to be either in a pristine or partially oxidized state
-with more particles becoming oxidized at higher states of
-charge\cite{nowack2016}. While \ce{Li2CO3} clearly plays a role in the
-ability of lithium to penetrate into the secondary particle, it was
-also demonstrated that the presence of two phases by \gls{xrd} is
-suppressed by stronger compaction of the electrode during laminate
-preparation\cite{bobrikov2018}. A related layered cathode material,
-\nmc[333]{}, is less prone to \ce{Li2CO3} formation, even showing
-lower levels of \ce{Li2CO3} after one month of air exposure than those
-found in pristine \nca{}\cite{shizuka2007}. For the most part, in-situ
-\gls{xrd} studies of \nmc[333]{} during first charge show a
+%% JC: We need to revamp this section. Like Vishwas, I think it gives too
+%% much weight to Li2CO3.  I would focus on the fundamentals of the
+%% transformation, not aspects that ultimately depend on care and don't
+%% even apply to all layered cathodes.
+
+%% jcabana: Ideally, this explanation needs to cover what is known about
+%% these fundamentals, so they would cover the Chueh paper and any of the
+%% recent papers that we consider relevant.
+
+%% jcabana: The problem of the current intro is that we will be bombarded
+%% with papers by the reviewers. The most modern reference is from
+%% 2018. This has to do with how long it took to write the paper, but
+%% still. this is where we are.
+
+Ensemble \gls{xrd} has shown a mixture of phases in \nca{} electrodes
+during the first charge when stored in ambient conditions, unlike the
+single-phase (solid solution) transformation seen during subsequent
+charge cycles\cite{robert2015}. While a \ce{Li2CO3} surface layer has
+been used to explain a seemingly two-phase
+transformation\cite{grenier2017}, limitations arising from diffusion
+kinetics within the material have also been demonstrated at distinct
+Li-site fractions\cite{chapman2020}. Recently, in-situ \gls{xrd} was
+used to indirectly study the transformation kinetics of the related
+\nmc[333]{} cathode, and showed that interfacial exchange current is a
+better explanation than \ce{Li+} diffusion limitations for the
+observed pseudo-two-phase behavior\cite{chueh2021}. In the same
+report, ex-situ X-ray microscopy revealed secondary particles in
+disparate states of charge from one another. While in-situ \gls{xrd}
+studies of \nmc[333]{} during first charge generally show a
 transformation that is primarily single-phase (solid
-solution)\cite{hulzen2018,ahn2017,zhou2016-2}, though some studies
-reveal two crystallographic phases with a small difference in \emph{a}
-and \emph{c} lattice parameters coexisting over a narrow range of
+solution)\cite{hulzen2018,ahn2017,zhou2016-2}, some studies reveal two
+crystallographic phases with a small difference in \emph{a} and
+\emph{c} lattice parameters coexisting over a narrow range of
 delithiation compared to \nca{}\cite{yoon2006,hua2018}. The oxidation
 dynamics of these layered cathode materials warrant further study to
 clarify the nature of the chemical transformation, especially in view
 of locating the onset and progression of heterogeneity, within and
-among the secondary particles that typically compose a cathode. It is
-important to elucidate how general this behavior is among the general
-class of layered oxides that are leading candidates as battery
-materials.
+among the secondary particles that typically compose a cathode.
 
-This work further examined the heterogeneities present in secondary
-particles of established layered cathode materials, namely \nca{},
-\nmc[333]{}, and \nmc[532]{}. A combination of operando \gls{uxrd} and
-\gls{txm} \gls{xas} experiments probed the inter-particle
-heterogeneity. While the cell potential and prior reports of ensemble
-\gls{xas} indicated a smooth transition to higher oxidation state upon
-delithiation\cite{deb2005,muto2009}, individual particles exhibited a
-sharp and stochastic transition from an initial, latent state to one
-containing highly oxidized \ce{Ni}. We refer to this phenomenon rapid
-or accelerated delithiation. Physics-based simulations were then
-conducted to determine the role of fundamental electrochemical
-processes in generating this rapid delithiation behavior, which showed
-that this behavior due to a significant increase in \gls{ecd} covering
-several orders of magnitude during delithiation. These observations
-highlight the decoupling between single-particle dynamics and the
-macroscopic response in battery electrodes even when they follow
-mechanisms of solid solution. The identification of \gls{ecd} as
-controlling parameter in these materials redirects models away from a
-focus on mass diffusion.
+%% A possible origin is the presence of a
+%% lithium diffusion barrier arising from surface \ce{Li2CO3} formation
+%% upon exposure to \ce{CO2} and \ce{H2O}. When pristine \nca{} was
+%% protected from ambient air exposure, a single-phase (solid solution)
+%% reaction was observed during first charge\cite{grenier2017}. This
+%% observation led to the conclusion that the secondary particles
+%% contained an uneven coating of \ce{Li2CO3}, which must be broken
+%% electrochemically before the reaction can proceed. The need to break
+%% this coating would produce different timelines for reaction initiation
+%% in different particles, resulting in a bimodal distribution of
+%% oxidation states and the appearance of non-equilibrium heterogeneity
+%% by \gls{xrd}. The oxidation states of individual secondary particles
+%% were measured by operando \gls{txm} \gls{xas} and particles were
+%% indeed observed to be either in a pristine or partially oxidized state
+%% with more particles becoming oxidized at higher states of
+%% charge\cite{nowack2016}. While \ce{Li2CO3} clearly plays a role in the
+%% ability of lithium to penetrate into the secondary particle, it was
+%% also demonstrated that the presence of two phases by \gls{xrd} is
+%% suppressed by stronger compaction of the electrode during laminate
+%% preparation\cite{bobrikov2018}. A related layered cathode material,
+%% \nmc[333]{}, is less prone to \ce{Li2CO3} formation, even showing
+%% lower levels of \ce{Li2CO3} after one month of air exposure than those
+%% found in pristine \nca{}\cite{shizuka2007}. For the most part, in-situ
+%% \gls{xrd} studies of \nmc[333]{} during first charge show a
+%% transformation that is primarily single-phase (solid
+%% solution)\cite{hulzen2018,ahn2017,zhou2016-2}, though some studies
+%% reveal two crystallographic phases with a small difference in \emph{a}
+%% and \emph{c} lattice parameters coexisting over a narrow range of
+%% delithiation compared to \nca{}\cite{yoon2006,hua2018}. The oxidation
+%% dynamics of these layered cathode materials warrant further study to
+%% clarify the nature of the chemical transformation, especially in view
+%% of locating the onset and progression of heterogeneity, within and
+%% among the secondary particles that typically compose a cathode. It is
+%% important to elucidate how general this behavior is among the general
+%% class of layered oxides that are leading candidates as battery
+%% materials.
+
+The work described here further examined the heterogeneities present
+in secondary particles of established layered cathode materials,
+namely \nca{}, \nmc[333]{}, and \nmc[532]{}. A combination of operando
+\gls{uxrd} and \gls{txm} \gls{xas} experiments probed the
+inter-particle heterogeneity. While the cell potential and prior
+reports of ensemble \gls{xas} indicated a smooth transition to higher
+oxidation state upon delithiation\cite{deb2005,muto2009}, individual
+particles exhibited a sharp and stochastic transition from an initial,
+latent state to one containing highly oxidized \ce{Ni}. We refer to
+this phenomenon rapid or accelerated delithiation. Physics-based
+simulations were then conducted to determine the role of fundamental
+electrochemical processes in generating this rapid delithiation
+behavior, which showed that this behavior due to a significant
+increase in \gls{ecd} covering several orders of magnitude during
+delithiation. These observations highlight the decoupling between
+single-particle dynamics and the macroscopic response in battery
+electrodes even when they follow mechanisms of solid solution. The
+identification of \gls{ecd} as controlling parameter in these
+materials redirects models away from a focus on mass diffusion.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Operando observations of single particle dynamics}
