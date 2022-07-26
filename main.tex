@@ -42,8 +42,8 @@
   potential. These results provide direct evidence that the apparent
   two-phase transition emerges from kinetic limitations experienced by
   a population of secondary particles. Physics-based modeling shows
-  that, to reproduce the experimental results, \gls{ecd} must depend
-  on \gls{xLi}, and that \gls{ecd} should increase rapidly over three
+  that, to reproduce the experimental results, the \gls{ecd} must depend
+  on the \gls{xLi}, and that \gls{ecd} should increase rapidly over three
   orders of magnitude when $\gls{xLi} \approx 0.9$. The specifics and
   implications of this jump in \gls{ecd} are crucial to understanding
   the charge-storage reaction of Li-ion battery cathodes.
@@ -60,7 +60,7 @@
 
 % NCA/NMC material
 Layered transition metal oxides represent the state-of-the-art
-cathode materials for electrochemical energy storage. In order to
+cathode materials for electrochemical energy storage with Li-ion batteries. In order to
 meet ever more ambitious performance targets, it is necessary to
 improve their efficiency and reliability beyond current
 limitations. While layered cathodes provide high theoretical capacity,
@@ -77,7 +77,7 @@ energy storage systems with superior performance.
 
 Synchrotron X-ray characterization provides several methods to
 evaluate heterogeneity within secondary particles of layered cathode
-materials. \Gls{uxrd} extends the structural characterization
+materials\cite{doeff2017}. Among them, \Gls{uxrd} extends the structural characterization
 capability of conventional \gls{xrd} with improved spatial
 resolution. Incoming X-rays are focused to a sub-micron spot and
 scanned over individual secondary particles. At each mapping position,
@@ -104,7 +104,7 @@ relaxation effects, in-situ measurement allows the same object to be
 measured repeatedly at different states of charge. Tracking the same
 object during a (dis)charge cycle allows for a direct comparison
 between different states of charge and provides a clearer picture of
-how heterogeneity evolves.
+the evolution of heterogeneity.
 
 %% NCA/NMC background
 
@@ -179,40 +179,28 @@ focus on mass diffusion.
 %% \subsection{\Gls{uxrd} - Interparticle Dynamics}
 
 Secondary particles of \nca{} were tracked during their first charge
-and discharge using operando \gls{uxrd} mapping. Dilute
+and discharge using operando \gls{uxrd} mapping (Figure \ref{fig:uxrd}). Dilute
 (\SI{20}{\percent} w/w) \nca{} electrodes were used to isolate the
-response of individual particles from each other. For each X--Y
+response of individual particles from each other. The introduction of large amounts of carbon black to dilute the particles had the beneficial effect of ensuring that the electronic conductivity of the electrode was not limiting, but it contributed to the faradaic processes on charge due to irreversible interactions with the electrolyte\cite{kostecki2014}, artificially extending the charging process (Figure \ref{fig:uxrd}c). For each X--Y
 mapping position, the individual 2D diffraction signals were
 integrated to one-dimensional patterns and converted from angular
-domain ($2\theta$) to the \gls{q} domain. While data were collected
+domain ($2\theta$) to the \gls{q} domain, which, in turn, relates to the \gls{d} spacing between planes in the crystal lattice through
+$d=\frac{2\pi}{\vert\vec{q}\vert}$. While data were collected
 with \SI{\approx500}{\nano\meter} spatial resolution, smaller than the
 particle agglomerates, all patterns from the same particle agglomerate
 at a given time stamp during the reaction were summed for the analyses
 presented here (Figures \ref{fig:uxrd}a,b and
-\zref{si:fig:xrd-echem}). In all cases, the pristine state matched the
+\zref{si:fig:xrd-echem}), to focus the analysis on the particle, rather than domain, dynamics. In all cases, the pristine state matched the
 literature results for \nca{} \cite{novak2015}, with the exception of
 an extra feature at $\gls{q}\approx\SI{3.6}{\per\angstrom}$ due to
 metallic \ce{Li} (PDF \#00-001-1131). Small extraneous peaks occurred
 due to random aberrations in individual pixels on the diffraction
 detector (Figure \zref{si:fig:xrd-echem}).
 
-During (de)lithiation, the crystal structure of the cathode expands
-and contracts in response to transition metal oxidation states and
-lithium site fraction. Each diffraction peak corresponds to a spacing
-between planes in the crystal lattice, referred to as \gls{d}, where
-$d=\frac{2\pi}{\vert\vec{q}\vert}$. The value of \gls{d} for a given
-peak is related to the lattice parameters through the hkl indices for
-the corresponding plane. For example, \gls{d} for the (003) peak is
-determined solely by the $c$ lattice parameter, while \gls{d} for the
-(104) peak is based on both the $a$ and $c$ lattice parameters. This
-allows lattice parameters to be extracted from the \gls{d} values of
-the diffraction peaks.
-
-The diffraction peaks for \gls{p1} began to shift in \gls{q} soon
-after the onset of oxidation (Figure \ref{fig:uxrd}a), following the
+During (de)lithiation, the diffraction peaks for \gls{p1} began to shift in \gls{q} soon after the onset of oxidation (Figure \ref{fig:uxrd}a), following the
 same overall trajectory as reported for the ensemble
 average\cite{robert2015}. This similarity and the absence of peak
-splitting indicates that individual particles followed a rather single
+splitting indicates that individual particles followed a single
 phase mechanism, with no fictitious phase separation induced by
 surface impurities \cite{grenier2017}. The most characteristic changes
 can be observed at the (003) and (104) reflections. The former showed
@@ -222,7 +210,7 @@ initial state, representing an expansion then contraction along the
 $c$ axis during delithiation\citeme{}. The (104) diffraction peak
 gradually shifted to higher \gls{q} (lower \gls{d}) upon removal of
 \ce{Li} (Figure \ref{fig:uxrd}b), reflecting the balance between the
-trend along $c$ and the continuous decrease in the $a$
+trend along $c$, which is pseudo-parabolic, and the continuous decrease in the $a$
 dimension.\cite{robert2015} While the peak positions of \gls{p2}
 (Figure \zref{si:fig:xrd-echem}b) underwent similar changes, the peaks
 did not begin shifting until the electrochemical cell had reached a
@@ -238,8 +226,7 @@ at the end of charge and discharge consistent with full delithiation
 and relithiation, respectively\cite{novak2015}. The trends followed by
 the lattice parameters during the reaction again agreed with
 measurements of the ensemble average in the
-literature\cite{novak2015}, but \mw{differed from what}{their
-  correlation with potential differed}. The lattice parameters for
+literature\cite{novak2015, faenza2018}, but their timing with respect to the experiment differed. The lattice parameters for
 \gls{p1} and \gls{p2} began shifting at cell potentials below
 \SIrange{3.0}{3.8}{\volt} and at \SI{\approx4.5}{\volt}, respectively
 (Figure \ref{fig:uxrd}d). All in all, the rates of delithiation of
@@ -250,8 +237,7 @@ sequence, observed in Figure \ref{fig:uxrd}e and by the peak positions
 in Figures \ref{fig:uxrd}a,b and \zref{si:fig:ind-peaks}. Since
 \gls{p2} did not start delithiating until late in the charge sequence,
 its maximum rate of delithiation was more than double that of
-\gls{p1}. This observation has no precedent in the literature for
-reactions involving solid solutions, since there is no thermodynamic activation barrier toward nucleation of segregated phases.
+\gls{p1}. This observation is unexpected for solid solutions, since there is no thermodynamic activation barrier toward nucleation of segregated phases.
 
 \vg{I think we should provide a
   brief explanation in the difference between the phase-transformation
@@ -260,35 +246,19 @@ reactions involving solid solutions, since there is no thermodynamic activation 
 
 %% \subsection{u-XRD - Rates of (De)lithiation}
 \newpage % temporary to keep comments from overrunning
-Further insight into rates of delithiation during the reaction was
+Further insight into rates of delithiation of each particle during the reaction was
 extracted from the relationship between \gls{xLi} in \nca{x} and
-lattice parameters available in the literature. The most comprehensive
-study was by Robert et al\cite{robert2015}.\ \kt{Are you demonstrating
-  this in this work, or is this from Robert et al?  If latter, I would
-  combine this sentence with the previous one by …, whose relationship
-  holds…. (MW: Another Brian question)}{This relationship holds as
-  long as single phases are observed}, as in Figure
-\ref{fig:uxrd}a. Therefore, we apply it to quantify the extent of
-lithiation of each particle (Figure \ref{fig:uxrd}e), which can then
-provide an estimate of the delithiation rates of each particle. We
-extracted a calibration curve from the second cycle in Robert et
-al\cite{robert2015}.\ because it was free from interference due to a
-heterogeneous transformation due to kinetic limitations (Figure
-\zref{si:fig:xrd-echem}). Figure \ref{fig:uxrd}e shows the \ce{Li}
-content obtained from the \emph{c} lattice parameter for each of the
-two \nca{x} particles during the first charge-discharge cycle. We
-selected data points for which \kt{This statement does not seem to be
-  consistent with the plot.  There are points where changes are very
-  little from a point to another.  Maybe it's not “change” but
-  “value”?}{reliable changes in lattice parameters were observed},
-rather than all data points in Figure \ref{fig:uxrd}d. Similar trends
+lattice parameters collected with PXRD in the literature.\cite{robert2015} (Figure
+\zref{si:fig:xrd-echem}), and plotting the value against the time elapsed in the experiment. Figure \ref{fig:uxrd}e shows the \ce{Li}
+content obtained from the \emph{c} lattice parameter at selected time stamps for each of the
+two \nca{x} particles during the first charge-discharge cycle. Similar trends
 were observed when calculating \ce{Li} content using the \emph{a}
 parameter (Figure \zref{si:fig:rates}). In these plots, to allow for
 an easier comparison between experiments and simulation, the Li
 content was plotted against the ratio of time passed since current was
-applied to the total time to reach the cutoff potential ($t_c$).
+applied to the total time to reach the charge cutoff potential ($t_c$), given the decoupling between the macroscopic rate of the experiment and that of individual particles.
 
-For both \gls{p1} and \gls{p2} the rate of delithiation, estimated
+For both \gls{p1} and \gls{p2}, the rate of delithiation, estimated
 from the slope in Figure \ref{fig:uxrd}e, was initially low,
 proceeding at \SI{\approx0.025}{\ce{Li}\per\hour}, or C/40. Once the
 overall content of the particle reached \Li{0.9}, the reaction
@@ -303,7 +273,9 @@ fraction evoled in a similar manner as \gls{p1}, with a 20-fold
 acceleration at \Li{0.9} to \SI{\approx0.66}{\ce{Li}\per\hour}, or
 C/1.5, which lasted until an average particle composition \Li{0.5},
 after which the rate fell below \SI{0.1}{\ce{Li}\per\hour}, or C/10,
-for the remainder of the delithiation process. Upon discharge of the
+for the remainder of the delithiation process.
+
+The discharge of the cell proceeded more quickly than charge, with the consequence that less data points were captured for quantification. Nonetheless, the process returned the cell parameters of both particles to values close to the pristine state, indicating degrees of reversibility comparable to the literature.\cite{robert2015} The change in cell parameters was smoother than upon charge, with no obvious evidence of acceleration. It is worth noting that, while the end values were similar, the trajectory of both a and c parameters was not quantitatively the same. For instance, the c parameter peaked at 14,48 and 14.35 A on charge and discharge, respectively. This evolution suggests that full delithiation introduces irreversible structural changes that affect the dependence of cell parameters on Li content. To the best of our knowledge, this issue has not been explored in the literature and demands dedicated operando PXRD experiments. Upon discharge of the
 cell, i.e.\ after \SI{1.0}{t_c}, both particles relithiated quickly at
 the initial stages, with the consequence that too few data points were
 captured for a reliable quantification. When the lattice parameters
