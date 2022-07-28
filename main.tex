@@ -51,8 +51,13 @@
 
 % \listoftodos
 
-\mw{Include this paper: https://pubs.acs.org/doi/pdf/10.1021/acs.nanolett.2c01818}{}
-\mw{Include this paper: https://onlinelibrary.wiley.com/doi/10.1002/anie.202205394}{}
+\section{[Other papers to consider]}
+\begin{itemize}
+\item \url{https://pubs.acs.org/doi/pdf/10.1021/acs.nanolett.2c01818}
+\item \url{https://onlinelibrary.wiley.com/doi/10.1002/anie.202205394}
+\item \url{https://doi.org/10.1021/acs.nanolett.2c01818?urlappend=%3Fref%3DPDF&jav=VoR&rel=cite-as}
+\item \url{https://onlinelibrary.wiley.com/doi/10.1002/anie.202205394}
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
@@ -147,42 +152,6 @@ clarify the nature of the chemical transformation, especially in view
 of locating the onset and progression of heterogeneity, within and
 among the secondary particles that typically compose a cathode.
 
-%% A possible origin is the presence of a
-%% lithium diffusion barrier arising from surface \ce{Li2CO3} formation
-%% upon exposure to \ce{CO2} and \ce{H2O}. When pristine \nca{} was
-%% protected from ambient air exposure, a single-phase (solid solution)
-%% reaction was observed during first charge\cite{grenier2017}. This
-%% observation led to the conclusion that the secondary particles
-%% contained an uneven coating of \ce{Li2CO3}, which must be broken
-%% electrochemically before the reaction can proceed. The need to break
-%% this coating would produce different timelines for reaction initiation
-%% in different particles, resulting in a bimodal distribution of
-%% oxidation states and the appearance of non-equilibrium heterogeneity
-%% by \gls{xrd}. The oxidation states of individual secondary particles
-%% were measured by operando \gls{txm} \gls{xas} and particles were
-%% indeed observed to be either in a pristine or partially oxidized state
-%% with more particles becoming oxidized at higher states of
-%% charge\cite{nowack2016}. While \ce{Li2CO3} clearly plays a role in the
-%% ability of lithium to penetrate into the secondary particle, it was
-%% also demonstrated that the presence of two phases by \gls{xrd} is
-%% suppressed by stronger compaction of the electrode during laminate
-%% preparation\cite{bobrikov2018}. A related layered cathode material,
-%% \nmc[333]{}, is less prone to \ce{Li2CO3} formation, even showing
-%% lower levels of \ce{Li2CO3} after one month of air exposure than those
-%% found in pristine \nca{}\cite{shizuka2007}. For the most part, in-situ
-%% \gls{xrd} studies of \nmc[333]{} during first charge show a
-%% transformation that is primarily single-phase (solid
-%% solution)\cite{hulzen2018,ahn2017,zhou2016-2}, though some studies
-%% reveal two crystallographic phases with a small difference in \emph{a}
-%% and \emph{c} lattice parameters coexisting over a narrow range of
-%% delithiation compared to \nca{}\cite{yoon2006,hua2018}. The oxidation
-%% dynamics of these layered cathode materials warrant further study to
-%% clarify the nature of the chemical transformation, especially in view
-%% of locating the onset and progression of heterogeneity, within and
-%% among the secondary particles that typically compose a cathode. It is
-%% important to elucidate how general this behavior is among the general
-%% class of layered oxides that are leading candidates as battery
-%% materials.
 
 The work described here further examined the heterogeneities present
 in secondary particles of established layered cathode materials,
@@ -305,7 +274,7 @@ fraction evoled in a similar manner as \gls{p1}, with a 20-fold
 acceleration at \Li{0.9} to \SI{\approx0.66}{\ce{Li}\per\hour}, or
 C/1.5, which lasted until an average particle composition \Li{0.5},
 after which the rate fell below \SI{0.1}{\ce{Li}\per\hour}, or C/10,
-for the remainder of the delithiation process.
+for the remainder of the delithiation process. The divergence in charging rates during a galvanostatic experiment has been recently reported by others using optical microscopy. However, our ability to relate specific signatures with Li content using its well-established dependence on \gls{d} allow us not only to pinpoint that the rate acceleration happens at specific points of the reaction (between \Li{0.9} and ~\Li{0.6}), but also estimate the actual rate of the process at each stage.
 
 The discharge of the cell proceeded more quickly than charge, with the consequence that less data points were captured for quantification. Nonetheless, the process returned the cell parameters of both particles to values close to the pristine state, indicating degrees of reversibility comparable to the literature.\cite{robert2015} The change in cell parameters was smoother than upon charge, with no obvious evidence of acceleration. It is worth noting that, while the end values were similar, the trajectory of both a and c parameters was not quantitatively the same. For instance, the c parameter peaked at 14,48 and 14.35 A on charge and discharge, respectively. This evolution suggests that full delithiation introduces irreversible structural changes that affect the dependence of cell parameters on Li content. To the best of our knowledge, this issue has not been explored in the literature and demands dedicated operando PXRD experiments. Upon discharge of the
 cell, i.e.\ after \SI{1.0}{t_c}, both particles relithiated quickly at
@@ -330,17 +299,14 @@ A second set of independent experiments was pursued to evaluate the
 reproducibility of the varying delithiation rates observed among
 particles by the operando \gls{uxrd} mapping. In particular, we
 employed operando \Gls{txm} \gls{xas} of \nca{} secondary particles
-during charging to probed \ce{Ni} oxidation states at high spatial
+during charging to probe \ce{Ni} oxidation states at high spatial
 resolution. Framesets containing multiple particles were collected
 during the first galvanostatic charge (Figure
 \ref{fig:txm-nca}a). Localized \gls{xas} K-edge spectra were averaged
-over all pixels in a single secondary particle. Upon delithiation, a
-progressive increase was seen in the energy of the absorption edge and
+over all pixels in a single secondary particle. XAS measurements of the ensemble average of electrodes showed that, upon delithiation, there was a
+progressive increase in the energy of the absorption edge and
 the associated energy of maximum absorbance, or whiteline (Figures
-\zref{si:fig:isobestic-point} and \zref{si:fig:kedges}). For layered
-transition-metal oxide cathodes, energy of the the \ce{Ni} K-edge
-whiteline increases as \ce{Ni^{2+}} oxidizes to \ce{Ni^{3+}} and then
-\ce{Ni^{4+}}. Therefore, the whiteline energy was used as a proxy for
+\zref{si:fig:isobestic-point} and \zref{si:fig:kedges}), consistent with literature observations of \ce{Ni^{2+}} oxidation to \ce{Ni^{4+}}.\cite{deb2005}\cite{muto2009} Therefore, the whiteline energy was used as a proxy for
 \ce{Ni} oxidation, which is the dominant redox process in \nca{} and
 \nmc{}. Figure \ref{fig:txm-nca}c shows the changes in
 ensemble-average \ce{Ni} K-edge \gls{xas} spectra for \nca{} across
@@ -359,18 +325,13 @@ all particles, reaching \SIrange{75}{100}{\percent} \kt{When working
   forth.  SOC and DOD sounds more like it's about cell, so it might be
   better to stick with site fraction. [MW: I agree, we need to find
     out from YS how he defines 100\% SOC in order to translate to Li
-    fraction]}{state-of-charge}. Although some particles oxidized
-concurrently, there was no clear preference for \vg{}{when particles
-  began rapid oxidation}. Not all of the particles measured reached
-the full \SI{100}{\percent} state-of-charge. Additionally, upon
-reaching their maximum state-of-charge, some particles subsequently
-exhibited \ce{Ni} reduction, presumably due to the instability of
+    fraction]}{state-of-charge}. Although several particles oxidized
+concurrently, there was no clear preference for when particles
+  began rapid oxidation. The analysis produced instances where the trend in whiteline appeared to shift toward lower energy upon
+reaching their maximum state-of-charge, suggesting \ce{Ni} reduction may have occurred, presumably due to the instability of
 \ce{Ni} in high oxidation states\citeme{}, resulting in oxygen
-loss. This stochastic, particle-level behavior was in contrast with
-that seen by in-situ ensemble-average \gls{xas}\cite{deb2005}, which
-showed a gradual increase in whiteline position over the full range of
-delithiation. Overall, this inter-particle rapid oxidation was in
-agreement with the observations made by \gls{uxrd} described above
+loss. Overall, the observation of rapid particle oxidation despite the constant current applied to the cell was in
+agreement with \gls{uxrd} above
 (Figure \ref{fig:uxrd}).
 
 \begin{table}
@@ -410,7 +371,7 @@ shape as compared to \nca{} (Figure \ref{fig:txm-nca}a). The mean
 optical depth for all foreground pixels in the frame was used for
 evaluating overall oxidation (Figures \ref{fig:txm-nmc}b,c). As
 expected, \nmc[333]{} exhibited a lower initial whiteline energy than
-\nca{}\cite{deb2005,muto2009}. Similar to \nca{}, spectra for both
+\nca{}\cite{deb2005,muto2009}, matching the contrast between \ce{Ni^{2+}} and \ce{Ni^{3+}}. Similar to \nca{}, spectra for both
 \nmc{} cathodes showed an increase in the whiteline energy, which is
 in agreement with the literature\citeme{}. To estimate the state of
 charge, the evolution of the whiteline was compared to the lowest
@@ -429,11 +390,11 @@ initial latent phase and subsequent rapid oxidation were seen (Figures
 changes in whiteline energy for \nmc[333]{} of
 \SI{\approx3}{\electronvolt} and \nmc[532]{} of
 \SI{\approx2.5}{\electronvolt}, reflecting the lower starting
-concentration of \ce{Ni^{2+}} in \nmc[532]{}. The experiment using
+concentration of \ce{Ni^{2+}} in \nmc[333]{}. The experiment using
 \nmc[532]{} did not reach the same overall state of charge as those
 using \nmc[333]{} and \nca{} due to loss of X-rays. For \nmc[333]{},
 once rapid oxidation had occurred, a subsequent gradual increase to
-\SI{4.1}{eV} was observed. The total change in whiteline energy for
+\SI{4.1}{eV} was observed, consistent with the final phase of slower delithiation observed for NCA using \gls{uxrd}. The total change in whiteline energy for
 all observed secondary particles was \SI{>4}{eV} (Figure
 \ref{fig:txm-nmc}d). While ensemble \gls{xas}
 studies\cite{deb2005,muto2009} did not reach the \SI{4.7}{V} cell
@@ -447,15 +408,13 @@ that an appreciable portion of the particles in the specimens measured
 by ensemble \gls{xas} had not reached their fully oxidized states.
 
 In summary, all layered cathode chemistries studied here exhibited
-indivudual secondary particles undergoing rapid delithiation at
+individual secondary particles undergoing rapid delithiation at
 various times during galvanostatic delithiation. This behavior was
 observed experimentally by two independent mapping techniques
-(\gls{uxrd} and \gls{txm}), with both low-energy
-(\SI{\approx8}{\kilo\electronvolt}) and high-energy
-(\SI{25}{\kilo\electronvolt}) X-rays, \kt{Where do you we discuss the
-  effect of this parameter? Please clarify.}{and with varying carbon
-  content in the electrode composite}. The persistence of this
-phenomena across observations suggests that this behavior is inherent
+(\gls{uxrd} and \gls{txm}), with very different energies of the X-ray beam
+(\SI{\approx8}{\kilo\electronvolt} for TXM vs
+\SI{25}{\kilo\electronvolt} for \gls{uxrd}). The persistence of the
+phenomena suggests that the behavior is inherent
 to layered cathode materials rather than being an artifact of the
 techniques, and is consistent with previous reports using other
 techniques on related \nmc{} and \ce{LiCoO2} layered
@@ -467,9 +426,8 @@ materials\cite{chueh2021,rao2021,wang2020-6}.
 %% Electrochemical dynamics simulations to identify the origin of the
 %% accelerated delithiation
 
-Our experiments clearly show that changes in rate of delithiation
-occur at similar Li contents for both particles (\gls{p1} and
-\gls{p2}), suggesting that the fundamental electrochemical properties
+Our \gls{uxrd} experiments clearly show that changes in rate of delithiation
+occur at similar Li contents in the particles, suggesting that the fundamental electrochemical properties
 are strongly dependent on the state of charge. While the observed
 phenomenon of accelerated delithiation is reminiscent of the
 interparticle phase separation predicted in lithium iron phosphate
@@ -501,7 +459,7 @@ studied using the \gls{ecd}. Similarly, the effect of the transport of
 are dependent on the \gls{xLi} in the particles. Therefore, we
 performed sensitivity analyses with respect to various functional
 forms and values of \gls{ecd} and \gls{D_s}, including the ones
-reported in literature and constructed for this work to qualitatively
+reported in literature\citeme{VG/KT?} and constructed for this work to qualitatively
 reproduce rapid delithiation. The details of these forms are provided
 in the Supporting Information. %% Our sensitivity analyses generated
 two
@@ -549,7 +507,7 @@ phenomena under a galvanostatic condition have also been observed in
 thermodynamics of the phase-separating material
 \cite{thornton2015}\citeme{KT: Vishwas, I will provide them; please
   add.}. The ensure that the results from the 8-particle simulations
-are not artificially affects by the small number of particles
+are not artificially affected by the small number of particles
 simulated, we performed a simulation with 30 particles; the details of
 the simulation are provided in the Supporting Information. The results
 are provided in Figure \ref{fig:model-1}c. First, rapid delithiation
@@ -581,7 +539,7 @@ duration of time. Such an increase in the flux cannot be realized even
 if the diffusion function has a step-function-like dependence on
 \gls{xLi} because the diffusivity (hence, diffusion flux) only
 increases in the shell of the particle close to the particle surface;
-the particle bulk continues to have the lower diffusivity. In other
+the particle bulk continues to have lower diffusivity. In other
 words, the entire particle does not undergo rapid delithiation;
 instead, only the shell close to the particle surface exhibits such
 behavior. Furthermore, the experimental measurements show that the
@@ -622,7 +580,7 @@ Operando X-ray characterization of layered cathodes in assembled
 Li-ion cells showed rapid and stochastic oxidation within the cathode
 at the level of secondary particle agglomerates. This behavior was
 consistent across cathodes with several transition metal compositions,
-in both high and low carbon content electrodes, and when measured by
+and when measured by
 two distinct X-ray characterization modalities. The robustness with
 which this effect was measured demonstrates it to be inherent to
 layered cathode materials. Subsequent modeling of the electrochemical
@@ -633,10 +591,9 @@ change of three orders of magnitude in \gls{ecd} at $\gls{xLi}\approx
 delithiation explains the apparent two-phase behavior reported by
 conventional \gls{xrd}: it is an emergent property resulting from the
 ensemble-average nature of the technique rather than being inherent to
-the thermodynamics of layered cathodes. Furthermore, comparison of the
-spectromicroscopy results presented here and ensemble \gls{xas}
-reveals that individual particles reach a higher state of charge than
-the global average, highlighting the heterogeneity within the
+the thermodynamics of layered cathodes. The
+spectromicroscopy results presented here reveal that individual particles can reach a higher state of charge than
+the global average during cycling, highlighting the heterogeneity within the
 electrode and the need for experimental techniques such as those
 applied here that provide spatial, temporal and chemical resolutions.
 
@@ -654,8 +611,7 @@ applied here that provide spatial, temporal and chemical resolutions.
   discussed or demonstrated — theoretically, this just means that it
   will be utilized at a later time.}{Furthermore, the observation that
   some particles remain lithiated relative for the ensemble average
-  equates to a reduction in the usable capacity of the battery.} Both
-of these factors present areas of improvement for the performance of
+  equates to a reduction in the usable capacity of the battery.} These factors present areas of improvement for the performance of
 layered cathode materials, which could be realized with further
 research into the origin of the significant increase in \gls{ecd}
 during charging.
