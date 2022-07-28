@@ -16,6 +16,7 @@
 \usepackage{glossaries}
 
 \input{macros}
+\input{colors}
 \input{acronyms}
 \input{metadata}
 
@@ -358,8 +359,6 @@ The remaining model parameters are described in Table \ref{tab:model-parameters}
 
 \section{Sensitivity Analyses with Respect to \Gls{ecd}}
 
-\todo{start here}
-
 In this section, we report the results of the sensitivity studies with
 respect to different forms of \gls{ecd}. We note that we set $D_s>
 \SI{5e-15}{\meter\squared\per\second}$ (as shown in Figure
@@ -531,120 +530,183 @@ increased.
   \label{fig:2Ddiffraction}
 \end{figure}
 
-\begin{figure}
-  \includegraphics{figures/nmc_echem.pdf}
-  \caption{E-chem of NMC-333 (blue) and NMC-532 (orange). TODO: Finish caption}
-\end{figure}
+%% \begin{figure}
+%%   \includegraphics{figures/nmc_echem.pdf}
+%%   \caption{E-chem of NMC-333 (blue) and NMC-532 (orange). TODO: Finish caption}
+%% \end{figure}
 
-\begin{figure}
-  \includegraphics[width=\textwidth]{figures/ys-echem.png}
-  \caption{[YSY] SoCs for ex-situ bulk XANES.}
-\end{figure}
+%% \begin{figure}
+%%   \includegraphics[width=\textwidth]{figures/ys-echem.png}
+%%   \caption{[YSY] SoCs for ex-situ bulk XANES.}
+%% \end{figure}
 
-\begin{figure}
-  \includegraphics[width=\textwidth]{figures/ys-xanes.png}
-  \caption{[YSY] How to judge SoC from Ni K-edge XANES. The trend between
-    white line peak position and SoCs is not perfect linear, but we
-    still can estimate the oxidation states of Ni.}
-\end{figure}
+%% \begin{figure}
+%%   \includegraphics[width=\textwidth]{figures/ys-xanes.png}
+%%   \caption{[YSY] How to judge SoC from Ni K-edge XANES. The trend between
+%%     white line peak position and SoCs is not perfect linear, but we
+%%     still can estimate the oxidation states of Ni.}
+%% \end{figure}
 
-\begin{figure}
-  \includegraphics[width=\textwidth]{figures/ys-xanes-fov.png}
-  \caption{[YSY](A) Field-of-view (FoV) for in-situ hard X-ray full-filed
-    transmission microscopy. (B) Electrochemical response of the
-    in-situ cell. Identical FoV was repeatedly visualized (OCV \& SoC I
-    ~ IX) during battery operation.}
-\end{figure}
+%% \begin{figure}
+%%   \includegraphics[width=\textwidth]{figures/ys-xanes-fov.png}
+%%   \caption{[YSY](A) Field-of-view (FoV) for in-situ hard X-ray full-filed
+%%     transmission microscopy. (B) Electrochemical response of the
+%%     in-situ cell. Identical FoV was repeatedly visualized (OCV \& SoC I
+%%     ~ IX) during battery operation.}
+%% \end{figure}
 
-\begin{figure}
-  \includegraphics[width=\textwidth]{figures/ys-soc-txm.png}
-  \caption{[YSY] See text}
-  \label{ys-soc-txm}
-\end{figure}
+%% \begin{figure}
+%%   \includegraphics[width=\textwidth]{figures/ys-soc-txm.png}
+%%   \caption{[YSY] See text}
+%%   \label{ys-soc-txm}
+%% \end{figure}
 
-Figure \ref{ys-soc-txm}:
+%% Figure \ref{ys-soc-txm}:
 
-(A) Isolated 2nd particle in the FoV. The crack (indicated as red
-arrow) suddenly appeared at the SoC VI (same sudden ``jumps'' position
-in Jordi's e-mail). (B) Geometrical scaling factor with respect to
-global SoCs. At ‘jump’ position, the volumes (1-dimensional scaling
-factor \textasciicircum3) of the 2nd particles shrank around 3\%. The 1-dimensional
-scaling factor was calculated by intensity-based image registration of
-identical particles with respect to different SoCs. The enhance
-robustness of analysis, 1-dimensional scaling factors were calculated
-at all energy points (I don't remember exact the number of points but
-it should be 30 ~ 40 points. Need to revisit the data) in imagespectra
-and STD of the calculated 1-dimensional scaling factors\^{}3 shown as
-error bars.  The shrinkage of the 2nd particles is smaller that
-crystallographic volume shrinkage of the unit cell (I don't remember
-exact number.) and cause the empty space inside (means microstructural
-defaces such as void and crack).  (C) and (D) Chemical heterogeneity
-of 2nd particle -> As Jordi mentioned, they are not the important
-point. : )
+%% (A) Isolated 2nd particle in the FoV. The crack (indicated as red
+%% arrow) suddenly appeared at the SoC VI (same sudden ``jumps'' position
+%% in Jordi's e-mail). (B) Geometrical scaling factor with respect to
+%% global SoCs. At ‘jump’ position, the volumes (1-dimensional scaling
+%% factor \textasciicircum3) of the 2nd particles shrank around 3\%. The 1-dimensional
+%% scaling factor was calculated by intensity-based image registration of
+%% identical particles with respect to different SoCs. The enhance
+%% robustness of analysis, 1-dimensional scaling factors were calculated
+%% at all energy points (I don't remember exact the number of points but
+%% it should be 30 ~ 40 points. Need to revisit the data) in imagespectra
+%% and STD of the calculated 1-dimensional scaling factors\^{}3 shown as
+%% error bars.  The shrinkage of the 2nd particles is smaller that
+%% crystallographic volume shrinkage of the unit cell (I don't remember
+%% exact number.) and cause the empty space inside (means microstructural
+%% defaces such as void and crack).  (C) and (D) Chemical heterogeneity
+%% of 2nd particle -> As Jordi mentioned, they are not the important
+%% point. : )
 
-(E) Averaged SoC of each 2nd particle with respect to global
-SoCs. The positions of ``jump'' are differed.  The definition of
-several SoC 1. Global SoC -> SoC of the entire in-situ cell (shown
-in Figure 3B) 2. SoC or averaged SoC -> SoC of each individual 2nd
-particle.
+%% (E) Averaged SoC of each 2nd particle with respect to global
+%% SoCs. The positions of ``jump'' are differed.  The definition of
+%% several SoC 1. Global SoC -> SoC of the entire in-situ cell (shown
+%% in Figure 3B) 2. SoC or averaged SoC -> SoC of each individual 2nd
+%% particle.
 
 \begin{figure}
   \includegraphics{figures/Kedges.pdf}
-  \caption{[MW] }
+  \caption{Ni K-edge absorption spectra for TXM fields of view. Mean
+    optical depth of pixels after edge filter for
+    (\textcolor{C0}{\mplreduced{}}) most reduced and
+    (\textcolor{C1}{\mploxidized{}}) most oxidized time-steps for (a)
+    \nmc[333]{}, (b) \nca{}, and (c) \nmc[532]{}.}
   \label{fig:kedges}
 \end{figure}
 
 \begin{figure}
   \includegraphics{figures/isobestic-point.pdf}
-  \caption{[MW] }
+  \caption{Demonstration of isobestic point for \nmc[333]{} \ce{Ni}
+    K-edge. (a) Observed mean optical depth spectra for \gls{txm}
+    frames during operando oxidation, with dashed lines added as
+    visual guides. (b) Results of mathematical linear combinations of
+    fit spectra (\mplline{}) for observed spectral end-members for the
+    most reduced (\textcolor{C0}{+}) and oxidized (\textcolor{C1}{+})
+    points in the \nmc[333]{} frames in (a). (c) Effect of linear
+    combination ratio of spectral end-members in \emph{b} on resultant
+    whiteline energy.}
   \label{fig:isobestic-point}
 \end{figure}
 
 \begin{figure}
   \includegraphics{figures/bulk-xas-extraction.pdf}
-  \caption{[MW] }
+  \caption{Reported changes of \ce{Ni} K-edge whiteline energy. (a)
+    In-situ XAS of \nmc[333]{x} and (b) ex-situ XAS of \nca{x}. Data
+    extracted from published figures as described in Table
+    \ref{tab:bulk-xas-extraction}.}
   \label{fig:bulk-xas-extraction}
 \end{figure}
 
 \begin{figure}
   \includegraphics{figures/kedge-decomposition.pdf}
-  \caption{[MW] }
+  \caption{Sample decomposition of Ni K-edge fitting. Spectrum of mean
+    optical depth of a frame of \nca{} particles as
+    (\textcolor{C0}{\textbf{+}}) observed optical depth;
+    (\textcolor{C1}{\mplline{}}) overall least squares fit; and
+    (\textcolor{C2}{\mpldashes{}}) arctangent,
+    (\textcolor{C3}{\mpldashes{}}) Gaussian and
+    (\textcolor{C4}{\mpldashes{}}) background components of least
+    squares fit.}
   \label{fig:kedge-decomposition}
 \end{figure}
 
 \begin{figure}
   \includegraphics{figures/echem-derivatives.pdf}
-  \caption{[MW] }
+  \caption{Cell potential (\textcolor{C0}{\mplline{}}) and derivative
+    of potential with respect to $x$ in \ce{Li_xMO2}
+    (\textcolor{C1}{\mpldots}) during galvanostatic
+    charge/discharge. (a,b) \nmc[333]{} cathode in modified coin-cell
+    during first charge, (c) \nca{} cathode in pouch-cell during first
+    charge, (d) \nca{} cathode in pouch-cell during second charge, (e)
+    \nca{} cathode charged in modified coin-cell, and (f) \nmc[532]{}
+    cathode charged in modified coin-cell. All galvanostatic profiles
+    treated with third-order Sovitzky-Golay filter with 101-point
+    window prior to calculating derivative.}
   \label{fig:echem-derivatives}
 \end{figure}
 
-\begin{figure}
-  \includegraphics{figures/OD-frames.pdf}
-  \caption{[MW]}
-  \label{fig:od-labels}
-\end{figure}
+%% \begin{figure}
+%%   \includegraphics{figures/OD-frames.pdf}
+%%   \caption{[MW]}
+%%   \label{fig:od-labels}
+%% \end{figure}
 
 \begin{figure}
   \includegraphics{figures/NMC333-particle-echem.pdf}
-  \caption{[MW]}
+  \caption{Particle-level oxidation during first charge and discharge
+    of \nmc[333]{}. (a) Changes in mean whiteline energies relative to
+    \SI{8351.69}{eV} for secondary particles during first charge and
+    discharge. (c) Changes in mean whiteline energies relative to
+    \SI{8351.22}{eV} for secondary particles with higher temporal
+    resolution. (b,d) Operando potential (\textcolor{C0}{\mplline{}})
+    and current (\textcolor{C1}{\mplline{}}) for galvanostatic cycling
+    with \SI{4.75}{V} potentiostatic step for \nmc[333]{} samples in
+    modified coin-cells.}
   \label{fig:nmc333-particles}
 \end{figure}
 
 \begin{figure}
   \includegraphics{figures/NCA-particle-echem.pdf}
-  \caption{[MW]}
+  \caption{Particle-level oxidation during first and second discharge
+    of \nca{} samples in pouch cells. (a) Changes in mean whiteline
+    energies relative to \SI{8350.92}{eV} for secondary particle
+    during first charge/discharge cycle. (c) Changes in mean whiteline
+    energies relative to \SI{8350.45}{eV} for secondary particles
+    during second charge and discharge cycle. (b) Operando potential
+    (\textcolor{C0}{\mplline{}}) and current
+    (\textcolor{C1}{\mplline{}}) for galvanostatic oxidation,
+    open-circuit potential, galvanostatic reduction, and
+    potentiostatic reduction during first cycle. (d) Operando
+    potential (\textcolor{C0}{\mplline{}}) and current
+    (\textcolor{C1}{\mplline{}}) for galvanostatic oxidation,
+    potentiostatic oxidation, and galvanostatic reduction during
+    second cycle.}
   \label{fig:nca-particles}
 \end{figure}
 
 \begin{figure}
   \includegraphics{figures/NMC532-particle-echem.pdf}
-  \caption{[MW]}
+  \caption{Particle-level oxidation during first charge and discharge
+    of \nmc[532]{}. (a) Mean whiteline energies of secondary particles
+    during charge discharge. (b) Operando potential
+    (\textcolor{C0}{\mplline{}}) and current
+    (\textcolor{C1}{\mplline{}}) for galvanostatic cycling for
+    \nmc[532]{} samples in modified coin-cells. X-rays unavailable
+    after \SI{10}{\hour} due to maintenance.}
   \label{fig:nmc532-particles}
 \end{figure}
 
 \begin{figure}
   \includegraphics{figures/NCA-particles-irradiation.pdf}
-  \caption{[MW]}
+  \caption{Operando \gls{txm} of secondary \nca{} particles during
+    first charge. Mean changes in whiteline energies relative to
+    \SI{8354.18}{eV} for secondary particles (a) without static X-ray
+    exposure, and (b) with a \SI{3}{\hour} static X-ray exposure prior
+    to operando imaging. (c) Galvanostatic charging profile for
+    modified coin-cell with \nca{} cathode.}
   \label{fig:nca-irradiation}
 \end{figure}
 
@@ -688,23 +750,23 @@ particle.
 \end{figure}
 
 
-\begin{table}
-  \centering
-  \input{figures/rates-table.tex}
-  \caption{Rates of \ce{Li} removal and corresponding \ce{Li} content during various time ranges of the
-    charge-discharge cycle for P1. Time ranges were selected due to linear
-    changes in \ce{Li} content.}
-  \label{table:rates}
-\end{table}
+%% \begin{table}
+%%   \centering
+%%   \input{figures/rates-table.tex}
+%%   \caption{Rates of \ce{Li} removal and corresponding \ce{Li} content during various time ranges of the
+%%     charge-discharge cycle for P1. Time ranges were selected due to linear
+%%     changes in \ce{Li} content.}
+%%   \label{table:rates}
+%% \end{table}
 
-\begin{table}
-  \centering
-  \input{figures/rates-table-p2.tex}
-  \caption{Rates of \ce{Li} removal and corresponding \ce{Li} content during various time ranges of the
-    charge-discharge cycle for P2. Time ranges were selected due to linear
-    changes in \ce{Li} content.}
-  \label{table:ratesp2}
-\end{table}
+%% \begin{table}
+%%   \centering
+%%   \input{figures/rates-table-p2.tex}
+%%   \caption{Rates of \ce{Li} removal and corresponding \ce{Li} content during various time ranges of the
+%%     charge-discharge cycle for P2. Time ranges were selected due to linear
+%%     changes in \ce{Li} content.}
+%%   \label{table:ratesp2}
+%% \end{table}
 
 \newpage
 \bibliographystyle{plain}

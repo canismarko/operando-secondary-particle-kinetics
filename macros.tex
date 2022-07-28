@@ -35,3 +35,44 @@
   \addFileDependency{#2.tex}%
   \addFileDependency{#2.aux}%
 }
+
+
+%% Drawing lines similar to those found in matplotlib
+%% Define matplotlib line styles
+\newlength{\tikzheight}
+\newcommand{\mplline}{%
+  \rule[0.5ex]{1em}{1.2pt}%
+}
+\newcommand{\mpldashes}{%
+  \rule[0.5ex]{0.4em}{1.2pt}%
+  \hspace{0.2em}%
+  \rule[0.5ex]{0.4em}{1.2pt}%
+}
+\newcommand{\mpldots}{%
+  \rule[0.5ex]{0.15em}{0.15em}%
+  \hspace{0.2em}%
+  \rule[0.5ex]{0.15em}{0.15em}%
+  \hspace{0.2em}%
+  \rule[0.5ex]{0.15em}{0.15em}%
+}
+\DeclareRobustCommand{\mplreduced}{%
+  \settoheight{\tikzheight}{X}%
+  \begin{tikzpicture}[baseline=-0.4\tikzheight]
+    \draw [line width = 0.15ex] (0, 0) -- (0.75ex, 0);
+    \draw [line width = 0.3ex] (1.25ex, 0) -- (2.25ex, 0);
+    \draw [line width = 0.3ex] (1.75ex, 0.5ex) -- (1.75ex, -0.5ex);
+    \draw [line width = 0.15ex] (2.75ex, 0) -- (3.5ex, 0);
+  \end{tikzpicture}%
+}%
+\DeclareRobustCommand{\mploxidized}{%
+  \settoheight{\tikzheight}{X}%
+  \begin{tikzpicture}[baseline=-0.4\tikzheight]
+    \draw [line width = 0.15ex] (0, 0) -- (0.25ex, 0);
+    \draw [line width = 0.15ex] (0.75ex, 0) -- (2ex, 0);
+    \draw [line width = 0.15ex] (2.5ex, 0) -- (2.75ex, 0);
+
+    \draw [line width = 0.3ex] (0.875ex, 0.5ex) -- (1.875ex, -0.5ex);
+    \draw [line width = 0.3ex] (0.875ex, -0.5ex) -- (1.875ex, 0.5ex);
+
+      \end{tikzpicture}%
+}%
