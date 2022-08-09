@@ -14,6 +14,7 @@
 \usepackage{siunitx}
 \usepackage[xr,user]{zref} % For cross references to supplement figures
 \usepackage{glossaries}
+\usepackage{textgreek}
 
 \input{macros}
 \input{colors}
@@ -619,6 +620,27 @@ increased.
     \ref{tab:bulk-xas-extraction}.}
   \label{fig:bulk-xas-extraction}
 \end{figure}
+
+\begin{table}
+  \begin{tabular}{c c c | c c c}
+    \multicolumn{3}{c|}{\nmc[333]{x}} & \multicolumn{3}{c}{\nca{x}} \\
+    x & Whiteline /eV & \textDelta{} /eV & x & Whiteline /eV & \textDelta{} /eV \\
+    \hline\hline
+    0.945 & 8353.98 & 0.21 & 1.00 & 8348.84 & 0.00 \\
+    0.751 & 8354.72 & 0.94 & 0.80 & 8349.61 & 0.78 \\
+    0.570 & 8355.45 & 1.68 & 0.60 & 8350.14 & 1.30 \\
+    0.386 & 8356.12 & 2.35 & 0.25 & 8350.78 & 1.95 \\
+    0.257 & 8356.43 & 2.66 & 0.00 & 8351.16 & 2.32 \\
+  \end{tabular}
+  \caption{Reported energies of \ce{Ni} K-edge whiteline. In-situ
+    \gls{xas} of \nmc[333]{x} (Ref.\ \cite{deb2005}) and ex-situ
+    \gls{xas} \nca{x} (Ref.\ \cite{muto2009}). Data extracted from
+    published figures using
+    WebPlotDigitizer\cite{webplotdigitizer}. Relative shifts in
+    whiteline energy (\textDelta{}) calculated as difference from
+    fully lithiated state ($x=1$).}
+  \label{tab:bulk-xas-extraction}
+\end{table}
 
 \begin{figure}
   \includegraphics{figures/kedge-decomposition.pdf}
