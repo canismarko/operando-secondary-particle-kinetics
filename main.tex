@@ -13,6 +13,7 @@
 \usepackage{glossaries}
 \usepackage[xr,user]{zref} % For cross references to supplemental figures
 \usepackage{textgreek}
+\usepackage{nameref}
 
 \input{macros}
 \input{acronyms}
@@ -146,33 +147,35 @@ provides a clearer picture of the evolution of spatial heterogeneity.
 %% 2018. This has to do with how long it took to write the paper, but
 %% still. this is where we are.
 
-Operando \gls{xrd}, which averages the diffraction signal over the ensemble of the
-cathode, is the premier tool to probe the transformation of layered
-oxides undergoing electrochemical reactions because it reveals phase
-progressions that have implications for solid-state kinetics and
-mechanical strain.  In \nmc{} materials like \nmc[333]{}, \gls{xrd}
-measurements have revealed that the transformation follows a mechanism
-involving a single phase in the range of voltages used in practical
+Operando \gls{xrd}, which averages the diffraction signal over the
+ensemble of the cathode, is the premier tool to probe the
+transformation of layered oxides undergoing electrochemical reactions
+because it reveals phase progressions that have implications for
+solid-state kinetics and mechanical strain.  In \nmc{} materials like
+\nmc[333]{}, \gls{xrd} measurements have revealed that the
+transformation follows a mechanism involving a single phase in the
+range of voltages used in practical
 applications,\cite{hulzen2018,ahn2017,zhou2016-2} with the formation
 of solid solutions with different Li content and, thus, degrees of
 oxidation of the transition metals. While \nca{} was expected to
-follow a similar mechanism, the first report described the transformation following a mixture of
-two phases, rather than a single solid solution, during the first
-charge when stored in ambient conditions, followed by a single-phase
-(solid solution) transformation seen during subsequent charge
-cycles\cite{robert2015}. Kinetic manipulation toward co-existence of
-two crystallographic phases with a small difference in \emph{a} and
-\emph{c} lattice parameters over a narrow composition range could be
-induced for \nmc[333]{} \cite{yoon2006,hua2018}. While impurities
-forming blocking surface layers help explain a seemingly two-phase
+follow a similar mechanism, the first report described the
+transformation following a mixture of two phases, rather than a single
+solid solution, during the first charge when stored in ambient
+conditions, followed by a single-phase (solid solution) transformation
+seen during subsequent charge cycles\cite{robert2015}. Kinetic
+manipulation toward co-existence of two crystallographic phases with a
+small difference in \emph{a} and \emph{c} lattice parameters over a
+narrow composition range could be induced for \nmc[333]{}
+\cite{yoon2006,hua2018}. While impurities forming blocking surface
+layers help explain a seemingly two-phase
 transformation\cite{grenier2017}, limitations arising from diffusion
 kinetics within the material have also been
 proposed\cite{chapman2020}. Recently, this apparent two-phase behavior
 in layered oxides has been connected to individual particles
 delithiating rapidly and at seemingly random times\cite{chueh2021,
-  zhao2022, rao2021, wang2020-6}, however conflicting explanations
-for this behavior are presented. Park et al. \cite{chueh2021} used
-in-situ \gls{xrd} to indirectly study the transformation kinetics of
+  zhao2022, rao2021, wang2020-6}, however conflicting explanations for
+this behavior are presented. Park et al. \cite{chueh2021} used in-situ
+\gls{xrd} to indirectly study the transformation kinetics of
 \nmc[333]{} and showed that interfacial exchange current is the
 underlying reason for the observed pseudo-two-phase behavior rather
 than the solid-state diffusion limitation. In the same report, ex-situ
@@ -189,9 +192,9 @@ transport in the Li-rich phase. Clearly, there is no clear consensus
 on the origin of this rapid delithiation behavior in layered cathode
 particles. Therefore,the oxidation dynamics of these layered cathode
 materials warrant further study to clarify the behavior and
-asynchronicity of the individual secondary particles that typically compose
-a cathode in order to uncover sources of kinetic limitations that must be
-overcome by architecture design.
+asynchronicity of the individual secondary particles that typically
+compose a cathode in order to uncover sources of kinetic limitations
+that must be overcome by architecture design.
 
 Here, we examined the mechanism of transformation in secondary
 particles of established layered cathode materials, namely \nca{},
@@ -493,7 +496,8 @@ sufficient to consider 8 particles with diameters ranging from
 as the anode to survey the parameter space and support the finding
 with one larger (30-particle) simulation. More details on the model
 geometry, equations, and parameters are provided in the
-\ref{sec:methods} Section and the Supporting Information.
+\nameref{sec:methods}: \nameref{sec:methods_simulation} Section and
+the Supporting Information.
 
 %% The delithiation process of the cathode particles involves (a)
 %% transport of Li ions in the electrolyte, (b) transport of Li in the
@@ -509,8 +513,9 @@ the solid-state transport can be studied using the
 \glsreset{D_s}\gls{D_s}. Both of these quantities are dependent on the
 \gls{xLi} in the particles. Therefore, we performed sensitivity
 analyses with respect to various functional forms and values of
-\gls{ecd} and \gls{D_s}, including the ones reported in literature and
-constructed for this work to qualitatively reproduce rapid
+\gls{ecd} and \gls{D_s}, including the ones reported in
+literature\cite{amin2015,moshtev1984,newman1993,newman1994-2,newman1995-2,newman1996,chueh2021,mukherjee2017,chiang2020,tsai2018,dees2008}
+and constructed for this work to qualitatively reproduce rapid
 delithiation. The details of these forms are provided in the
 Supporting Information.
 
@@ -908,6 +913,7 @@ selecting the energy of maximum optical depth. Plotting was performed
 using matplotlib\cite{matplotlib}.
 
 \subsection*{Simulations}
+\label{sec:methods_simulation}
 
 To understand how different particles undergo the delithiation
 process, we constructed particle-level models based on previous
