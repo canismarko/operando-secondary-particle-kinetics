@@ -56,8 +56,15 @@
 % \listoftodos
 
 \section{[Other papers to consider]}
-\begin{itemize}
 
+Papers from Mistry:
+\begin{itemize}
+    \item https://pubs.acs.org/doi/10.1021/acsami.9b23155
+    \item https://pubs.acs.org/doi/10.1021/acsami.7b17771
+    \item https://iopscience.iop.org/article/10.1149/2.024203jes
+\end{itemize}
+
+\begin{itemize}
 \item song2022\cite{song2022} Used single-particle EIS to get i0 and Ds constants for NMC-333. Didn't show that large i0 jump we expect. \url{https://onlinelibrary.wiley.com/doi/10.1002/anie.202205394}
 \end{itemize}
 
@@ -154,16 +161,15 @@ mechanical strain.  In \nmc{} materials like \nmc[333]{}, \gls{xrd}
 measurements have revealed that the transformation follows a mechanism
 involving a single phase in the range of voltages used in practical
 applications,\cite{hulzen2018,ahn2017,zhou2016-2} with the formation
-of solid solutions with different Li content and, thus, degrees of
+of material fractions within the same solid-solution regime but with different Li contents and, thus, degrees of
 oxidation of the transition metals. While \nca{} was expected to
 follow a similar mechanism, the first report described the transformation following a mixture of
 two phases, rather than a single solid solution, during the first
 charge when stored in ambient conditions, followed by a single-phase
 (solid solution) transformation seen during subsequent charge
-cycles\cite{robert2015}. Kinetic manipulation toward co-existence of
+cycles\cite{robert2015}. Kinetic manipulation of \nmc[333]{} can be used to induce the co-existence of
 two crystallographic phases with a small difference in \emph{a} and
-\emph{c} lattice parameters over a narrow composition range could be
-induced for \nmc[333]{} \cite{yoon2006,hua2018}. While impurities
+\emph{c} lattice parameters over a narrow composition range\cite{yoon2006,hua2018}. While impurities
 forming blocking surface layers help explain a seemingly two-phase
 transformation\cite{grenier2017}, limitations arising from diffusion
 kinetics within the material have also been
@@ -207,7 +213,7 @@ delithiation that spanned between $\gls{xLi} \approx 0.9$ and $\approx
 role of fundamental electrochemical processes in generating this rapid
 delithiation behavior, which showed that this behavior is due to a
 significant increase in \gls{ecd} covering several orders of magnitude
-during delithiation. These observations highlight the decoupling
+during delithiation. These observations highlight the dissimilarity
 between single-particle dynamics and the macroscopic response in
 battery electrodes even when they follow mechanisms of solid
 solution. The identification of \gls{ecd} as controlling parameter in
@@ -290,8 +296,6 @@ was more than double that of \gls{p1}. This observation is unexpected
 for solid solutions, since there is no thermodynamic activation
 barrier toward nucleation of segregated phases.
 
-
-
 %% \subsection{u-XRD - Rates of (De)lithiation}
 \newpage % temporary to keep comments from overrunning
 Further insight into rates of delithiation of each particle during the
@@ -335,32 +339,29 @@ delithiation process. The divergence in charging rates during a
 galvanostatic experiment has been recently reported by others using
 optical microscopy\cite{zhao2022}. However, our ability to relate
 specific signatures with Li content using its well-established
-dependence on d spacing allow us not only to pinpoint that the rate
+dependence on d spacing allows us not only to pinpoint that the rate
 acceleration happens at specific points of the reaction (between
-\Li{0.9} and ~\Li{0.6}), but also estimate the actual rate of the
+\Li{0.9} and ~\Li{0.4}), but also estimate the actual rate of the
 process at each stage.
 
-The discharge of the cell proceeded more quickly than charge, with the
-consequence that less data points were captured for
-quantification. Nonetheless, the process returned the lattice parameters
-of both particles to values close to the pristine state, indicating
+Upon discharge of the cell, i.e.\ after \SI{1.0}{t_c},
+both particles relithiated quickly at the initial stages, with the
+consequence that fewer data points were captured. Nonetheless, the lattice parameters
+of both particles returned to values close to the pristine state, indicating
 degrees of reversibility comparable to the
-literature.\cite{robert2015} The change in the lattice parameters was
+literature\cite{robert2015}. When the lattice parameters reached values
+corresponding to \Li{0.8}, the rates were estimated at
+\SI{\approx0.025}{\ce{Li}\per\hour}, or C/40. The change in the lattice parameters was
 smoother during discharge than during charge, with no obvious evidence of
 acceleration. It is worth noting that, while the end values were
-similar, the trajectories of both a and c parameters were not
-quantitatively the same. For instance, the c parameter peaked at 14.48
-and 14.35 A on charge and discharge, respectively. This evolution
+similar, the trajectories of both \emph{a} and \emph{c} parameters were not
+quantitatively the same as during the first charge. For instance, the \emph{c} parameter peaked at \SI{14.48}{\angstrom}
+and \SI{14.35}{\angstrom} A on charge and discharge, respectively. This evolution
 suggests that full delithiation introduces irreversible structural
 changes that affect the dependence of lattice parameters on Li
 content. To the best of our knowledge, this issue has not been
 explored in the literature and demands dedicated operando \gls{xrd}
-experiments. Upon discharge of the cell, i.e.\ after \SI{1.0}{t_c},
-both particles relithiated quickly at the initial stages, with the
-consequence that too few data points were captured for a reliable
-quantification. When the lattice parameters reached values
-corresponding to \Li{0.8}, the rates were estimated at
-\SI{\approx0.025}{\ce{Li}\per\hour}, or C/40. 
+experiments. 
 
 
 %% \subsection{TXM - \nmc{}}
@@ -399,7 +400,7 @@ observed by ensemble \gls{xas} after first charge (Figure
 there was no clear preference for when particles began rapid
 oxidation. The analysis produced instances where the trend in
 whiteline appeared to shift toward lower energy upon reaching their
-maximum state-of-charge, suggesting \ce{Ni} reduction may have
+maximum state-of-charge (Figure \ref{fig:txm-nca}d), suggesting \ce{Ni} reduction may have
 occurred, presumably due to the instability of \ce{Ni} in high
 oxidation states\cite{myung2020-2}, resulting in oxygen loss. Overall,
 the observation of rapid particle oxidation despite the constant
@@ -656,15 +657,7 @@ spectromicroscopy results presented here reveal that individual
 particles can reach a higher state of charge than the global average
 during cycling, highlighting the heterogeneity within the electrode
 and the need for experimental techniques such as those applied here
-that provide spatial, temporal and chemical resolutions.
-
-These results show that the electrochemical reaction during discharge
-of layered cathode materials is kinetically limited by reactions at the surface
-of the secondary particles. At a given Li composition, the difference
-between the equilibrium reduction potential and the applied potential
-represents a thermodynamic irreversibility in the system, and thus a
-reduction in the energy storage efficiency relative to the theoretical
-limit. These factors present areas of improvement for the performance
+that provide spatial, temporal and chemical resolutions. These factors present areas of improvement for the performance
 of layered cathode materials, which could be realized with further
 research into the origin of the significant increase in \gls{ecd}
 during charging.
