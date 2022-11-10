@@ -4,7 +4,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\input{drafting}
+% Full-sized page with double line spacing
+\usepackage[margin=1.5cm,right=1.5cm]{geometry}
+\usepackage{setspace}
+\doublespacing
 
 \usepackage{graphicx}
 \usepackage[version=4]{mhchem}
@@ -53,22 +56,6 @@
   this jump in \gls{ecd} are crucial to understanding the
   charge-storage reaction of Li-ion battery cathodes.
 \end{abstract}
-
-% \listoftodos
-
-\section{[Other papers to consider]}
-
-%% Papers from Mistry:
-%% \begin{itemize}
-%%     \item https://pubs.acs.org/doi/10.1021/acsami.9b23155
-%%     \item https://pubs.acs.org/doi/10.1021/acsami.7b17771
-%%     \item https://iopscience.iop.org/article/10.1149/2.024203jes
-%% \end{itemize}
-
-%% Other papers:
-%% \begin{itemize}
-%% \item song2022\cite{song2022} Used single-particle EIS to get i0 and Ds constants for NMC-333. Didn't show that large i0 jump we expect. \url{https://onlinelibrary.wiley.com/doi/10.1002%% /anie.202205394}
-%% \end{itemize}
 
 \glsresetall{}
 
@@ -1060,6 +1047,5 @@ No.\ DE-AC02-76SF00515.
 \newpage
 \bibliographystyle{unsrt}
 \bibliography{refs,refs-extra}
-%% \bibliography{references}
 
 \end{document}
