@@ -1,29 +1,150 @@
-\documentclass{article}
+\documentclass[sn-mathphys,referee,lineno]{sn-jnl}
 
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-% Full-sized page with double line spacing
-\usepackage[margin=1.5cm,right=1.5cm]{geometry}
-\usepackage{setspace}
-\doublespacing
-
-\usepackage{graphicx}
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx}
-\usepackage[hidelinks]{hyperref}
-\usepackage{glossaries}
+%% \usepackage{glossaries}  %% Moved to the sn-jnl.cls file so it can be loaded in the right order
 \usepackage[xr,user]{zref} % For cross references to supplemental figures
 \usepackage{textgreek}
 \usepackage{nameref}
 
-\input{macros}
-\input{acronyms}
-\input{metadata}
+\jyear{2022}
 
-\newlength{\figwidth}
-\setlength{\figwidth}{3.5in}
+%%%%%%%%%
+% Macros
+%%%%%%%%%
+\newcommand{\dedt}{\frac{\textrm{d}E}{\textrm{d}t}}
+
+%% Custom units
+\DeclareSIUnit\Molar{\textsc{m}}
+\DeclareSIUnit\molar{\mole\per\cubic\deci\metre}
+\DeclareSIUnit\angstrom{\text {Å}}
+
+\newcommand{\nca}[1]{\ce{Li_{#1}Ni_{0.8}Co_{0.15}Al_{0.05}O_2}}
+\DeclareRobustCommand{\nmc}[2][]{%
+    \ifstrempty{#1}{%
+        \ce{Li_{#2}Ni_{y}Mn_{z}Co_{1-y-z}O2}}{}%
+    \ifstrequal{#1}{333}{%
+        \ce{Li_{#2}Ni_{1/3}Mn_{1/3}Co_{1/3}O2}}{}%
+    \ifstrequal{#1}{532}{%
+        \ce{Li_{#2}Ni_{0.5}Mn_{0.3}Co_{0.2}O2}}{}%
+}
+
+\newcommand{\Li}[1]{$x_{\textrm{Li}} = #1$}
+
+
+\makeatletter
+\newcommand*{\addFileDependency}[1]{% argument=file name and extension
+  \typeout{(#1)}
+  \@addtofilelist{#1}
+  \IfFileExists{#1}{}{\typeout{No file #1.}}
+}
+\makeatother
+
+\newcommand*{\myexternaldocument}[2][]{%
+  \ifstrempty{#1}{%
+    \zexternaldocument*{#2}%
+  }{%
+    \zexternaldocument*[#1]{#2}%
+  }%
+  \addFileDependency{#2.tex}%
+  \addFileDependency{#2.aux}%
+}
+
+
+%% Drawing lines similar to those found in matplotlib
+%% Define matplotlib line styles
+\newlength{\tikzheight}
+\newcommand{\mplline}{%
+  \rule[0.5ex]{1em}{1.2pt}%
+}
+\newcommand{\mpldashes}{%
+  \rule[0.5ex]{0.4em}{1.2pt}%
+  \hspace{0.2em}%
+  \rule[0.5ex]{0.4em}{1.2pt}%
+}
+\newcommand{\mpldots}{%
+  \rule[0.5ex]{0.15em}{0.15em}%
+  \hspace{0.2em}%
+  \rule[0.5ex]{0.15em}{0.15em}%
+  \hspace{0.2em}%
+  \rule[0.5ex]{0.15em}{0.15em}%
+}
+\DeclareRobustCommand{\mplreduced}{%
+  \settoheight{\tikzheight}{X}%
+  \begin{tikzpicture}[baseline=-0.4\tikzheight]
+    \draw [line width = 0.15ex] (0, 0) -- (0.75ex, 0);
+    \draw [line width = 0.3ex] (1.25ex, 0) -- (2.25ex, 0);
+    \draw [line width = 0.3ex] (1.75ex, 0.5ex) -- (1.75ex, -0.5ex);
+    \draw [line width = 0.15ex] (2.75ex, 0) -- (3.5ex, 0);
+  \end{tikzpicture}%
+}%
+\DeclareRobustCommand{\mploxidized}{%
+  \settoheight{\tikzheight}{X}%
+  \begin{tikzpicture}[baseline=-0.4\tikzheight]
+    \draw [line width = 0.15ex] (0, 0) -- (0.25ex, 0);
+    \draw [line width = 0.15ex] (0.75ex, 0) -- (2ex, 0);
+    \draw [line width = 0.15ex] (2.5ex, 0) -- (2.75ex, 0);
+
+    \draw [line width = 0.3ex] (0.875ex, 0.5ex) -- (1.875ex, -0.5ex);
+    \draw [line width = 0.3ex] (0.875ex, -0.5ex) -- (1.875ex, 0.5ex);
+
+      \end{tikzpicture}%
+}%
+
+%%%%%%%%%%%
+% Acronyms
+%%%%%%%%%%%
+% Techniques
+\newacronym{xrd}{PXRD}{powder X-ray diffraction}
+\newacronym{uxrd}{µ-XRD}{X-ray microdiffraction}
+\newacronym{txm}{TXM}{transmission X-ray microscopy}
+\newacronym{xas}{XAS}{X-ray absorbance spectroscopy}
+\newacronym{xanes}{XANES}{X-ray absorbance near edge spectroscopy}
+\newacronym{iscat}{iSCAT}{optical interferometric scattering microscopy}
+
+% Facilities and organizations
+\newacronym{ssrl}{SSRL}{Stanford Synchrotron Radiation Lightsource}
+\newacronym{doe}{DOE}{U.S.\ Department of Energy}
+
+% Chemistry
+\newacronym{ecd}{\ensuremath{i_0}}{exchange current density}
+\newacronym{q}{\ensuremath{\vert\vec{q}\vert}}{momentum transfer}
+\newacronym{d}{\ensuremath{d}}{lattice spacing}
+\newacronym{od}{OD}{optical depth}
+\newacronym{ocv}{OCV}{open circuit voltage}
+\newacronym{D_s}{\ensuremath{D_s}}{coefficient of Li diffusivity in particles}
+\newacronym{xLi}{\ensuremath{x_{\textrm{Li}}}}{Li-site fraction}
+
+% Particles in u-XRD mapping
+\newacronym{p1}{P1}{particle 1}
+\newacronym{p2}{P2}{particle 2}
+\newacronym{p3}{P3}{particle 3}
+
+%%%%%%%%%%%
+% Metadata
+%%%%%%%%%%%
+\title{Origin of Rapid Delithiation In Secondary Particles Of \nca{} and \nmc{} Cathodes}
+
+\author[1,2]{\fnm{Mark} \sur{Wolfman}}
+\author[1]{\fnm{Brian M.} \sur{May}}
+\author[3]{\fnm{Vishwas} \sur{Goel}}
+\author[3]{\fnm{Sicen} \sur{Du}}
+\author[4,5]{\fnm{Young-Sang} \sur{Yu}}
+\author[1]{\fnm{Chao} \sur{Li}}
+\author[3]{\fnm{Katsuyo} \sur{Thornton}}
+\author[1]{\fnm{Jordi} \sur{Cabana}}
+
+\affil[1]{\orgdiv{Department of Chemistry} \orgname{University of Illinois at Chicago}}
+\affil[2]{\orgdiv{Division of Chemical Sciences and Engineering} \orgname{Argonne National Laboratory}}
+\affil[3]{\orgdiv{Department of Materials Science and Engineering} \orgname{University of Michigan}}
+\affil[4]{\orgdiv{Department of Physics} \orgname{Chungbuk National University}}
+\affil[5]{\orgdiv{Advanced Light Source} \orgname{Lawrence Berkeley National Laboratory}}
+
+\date{}
 
 \myexternaldocument[si:]{supplement}
 
@@ -31,7 +152,7 @@
 
 \maketitle
 
-\begin{abstract}
+\abstract{
   Most research on the electrochemical dynamics in materials for
   high-energy Li-ion batteries has focused on the global behavior of
   the electrode. This approach is susceptible to misleading analyses
@@ -53,12 +174,14 @@
   specifics and implications of this jump in \gls{ecd} are crucial to
   understanding the charge-storage reaction of Li-ion battery
   cathodes.
-\end{abstract}
+}
+
 
 \glsresetall{}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+\label{sec:intro}
 %%%%%%%%%%%%%%%%%%%%%%%
 
 % NCA/NMC material
@@ -210,9 +333,9 @@ battery electrodes even when they follow mechanisms of solid
 solution. The identification of \gls{ecd} as controlling parameter in
 these materials redirects models away from a focus on mass diffusion.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Operando observations of single particle dynamics}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% \subsection{\Gls{uxrd} - Interparticle Dynamics}
 
@@ -643,6 +766,7 @@ charge-transfer kinetics.
 
 %%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
+\label{sec:conclusion}
 %%%%%%%%%%%%%%%%%%%%%
 
 Operando X-ray characterization of layered cathode materials showed
@@ -1043,7 +1167,6 @@ No.\ DE-AC02-76SF00515.
 
 
 \newpage
-\bibliographystyle{unsrt}
 \bibliography{refs,refs-extra}
 
 \end{document}
