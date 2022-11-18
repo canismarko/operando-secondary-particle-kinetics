@@ -44,11 +44,11 @@
 The cell used in our 8-particle simulations consists of a Li metal
 anode and an \nca{} cathode, which contains 8 particles ranging from
 \SIrange{2}{5.5}{\micro\meter} in radius, as shown in the Figure
-\ref{fig:8-particle-box}. All the particles are attached to a metallic current
-collector, which is also shown in
-Figure \ref{fig:8-particle-box}. The two electrodes are separated by
-a pool of electrolyte. The size of the computational domain is
-$50\times 50\times 50$ \si{\micro\meter\cubed}.
+\ref{fig:8-particle-box}. All the particles are attached to a metallic
+current collector, which is also shown in Figure
+\ref{fig:8-particle-box}. The two electrodes are separated by a pool
+of electrolyte. The size of the computational domain is $50\times
+50\times 50$ \si{\micro\meter\cubed}.
 
 \begin{figure}
   \centering
@@ -266,12 +266,11 @@ parameters for individual particle, $\psi{}_k$:
 
 where $r$ is the radius of this particle, $d$ is the distance to the
 particle center, $\delta$ determines the interfacial thickness and we
-used \vg{units?}{$\delta =
-  \SI[parse-numbers=false]{\sqrt{2}}{\micro\meter}$} .
+used $\delta = \sqrt{2}$.
 
-Figure \ref{fig:30-particle-box} shows the particle size distributions obtained by
-stratified sampling\cite{parsons2017} and the computational domain for
-the 30-particle simulations.
+Figure \ref{fig:30-particle-box} shows the particle size distributions
+obtained by stratified sampling\cite{parsons2017} and the
+computational domain for the 30-particle simulations.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{30-particle-simulation.pdf}
@@ -346,8 +345,8 @@ The remaining model parameters are described in Table \ref{tab:model-parameters}
     Electronic conductivity of Li, $\sigma_{\mathrm{Li}}$ & \num{1e5} & \si{\siemens\per\meter} & --  \\
     Exchange current density of Li, $i'_0$ & \num{9.65e1} & \si{\ampere\per\meter\squared} & Literature \cite{moshtev1984} \\
     \gls{ocv} of Li metal, $U_{\mathrm{Li}}^0$ & 0 & \si{\volt} & -- \\
-    Max \gls{xLi} in NCA, $c_p^{\mathrm{max}}$ & \num{4.8e4} & \si{\mole\per\meter\cubed} & Assumed based on the range reported in the literature \cite{sauer2015,sauer2018,bund2018} \\
-    Initial \gls{xLi} in NCA, $c_p^0$ & $0.99\times c_p^{\mathrm{max}}$ & \si{\mole\per\meter\cubed} & Assumed \\
+    Max \gls{xLi} in NCA, $c_p^{\mathrm{max}}$ & \num{4.8e4} & \si{\mole\per\meter\cubed} & Estimated based on literature \cite{sauer2015,bund2018,sauer2018} \\
+    Initial \gls{xLi} in NCA, $c_p^0$ & $0.99\times c_p^{\mathrm{max}}$ & \si{\mole\per\meter\cubed} & Presumed \\
     Initial electrolyte salt concentration, $c_e^0$ & \num{1e3} & \si{\mole\per\meter\cubed} & Experiment \\
     Temperature & \num{2.98e2} & \si{\kelvin} & Experiment \\
     1C current density & \num{1.164} & \si{\ampere\per\meter\squared} & Experiment \\
@@ -532,62 +531,6 @@ increased.
   \label{fig:2Ddiffraction}
 \end{figure}
 
-%% \begin{figure}
-%%   \includegraphics{figures/nmc_echem.pdf}
-%%   \caption{E-chem of NMC-333 (blue) and NMC-532 (orange). TODO: Finish caption}
-%% \end{figure}
-
-%% \begin{figure}
-%%   \includegraphics[width=\textwidth]{figures/ys-echem.png}
-%%   \caption{[YSY] SoCs for ex-situ bulk XANES.}
-%% \end{figure}
-
-%% \begin{figure}
-%%   \includegraphics[width=\textwidth]{figures/ys-xanes.png}
-%%   \caption{[YSY] How to judge SoC from Ni K-edge XANES. The trend between
-%%     white line peak position and SoCs is not perfect linear, but we
-%%     still can estimate the oxidation states of Ni.}
-%% \end{figure}
-
-%% \begin{figure}
-%%   \includegraphics[width=\textwidth]{figures/ys-xanes-fov.png}
-%%   \caption{[YSY](A) Field-of-view (FoV) for in-situ hard X-ray full-filed
-%%     transmission microscopy. (B) Electrochemical response of the
-%%     in-situ cell. Identical FoV was repeatedly visualized (OCV \& SoC I
-%%     ~ IX) during battery operation.}
-%% \end{figure}
-
-%% \begin{figure}
-%%   \includegraphics[width=\textwidth]{figures/ys-soc-txm.png}
-%%   \caption{[YSY] See text}
-%%   \label{ys-soc-txm}
-%% \end{figure}
-
-%% Figure \ref{ys-soc-txm}:
-
-%% (A) Isolated 2nd particle in the FoV. The crack (indicated as red
-%% arrow) suddenly appeared at the SoC VI (same sudden ``jumps'' position
-%% in Jordi's e-mail). (B) Geometrical scaling factor with respect to
-%% global SoCs. At ‘jump’ position, the volumes (1-dimensional scaling
-%% factor \textasciicircum3) of the 2nd particles shrank around 3\%. The 1-dimensional
-%% scaling factor was calculated by intensity-based image registration of
-%% identical particles with respect to different SoCs. The enhance
-%% robustness of analysis, 1-dimensional scaling factors were calculated
-%% at all energy points (I don't remember exact the number of points but
-%% it should be 30 ~ 40 points. Need to revisit the data) in imagespectra
-%% and STD of the calculated 1-dimensional scaling factors\^{}3 shown as
-%% error bars.  The shrinkage of the 2nd particles is smaller that
-%% crystallographic volume shrinkage of the unit cell (I don't remember
-%% exact number.) and cause the empty space inside (means microstructural
-%% defaces such as void and crack).  (C) and (D) Chemical heterogeneity
-%% of 2nd particle -> As Jordi mentioned, they are not the important
-%% point. : )
-
-%% (E) Averaged SoC of each 2nd particle with respect to global
-%% SoCs. The positions of ``jump'' are differed.  The definition of
-%% several SoC 1. Global SoC -> SoC of the entire in-situ cell (shown
-%% in Figure 3B) 2. SoC or averaged SoC -> SoC of each individual 2nd
-%% particle.
 
 \begin{figure}
   \includegraphics{figures/Kedges.pdf}
@@ -671,14 +614,8 @@ increased.
   \label{fig:echem-derivatives}
 \end{figure}
 
-%% \begin{figure}
-%%   \includegraphics{figures/OD-frames.pdf}
-%%   \caption{[MW]}
-%%   \label{fig:od-labels}
-%% \end{figure}
-
 \begin{figure}
-  \includegraphics{figures/NMC333-particle-echem.pdf}
+  \includegraphics[width=\textwidth]{figures/NMC333-particle-echem.pdf}
   \caption{Particle-level oxidation during first charge and discharge
     of \nmc[333]{}. (a) Changes in mean whiteline energies relative to
     \SI{8351.69}{eV} for secondary particles during first charge and
@@ -692,7 +629,7 @@ increased.
 \end{figure}
 
 \begin{figure}
-  \includegraphics{figures/NCA-particle-echem.pdf}
+  \includegraphics[width=\textwidth]{figures/NCA-particle-echem.pdf}
   \caption{Particle-level oxidation during first and second discharge
     of \nca{} samples in pouch cells. (a) Changes in mean whiteline
     energies relative to \SI{8350.92}{eV} for secondary particle
@@ -736,9 +673,9 @@ increased.
 
 \begin{figure}
 \centering   
-  \includegraphics[width=\linewidth, height=\textheight, keepaspectratio]{figures/p1-3-xrd.png}
-  \caption{[BM] Diffraction patterns for \nca{} through charge (red)
-    and discharge (black) for a) P1, b) P2, and c) P3. Feature due to
+  \includegraphics[width=\linewidth, height=0.8\textheight, keepaspectratio]{figures/p1-3-xrd.png}
+  \caption{Diffraction patterns for \nca{} through charge (red) and
+    discharge (black) for a) P1, b) P2, and c) P3. Feature due to
     \ce{Li} is denoted with a *.}
   \label{fig:xrd-echem}
 \end{figure}
@@ -753,14 +690,14 @@ increased.
 
 \begin{figure}
   \includegraphics[width=\linewidth]{figures/cell-pars.png}
-  \caption{[BM] Unit cell parameters as a function of cell potential for a)
+  \caption{Unit cell parameters as a function of cell potential for a)
   P1 a parameter b) P1 c parameter c) P2 a parameter and d) P2 c parameter}
   \label{fig:cell-pars}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=\linewidth, height=\textheight,keepaspectratio]{figures/rate-plots.png}
+  \includegraphics[width=\linewidth, height=0.8\textheight,keepaspectratio]{figures/rate-plots.png}
   \caption{\ce{Li} content (x in
     \ce{Li_xNi_{0.80}Co_{0.15}Al_{0.05}O2}) as a function of time
     during the first cycle for P1 (a) and P2 (b). The charge-discharge
@@ -772,26 +709,9 @@ increased.
   \label{fig:rates}
 \end{figure}
 
+\clearpage
+\pagebreak
 
-%% \begin{table}
-%%   \centering
-%%   \input{figures/rates-table.tex}
-%%   \caption{Rates of \ce{Li} removal and corresponding \ce{Li} content during various time ranges of the
-%%     charge-discharge cycle for P1. Time ranges were selected due to linear
-%%     changes in \ce{Li} content.}
-%%   \label{table:rates}
-%% \end{table}
-
-%% \begin{table}
-%%   \centering
-%%   \input{figures/rates-table-p2.tex}
-%%   \caption{Rates of \ce{Li} removal and corresponding \ce{Li} content during various time ranges of the
-%%     charge-discharge cycle for P2. Time ranges were selected due to linear
-%%     changes in \ce{Li} content.}
-%%   \label{table:ratesp2}
-%% \end{table}
-
-\newpage
 \bibliographystyle{plain}
 \bibliography{refs,refs-extra}
 
