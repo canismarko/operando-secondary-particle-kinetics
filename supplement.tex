@@ -1,25 +1,174 @@
-\documentclass{article}
+\RequirePackage{tikz}
+\documentclass[sn-mathphys,referee,lineno]{sn-jnl}
 
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
 %% Tools for drafting the manuscript, remove for publication
-\input{drafting}
+% \input{drafting}
 
 \usepackage{graphicx}
 \usepackage{booktabs}  % For making tables look nice
-\usepackage[hidelinks]{hyperref}
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx}
 \usepackage[xr,user]{zref} % For cross references to supplement figures
-\usepackage{glossaries}
+%% \usepackage{glossaries}  %% Moved to the sn-jnl.cls file so it can be loaded in the right order
 \usepackage{textgreek}
 
-\input{macros}
-\input{colors}
-\input{acronyms}
-\input{metadata}
+%%%%%%%%%
+% Macros
+%%%%%%%%%
+\newcommand{\dedt}{\frac{\textrm{d}E}{\textrm{d}t}}
+
+%% Custom units
+\DeclareSIUnit\Molar{\textsc{m}}
+\DeclareSIUnit\molar{\mole\per\cubic\deci\metre}
+\DeclareSIUnit\angstrom{\text {Å}}
+
+\newcommand{\nca}[1]{\ce{Li_{#1}Ni_{0.8}Co_{0.15}Al_{0.05}O_2}}
+\DeclareRobustCommand{\nmc}[2][]{%
+    \ifstrempty{#1}{%
+        \ce{Li_{#2}Ni_{y}Mn_{z}Co_{1-y-z}O2}}{}%
+    \ifstrequal{#1}{333}{%
+        \ce{Li_{#2}Ni_{1/3}Mn_{1/3}Co_{1/3}O2}}{}%
+    \ifstrequal{#1}{532}{%
+        \ce{Li_{#2}Ni_{0.5}Mn_{0.3}Co_{0.2}O2}}{}%
+}
+
+\newcommand{\Li}[1]{$x_{\textrm{Li}} = #1$}
+
+
+\makeatletter
+\newcommand*{\addFileDependency}[1]{% argument=file name and extension
+  \typeout{(#1)}
+  \@addtofilelist{#1}
+  \IfFileExists{#1}{}{\typeout{No file #1.}}
+}
+\makeatother
+
+\newcommand*{\myexternaldocument}[2][]{%
+  \ifstrempty{#1}{%
+    \zexternaldocument*{#2}%
+  }{%
+    \zexternaldocument*[#1]{#2}%
+  }%
+  \addFileDependency{#2.tex}%
+  \addFileDependency{#2.aux}%
+}
+
+
+%% Drawing lines similar to those found in matplotlib
+%% Define matplotlib line styles
+\newlength{\tikzheight}
+\newcommand{\mplline}{%
+  \rule[0.5ex]{1em}{1.2pt}%
+}
+\newcommand{\mpldashes}{%
+  \rule[0.5ex]{0.4em}{1.2pt}%
+  \hspace{0.2em}%
+  \rule[0.5ex]{0.4em}{1.2pt}%
+}
+\newcommand{\mpldots}{%
+  \rule[0.5ex]{0.15em}{0.15em}%
+  \hspace{0.2em}%
+  \rule[0.5ex]{0.15em}{0.15em}%
+  \hspace{0.2em}%
+  \rule[0.5ex]{0.15em}{0.15em}%
+}
+\DeclareRobustCommand{\mplreduced}{%
+  \settoheight{\tikzheight}{X}%
+  \begin{tikzpicture}[baseline=-0.4\tikzheight]
+    \draw [line width = 0.15ex] (0, 0) -- (0.75ex, 0);
+    \draw [line width = 0.3ex] (1.25ex, 0) -- (2.25ex, 0);
+    \draw [line width = 0.3ex] (1.75ex, 0.5ex) -- (1.75ex, -0.5ex);
+    \draw [line width = 0.15ex] (2.75ex, 0) -- (3.5ex, 0);
+  \end{tikzpicture}%
+}%
+\DeclareRobustCommand{\mploxidized}{%
+  \settoheight{\tikzheight}{X}%
+  \begin{tikzpicture}[baseline=-0.4\tikzheight]
+    \draw [line width = 0.15ex] (0, 0) -- (0.25ex, 0);
+    \draw [line width = 0.15ex] (0.75ex, 0) -- (2ex, 0);
+    \draw [line width = 0.15ex] (2.5ex, 0) -- (2.75ex, 0);
+
+    \draw [line width = 0.3ex] (0.875ex, 0.5ex) -- (1.875ex, -0.5ex);
+    \draw [line width = 0.3ex] (0.875ex, -0.5ex) -- (1.875ex, 0.5ex);
+
+      \end{tikzpicture}%
+}%
+
+%%%%%%%%%
+% Colors
+%%%%%%%%%
+
+%% Define colors
+\definecolor{ligreen}{HTML}{63A656}
+\definecolor{mnpurple}{HTML}{6E0567}
+\definecolor{ored}{HTML}{AB0200}
+\definecolor{coblue}{HTML}{000082}
+\definecolor{C0}{HTML}{1F77B4}
+\definecolor{C1}{HTML}{FF7F0E}
+\definecolor{C2}{HTML}{2CA02C}
+\definecolor{C3}{HTML}{D62728}
+\definecolor{C4}{HTML}{9467BD}
+\definecolor{C5}{HTML}{8C564B}
+\definecolor{C6}{HTML}{E377C2}
+\definecolor{C7}{HTML}{7F7F7F}
+\definecolor{C8}{HTML}{BCBD22}
+\definecolor{C9}{HTML}{17BECF}
+
+%%%%%%%%%%%
+% Acronyms
+%%%%%%%%%%%
+% Techniques
+\newacronym{xrd}{PXRD}{powder X-ray diffraction}
+\newacronym{uxrd}{µ-XRD}{X-ray microdiffraction}
+\newacronym{txm}{TXM}{transmission X-ray microscopy}
+\newacronym{xas}{XAS}{X-ray absorbance spectroscopy}
+\newacronym{xanes}{XANES}{X-ray absorbance near edge spectroscopy}
+\newacronym{iscat}{iSCAT}{optical interferometric scattering microscopy}
+
+% Facilities and organizations
+\newacronym{ssrl}{SSRL}{Stanford Synchrotron Radiation Lightsource}
+\newacronym{doe}{DOE}{U.S.\ Department of Energy}
+
+% Chemistry
+\newacronym{ecd}{\ensuremath{i_0}}{exchange current density}
+\newacronym{q}{\ensuremath{\vert\vec{q}\vert}}{momentum transfer}
+\newacronym{d}{\ensuremath{d}}{lattice spacing}
+\newacronym{od}{OD}{optical depth}
+\newacronym{ocv}{OCV}{open circuit voltage}
+\newacronym{D_s}{\ensuremath{D_s}}{coefficient of Li diffusivity in particles}
+\newacronym{xLi}{\ensuremath{x_{\textrm{Li}}}}{Li-site fraction}
+
+% Particles in u-XRD mapping
+\newacronym{p1}{P1}{particle 1}
+\newacronym{p2}{P2}{particle 2}
+\newacronym{p3}{P3}{particle 3}
+
+%%%%%%%%%%%
+% Metadata
+%%%%%%%%%%%
+
+\title{Origin of Rapid Delithiation In Secondary Particles Of \nca{} and \nmc{} Cathodes}
+
+\author[1,2]{\fnm{Mark} \sur{Wolfman}}
+\author[1]{\fnm{Brian M.} \sur{May}}
+\author[3]{\fnm{Vishwas} \sur{Goel}}
+\author[3]{\fnm{Sicen} \sur{Du}}
+\author[4,5]{\fnm{Young-Sang} \sur{Yu}}
+\author[1]{\fnm{Chao} \sur{Li}}
+\author[3]{\fnm{Katsuyo} \sur{Thornton}}
+\author[1]{\fnm{Jordi} \sur{Cabana}}
+
+\affil[1]{\orgdiv{Department of Chemistry} \orgname{University of Illinois at Chicago}}
+\affil[2]{\orgdiv{Division of Chemical Sciences and Engineering} \orgname{Argonne National Laboratory}}
+\affil[3]{\orgdiv{Department of Materials Science and Engineering} \orgname{University of Michigan}}
+\affil[4]{\orgdiv{Department of Physics} \orgname{Chungbuk National University}}
+\affil[5]{\orgdiv{Advanced Light Source} \orgname{Lawrence Berkeley National Laboratory}}
+
+\date{}
 
 \makeatletter
 \let\mytitle\@title
@@ -35,7 +184,6 @@
 \begin{document}
 
 \maketitle
-
 
 \section{Model Equations}
 
@@ -73,9 +221,9 @@ The boundary conditions for Equation \ref{eq:1a} are as
 follows\cite{newman1993,newman1994}
 
 \begin{subequations}
-    \begin{align}
-      -D_p\frac{\partial c_{p,k}}{\partial r}|_{r=R_{p,k}} &= J_{k} \label{eq:1b} \\
-      -D_p\frac{\partial c_{p,k}}{\partial r}|_{r=0} &= 0 \label{eq:1c}
+  \begin{align}
+    -D_p\frac{\partial c_{p,k}}{\partial r}\vert_{r=R_{p,k}} &= J_{k} \label{eq:1b} \\
+    -D_p\frac{\partial c_{p,k}}{\partial r}\vert_{r=0} &= 0 \label{eq:1c}
     \end{align}
 \end{subequations}
 
@@ -194,7 +342,7 @@ for the smoothed boundary method\cite{thornton2012,thornton2018}. The
 reformulated form is written as\cite{thornton2018}
 
 \begin{equation}
-  \frac{\partial c_{p,k}}{\partial t}=\frac 1{\psi{}_k}\nabla \cdot \psi{}_kD_p\nabla c_{p,k}+\frac{\left|\nabla \psi{}_k\right|}{\psi{}_k}J_k
+  \frac{\partial c_{p,k}}{\partial t}=\frac 1{\psi{}_k}\nabla \cdot \psi{}_kD_p\nabla c_{p,k}+\frac{\left\vert\nabla \psi{}_k\right\vert}{\psi{}_k}J_k
   \label{eq:8}
 \end{equation}
 
@@ -266,7 +414,7 @@ parameters for individual particle, $\psi{}_k$:
 
 where $r$ is the radius of this particle, $d$ is the distance to the
 particle center, $\delta$ determines the interfacial thickness and we
-used $\delta = \sqrt{2}$.
+used $\delta = \SI[parse-numbers=false]{\sqrt{2}}{\micro\meter}$.
 
 Figure \ref{fig:30-particle-box} shows the particle size distributions
 obtained by stratified sampling\cite{parsons2017} and the
@@ -365,7 +513,6 @@ respect to different forms of \gls{ecd}. We note that we set $D_s>
 \SI{5e-15}{\meter\squared\per\second}$ (as shown in Figure
 \ref{fig:diffusivity}) for all simulations in this section to avoid
 solid-state limitation in the simulated system.
-
 
 \section{Selection of $i_0$ Function}
 
@@ -659,6 +806,7 @@ increased.
   \label{fig:nmc532-particles}
 \end{figure}
 
+
 \begin{figure}
   \includegraphics{figures/NCA-particles-irradiation.pdf}
   \caption{Operando \gls{txm} of secondary \nca{} particles during
@@ -712,7 +860,6 @@ increased.
 \clearpage
 \pagebreak
 
-\bibliographystyle{plain}
 \bibliography{refs,refs-extra}
 
 \end{document}
