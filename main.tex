@@ -65,6 +65,7 @@ Papers from Mistry:
     \item https://iopscience.iop.org/article/10.1149/2.024203jes
 \end{itemize}
 
+Other papers:
 \begin{itemize}
 \item song2022\cite{song2022} Used single-particle EIS to get i0 and Ds constants for NMC-333. Didn't show that large i0 jump we expect. \url{https://onlinelibrary.wiley.com/doi/10.1002/anie.202205394}
 \end{itemize}
@@ -491,9 +492,7 @@ that the fundamental electrochemical properties are strongly dependent
 on the state of charge. While the observed phenomenon of accelerated
 delithiation is reminiscent of the interparticle phase separation
 predicted in \ce{Li_{x}FePO_{4}} \cite{boesenberg2013,thornton2014},
-it does not apply here because the system under investigation is not a
-two-phase system in thermodynamic equilibrium. To gain further insight
-into the observed accelerated delithiation, we performed physics-based
+it does not apply here because the system under investigation does not permit two-phase co-existence in thermodynamic equilibrium. To understand the origin of the observed accelerated delithiation, we performed physics-based
 particle-level simulations of \nca{x}. While the computational expense
 (resulting from large changes in properties with varying x) does not
 allow a parametric study of many-particle simulations, it was
@@ -514,14 +513,14 @@ the Supporting Information.
 %% and (d).
 The effect of the electrochemical reaction that occurs at the
 interface between the active material and the electrolyte phase can be
-studied using the \glsreset{ecd}\gls{ecd}. Similarly, the effect of
-the solid-state transport can be studied using the
+studied by varying the \glsreset{ecd}\gls{ecd}. Similarly, the effect of
+the solid-state transport can be studied by examining the
 \glsreset{D_s}\gls{D_s}. Both of these quantities are dependent on the
 \gls{xLi} in the particles. Therefore, we performed sensitivity
 analyses with respect to various functional forms and values of
 \gls{ecd} and \gls{D_s}, including the ones reported in
 literature\cite{amin2015,moshtev1984,newman1993,newman1994-2,newman1995-2,newman1996,chueh2021,mukherjee2017,chiang2020,tsai2018,dees2008}
-and constructed for this work to qualitatively reproduce rapid
+and the ones constructed for this work to qualitatively reproduce rapid
 delithiation. The details of these forms are provided in the
 Supporting Information.
 
@@ -550,20 +549,18 @@ particle undergoes rapid delithiation.  We note that no rapid
 delithiation was observed when the traditional form of \gls{ecd}
 ($\propto\sqrt{{x_{\textrm{Li}}}(1-{x_{\textrm{Li}}})}$
 \cite{newman1993, newman1994, newman1995, newman1996}) is used, as
-shown in Figure \zref{si:fig:x-evolution}.
-
-The oscillations observed in $\left\langle \gls{xLi} \right\rangle$ in
+shown in Figure \zref{si:fig:x-evolution}. The oscillations observed in $\left\langle \gls{xLi} \right\rangle$ in
 Figure \ref{fig:model-1}b arise due to the large difference between
 minimum and maximum values of \gls{ecd} used in these
 simulations. This large difference can cause a particle undergoing the
 aforementioned transition to deliver more than the applied current,
-which induces already delithiated particles to lithiate slightly. Such
-phenomena under a galvanostatic condition have also been observed in
+which induces already delithiated particles to lithiate slightly. This mechanism is different from the similar phenomena observed in
 \ce{Li_{x}FePO_{4}}, for which the acceleration occurs due to the
 thermodynamics of the phase-separating material
-\cite{thornton2015}. To ensure that the results from the 8-particle
-simulations are not artificially affected by the small number of
-particles simulated, we performed a simulation with 30 particles; the
+\cite{thornton2015}.
+
+To ensure that the results from the 8-particle
+simulations are not artificially affected by the system size, we performed a simulation with 30 particles; the
 details of the simulation are provided in the Supporting
 Information. The results are provided in Figure
 \ref{fig:model-1}c. First, rapid delithiation is observed for all of
@@ -576,7 +573,7 @@ whether or not such oscillations in state of charge occur in a
 physical system would require higher chemical and temporal resolutions
 than what is possible with these techniques today.
 
-Next, we studied the effect of a model \gls{D_s} form that has the
+Next, we studied the effect of the function form of \gls{D_s} by employing the
 same form as the model \gls{ecd} above, as shown in Figure
 \ref{fig:model-2}a. Note that the traditional form of \gls{ecd} was
 used for this simulation and initial $\left\langle \gls{xLi}
@@ -589,28 +586,28 @@ $\left\langle \gls{xLi} \right\rangle$ during charging of the
 8-particle system at \SI{0.05}{\ampere\per\ampere\hour} (C/20) with
 the model \gls{D_s}. Although accelerated delithiation is observed for
 smaller particles, its extent is much smaller than that observed
-above. For a particle to exhibit rapid delithiation, the flux at the
+due to the change in \gls{ecd}, discussed above. For a particle to exhibit rapid delithiation, the flux at the
 particle-electrolyte interface needs to increase rapidly in a short
 duration of time. Such an increase in the flux cannot be realized even
 if the diffusion function has a step-function-like dependence on
 \gls{xLi} because the diffusivity (hence, diffusion flux) only
-increases in the shell of the particle close to the particle surface;
+increases in the outer shell of the particle;
 the particle bulk continues to have lower diffusivity. In other words,
 the entire particle does not undergo rapid delithiation; instead, only
-the shell close to the particle surface exhibits such
+the outer shell exhibits such
 behavior. Furthermore, prior results do not show a preference for
 delithiation at the outside of the particles\cite{lu2021} as would be
 expected if Li transport was sluggish, suggesting that Li diffusion is
 not the limiting mechanism in these experiments. Indeed, the
 simulation result also supports this conclusion for the values of
 \gls{D_s} obtained from the literature, as well as the step form of
-\gls{D_s} having 1000-fold smaller value. Hence we can rule out a strong
+\gls{D_s} having 1000-fold smaller value. Hence, we can rule out a strong
 dependence of \gls{D_s} on \gls{xLi} as the underlying cause of rapid
 delithiation.
 
 Based on the insights generated above, we conclude that rapid
 delithiation in \nca{} particles is controlled by the surface reaction
-kinetics, rather than the bulk \ce{Li+} diffusion dynamics in the
+kinetics, rather than the bulk \ce{Li} diffusion dynamics in the
 active material. This result from our deterministic
 modeling study agrees well with the stochastic simulations performed
 by Park et al.\cite{chueh2021}, where the authors showed that the
@@ -618,7 +615,8 @@ accelerated delithiation (termed electro-autocatalysis by the authors)
 is controlled by the surface reaction and not the solid-state
 diffusion. Moreover, the authors reported a rapid increase in
 \gls{ecd} at the \nca{} particle surface as the delithiation
-progresses, albeit with an exponential dependence.
+progresses, albeit with a different form of the function. The authors used an exponential
+relation between \gls{ecd} and \gls{xLi}, while we used a smoothed-step function. 
 
 We note that the electrodes used in our experimental \gls{txm}
 measurements were prepared with a high carbon-additive content
@@ -629,15 +627,15 @@ in such electrodes suggest that the behavior is governed by material
 properties other than electronic conductivity, unlike what is
 suggested by Sharma et al.\cite{zhao2022}. Additionally, several
 studies instead attributed the rapid delithiation to limited diffusion
-of \ce{Li^+} in the cathode active material\cite{rao2021,
-  wang2020-6}. Their models and those described above predict spatial
+of \ce{Li} in the cathode active material\cite{rao2021,
+  wang2020-6}. Their models and those described above (our model with the step form of \gls{D_s} and the model presented by Park et al. \cite{chueh2021}) predict spatial
 heterogeneity within secondary particles in the diffusion limited
-case\cite{wang2020-6}, which is not observed for polycrystalline
+case\cite{wang2020-6}. However, no such spatial heterogeneity is experimentally observed in the polycrystalline
 secondary particles, neither in this work nor that of other
 authors\cite{chueh2021, zhao2022}. This difference between
 polycrystalline and single crystal cathode behavior implies that
-\ce{Li^+} diffusion may be the limiting factor in the case of large
-single crystal particles, but that poly-crystalline secondary
+\ce{Li} diffusion may be the limiting factor in the case of large
+single crystal particles, but that polycrystalline secondary
 particles are instead limited by charge-transfer kinetics.
  
 
