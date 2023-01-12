@@ -1,7 +1,7 @@
 LATEXMK=latexmk
 BASE=$(shell basename $(shell pwd))
 VERSION=`git describe | sed s/\\\\./_/`
-HASH=`git rev-parse HEAD`
+HASH=`git rev-parse --short HEAD`
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 PDFTK=pdftk
 PANDOC=pandoc -s
