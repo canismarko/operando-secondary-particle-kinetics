@@ -1,11 +1,8 @@
-\documentclass{article}
+\documentclass{WileyMSP-template}
 
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-
-\input{drafting}
-
 \usepackage{graphicx}
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx}
@@ -15,9 +12,12 @@
 \usepackage{textgreek}
 \usepackage{nameref}
 
+\pagestyle{fancy}
+\rhead{\includegraphics[width=2.5cm]{vch-logo.png}}
+
 \input{macros}
 \input{acronyms}
-\input{metadata}
+
 
 \newlength{\figwidth}
 \setlength{\figwidth}{3.5in}
@@ -26,7 +26,79 @@
 
 \begin{document}
 
+\title{Origin of Rapid Delithiation In Secondary Particles Of \\ \nca{} and \nmc{} Cathodes}
+
 \maketitle
+
+\author{Mark Wolfman}
+\author{Brian M.\ May}
+\author{Vishwas Goel}
+\author{Sicen Du}
+\author{Young-Sang Yu}
+\author{Nicholas V.\ Faenza}
+\author{Nathalie Pereira}
+\author{Kamila M.\ Wiaderek}
+\author{Ruqing Xu}
+\author{Jiajun Wang}
+\author{Glenn G. Amatucci}
+\author{Katsuyo Thornton}
+\author{Jordi Cabana*}
+
+\begin{affiliations}
+  M.\ Wolfman, B.M.\ May, J.\ Cabana* \\
+  Department of Chemistry \\
+  University of Illinois at Chicago \\
+  845 W Taylor St \\
+  4500 SES (MC 111) \\
+  Chicago IL 60607
+
+  M.\ Wolfman \\
+  Chemical Sciences and Engineering Division \\
+  Argonne National Laboratory \\
+  9700 S Cass Ave \\
+  Lemont IL 60439
+
+  M.\ Wolfman, K.M.\ Wiaderek, R.\ Xu \\
+  X-ray Science Division \\
+  Advanced Photon Source \\
+  Argonne National Laboratory \\
+  9700 S Cass Ave \\
+  Lemont IL 60439
+
+  V.\ Goel, S.\ Du, K.\ Thornton \\
+  Department of Materials Science and Engineering \\
+  University of Michigan \\
+  2300 Hayward St \\
+  Ann Arbor MI 48109
+
+  Y.S.\ Yu \\
+  Advanced Light Source \\
+  Lawrence Berkeley National Laboratory \\
+  6 Cyclotron Rd \\
+  Berkeley CA 94720
+
+  Y.S.\ Yu \\
+  Department of Physics \\
+  Chungbuk National University \\
+  Chungdae-ro 1 \\
+  Seowon-Gu, Cheongju, Chungbuk 28644 \\
+  Korea
+
+  N.V.\ Faenza, N.\ Pereira, G.G.\ Amatucci \\
+  Energy Storage Research Group \\
+  Department of Materials Science and Engineering \\
+  Rutgers, The State University of New Jersey
+
+  J.\ Wang \\
+  Harbin Institute of Technology \\
+  92 Xida St \\
+  Nangang, Harbin, Heilongjiang \\
+  China
+
+  J.\ Cabana \\
+  Email Address: jcabana@uic.edu
+  
+\end{affiliations}
 
 \begin{abstract}
   Most research on the electrochemical dynamics in materials for
@@ -51,22 +123,6 @@
   understanding the charge-storage reaction of Li-ion battery
   cathodes.
 \end{abstract}
-
-% \listoftodos
-
-\section{[Other papers to consider]}
-
-%% Papers from Mistry:
-%% \begin{itemize}
-%%     \item https://pubs.acs.org/doi/10.1021/acsami.9b23155
-%%     \item https://pubs.acs.org/doi/10.1021/acsami.7b17771
-%%     \item https://iopscience.iop.org/article/10.1149/2.024203jes
-%% \end{itemize}
-
-%% Other papers:
-%% \begin{itemize}
-%% \item song2022\cite{song2022} Used single-particle EIS to get i0 and Ds constants for NMC-333. Didn't show that large i0 jump we expect. \url{https://onlinelibrary.wiley.com/doi/10.1002%% /anie.202205394}
-%% \end{itemize}
 
 \glsresetall{}
 
@@ -949,8 +1005,13 @@ Supporting Information. Additional details about these models such as
 model equations and geometry are also provided in the Supporting
 Information.
 
+\medskip
+\textbf{Supporting Information} \par %Please delete the Suppporting Information statement if it is not applicable. Please supply Supporting Information in another file. Supporting information should not be provided in .tex format
+Supporting Information is available from the Wiley Online Library or from the author.
 
-\section*{Acknowledgments}
+\medskip
+\textbf{Acknowledgements} \par %delete if not applicable))
+Please insert your acknowledgements here
 
 We thank Hao Liu, Department of Chemistry at the State University of
 New York, Binghamton for \gls{ocv} values during first charge of
@@ -978,8 +1039,13 @@ No.\ DE-AC02-76SF00515.
 
 
 \newpage
+\bibliographystyle{MSP}
+\bibliography{refs,refs-extra}
+
+
+\newpage
 %%%%%%%%%%%%%%%%%%%
-\section*{Figures}
+% \section*{Figures}
 %%%%%%%%%%%%%%%%%%%
 
 \begin{figure}[!h]
@@ -1054,10 +1120,5 @@ No.\ DE-AC02-76SF00515.
   \label{fig:model-2}
 \end{figure}
 
-
-\newpage
-\bibliographystyle{unsrt}
-\bibliography{refs,refs-extra}
-%% \bibliography{references}
 
 \end{document}
