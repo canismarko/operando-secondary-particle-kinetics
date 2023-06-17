@@ -363,11 +363,12 @@ while the end values were similar, the trajectories of both \emph{a}
 and \emph{c} parameters were not quantitatively the same as during the
 first charge. For instance, the \emph{c} parameter peaked at
 \SI{14.48}{\angstrom} and \SI{14.35}{\angstrom} on charge and
-discharge, respectively. This evolution suggests that full
-delithiation introduces irreversible structural changes that affect
-the dependence of lattice parameters on Li content. To the best of our
-knowledge, this issue has not been explored in the literature and
-demands dedicated operando \gls{xrd} experiments.
+discharge, respectively (Figure \ref{fig:uxrd}d). This evolution
+suggests that full delithiation introduces irreversible structural
+changes that affect the dependence of lattice parameters on Li
+content. To the best of our knowledge, this issue has not been
+explored in the literature and demands dedicated operando \gls{xrd}
+experiments.
 
 
 %% \subsection{TXM - \nmc{}}
@@ -379,11 +380,18 @@ reproducibility of the varying delithiation rates observed among
 particles by the operando \gls{uxrd} mapping. In particular, we
 employed operando \Gls{txm} \gls{xas} of \nca{} secondary particles
 during charging to probe \ce{Ni} oxidation states at high spatial
-resolution. Framesets containing multiple particles were collected
-during the first galvanostatic charge (Figure
+resolution. The frames collected during these measurements were
+two-dimensional projections through the particles, since the geometry
+of coin-cells does not permit the range of angles needed to image the
+particles in three spatial dimensions. Framesets containing multiple
+particles were collected during the first galvanostatic charge (Figure
 \ref{fig:txm-nca}a). Localized \gls{xas} K-edge spectra were averaged
-over all pixels in a single secondary particle. \gls{xas} measurements
-of the ensemble average of electrodes showed that, upon delithiation,
+over all pixels in a single secondary particle. While fractures within
+the secondary particle microstructure are expected at high states of
+charge\ref{tsai2018}, these fractures represent movement of transition
+metal within the particle and so are not expected to directly effect
+the whole-particle spectra presented here. \gls{xas} measurements of
+the ensemble average of electrodes showed that, upon delithiation,
 there was a progressive increase in the energy of the absorption edge
 and the associated energy of maximum absorbance, or whiteline (Figures
 \zref{si:fig:kedges} and \zref{si:fig:isobestic-point}), consistent
@@ -727,7 +735,9 @@ sample was moved relative to the beam using a step size of
 this manner continuously over the charge-discharge cycle. At each
 exposure, or mapping position, a single full 2D diffraction pattern,
 averaging over the depth of the material, was collected (an example is
-seen in \zref{si:fig:2Ddiffraction}). After one map was collected for
+seen in Figure \zref{si:fig:2Ddiffraction}). Maps of the summed diffraction
+intensity for each particle at open-circuit conditions are shown in
+Figure \zref{si:fig:refinements}a-c.  After one map was collected for
 each particle, a positive current was applied so that the charge rate
 would be C/20 (in which removal of a full \ce{Li} equivalent would
 complete in \SI{20}{\hour}). The cut-off potential for the cell was
@@ -747,7 +757,8 @@ Python. An ensemble diffraction pattern for each particle at each
 state of charge was obtained by summing the patterns at each mapping
 position. These patterns underwent batch Le Bail refinement by the
 TOPAS software developed by Bruker to produce plots of unit cell as a
-function of charge-discharge for each particle as a whole.
+function of charge-discharge for each particle as a whole (Figure
+\zref{si:fig:refinements}d-e).
 
 \subsection*{\textit{Ex-situ} X-ray absorption spectroscopy - \nca{}}
 To obtain standard spectra of \nca{} (NAT-1050) with respect to the
@@ -836,13 +847,13 @@ points near the highest \gls{od} position.
 
 \subsection*{TXM - \nmc{}}
 
-\nca{} (NAT-1050), \nmc[333]{} (NM-3100) and \nmc[532]{} (NCM-045T)
-were purchased from TODA America, Inc.\ and either stored under
-ambient atmosphere (Figures \zref{si:fig:isobestic-point},
-\zref{si:fig:nca-irradiation}, \zref{si:fig:nmc532-particles},
-\zref{si:fig:echem-derivatives}a-d) or in a dry room followed by an
-argon-filled glovebox (Figures \zref{si:fig:nmc333-particles},
-\zref{si:fig:echem-derivatives}e,f, \zref{si:fig:nca-particles},
+\nmc[333]{} (NM-3100) and \nmc[532]{} (NCM-045T) were purchased from
+TODA America, Inc.\ and either stored under ambient atmosphere
+(Figures \zref{si:fig:isobestic-point}, \zref{si:fig:nca-irradiation},
+\zref{si:fig:nmc532-particles}, \zref{si:fig:echem-derivatives}a-d) or
+in a dry room followed by an argon-filled glovebox (Figures
+\zref{si:fig:nmc333-particles}, \zref{si:fig:echem-derivatives}e,f,
+\zref{si:fig:nca-particles},
 \zref{si:fig:kedge-decomposition}). \nca{} or \nmc{} powder
 (\SI{20}{\percent}, TODA) and acetylene black (\SI{60}{\percent}) were
 ground in a mortar and pestle, then mixed with polyvinylidene fluoride
@@ -866,19 +877,13 @@ windows (Norcada NX5200F) using Torr-Seal vacuum-rated
 epoxy. Assembled and sealed cells were removed from the glovebox and
 mounted in the X-ray microscope.
 
-\gls{txm} was performed at either the Stanford Synchrotron Radiation
-Lightsource beamline 6-2c (Figures \ref{fig:txm-nca} and
-\zref{si:fig:nca-particles}) or the Advanced Photon Source beamline
-8-BM-B (Figures \zref{si:fig:nmc333-particles},
+\gls{txm} was performed at the Advanced Photon Source bending magnet
+beamline 8-BM-B (Figures \zref{si:fig:nmc333-particles},
 \zref{si:fig:nca-irradiation}, and \zref{si:fig:nmc532-particles}),
-both equipped with an XRadia transmission microscope. Beamline 6-2c
-utilizes a 56-pole, 0.9-Tesla Wiggler with 1.2 mrad acceptance focused
-and \num{\approx1e-4} energy resolution ($\frac{\Delta E}{E}$). A
-\SI{60}{nm} outer-zone-width objective zone-plate was used to render a
-magnified image on a $2048 \times 2048$ charge-coupled device with
-binning factor 2, producing $1024 \times 1024$ intensity
-images. Beamline 8-BM-B utilizes a bending magnet source. The
-remaining optical setup is similar to beamline 6-2c.
+equipped with an XRadia transmission microscope. A \SI{60}{nm}
+outer-zone-width objective zone-plate was used to render a magnified
+image on a $2048 \times 2048$ charge-coupled device with binning
+factor 2, producing $1024 \times 1024$ intensity images.
 
 Operando data acquisition was performed by collecting frames at each
 energy of both the specimen and a reference frame with no cell or
@@ -1008,7 +1013,10 @@ No.\ DE-AC02-76SF00515.
     energy of maximum absorbance of all pixels in a particle at a
     given time point relative to the energy of maximum absorbance for
     all particles in the pristine state. Error bars represent one
-    standard deviation over pixels within the given particle.}
+    standard deviation over pixels within the given particle. The
+    horizontal axis in (d) shows the ratio of time since current was
+    applied ($t$) to the total time to reach the cut-off potential
+    ($t_c$).}
   \label{fig:txm-nca}
 \end{figure}
 
@@ -1030,7 +1038,7 @@ No.\ DE-AC02-76SF00515.
 
 \newpage
 \begin{figure}[!h]
-  \includegraphics[scale =0.7]{figures/modeling_figure_1.png}
+  \includegraphics[scale =1]{figures/modeling_figure_1.png}
   \caption{Simulation results for C/20 galvanostatic charging. (a) The
     model form of \gls{ecd} vs.\ \gls{xLi} used for the
     simulation. The evolution of the volume-averaged \gls{xLi} in
