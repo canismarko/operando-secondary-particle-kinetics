@@ -43,3 +43,27 @@ separate folders:
 each of which contain data in raw binary format (``.mpr`` file) and
 exported text format (``.mpt`` file), exported using BioLogic's EC-Lab
 software.
+
+# µ-XRD Data
+
+Operando micro-focused powder X-ray diffraction mapping (µ-XRD) data
+are in a zip archive in the ``uxrd`` folder, organized by particle.
+
+For each particle (1-3), there is an HDF5 file with the processed 1D
+diffraction patterns for all mapping positions at each state of charge
+(e.g. ``Particle1/SOC44.h5``). These files contain the reduced 1D
+diffraction patterns, but not the 2D area detector patterns.
+
+The folder *Echem* contains the potential and time arrays from the
+galvanostat during the experiment. All particles were measured
+concurrently and so there is only one set of electrochemistry data for
+all 3 particles.
+
+The folder *summed-data* contains the overall diffraction pattern for
+each particle at each state of charge. These were the data used for
+whole-pattern fitting using Topas.
+
+Additionally, there are two jupyter notebooks, ``paper-figs.ipynb``
+and ``Data_Analysis.ipynb`` that were used for generating µ-XRD
+figures for the paper and preparing the data for whole pattern
+fitting, respectively.
