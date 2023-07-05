@@ -472,7 +472,7 @@ consistent with previous reports using other techniques on related
 materials\cite{chueh2021,rao2021,wang2020-6}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Simulation of single particle dynamics}
+\section{Simulation of charging dynamics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Electrochemical dynamics simulations to identify the origin of the
@@ -510,12 +510,17 @@ interface between the active material and the electrolyte phase can be
 studied by varying the \glsreset{ecd}\gls{ecd}. Similarly, the effect
 of the solid-state transport can be studied by examining the
 \glsreset{D_s}\gls{D_s}. Both of these quantities are dependent on the
-\gls{xLi} in the particles. Therefore, we performed sensitivity
-analyses with respect to various functional forms and values of
-\gls{ecd} and \gls{D_s}, including the ones reported in
+local \glsreset{xLi}\gls{xLi} within the particles. Therefore, we
+performed sensitivity analyses with respect to various functional
+forms and values of \gls{ecd} and \gls{D_s}, including those in
 literature\cite{chueh2021,amin2015,moshtev1984,newman1993,newman1994-2,newman1995-2,newman1996,mukherjee2017,chiang2020,tsai2018,dees2008}
-and the ones constructed for this work to qualitatively reproduce
-rapid delithiation. The details of these forms are provided in the
+and those constructed for this work to qualitatively reproduce rapid
+delithiation. Note that we use the value of \gls{xLi} at each point in
+the discretized space, rather than the volume averaged values over a
+particle, to determine the local values of \gls{ecd} and \gls{D_s} in
+simulations in which functional forms are used. Thus, the spatial
+variations in these parameters are accounted in the
+simulations. Further details of these forms are provided in the
 Supporting Information.
 
 Figure \ref{fig:model-1}b shows the evolution of volume-averaged
@@ -1040,25 +1045,31 @@ No.\ DE-AC02-76SF00515.
 \newpage
 \begin{figure}[!h]
   \includegraphics[scale =1]{figures/modeling_figure_1.pdf}
-  \caption{Simulation results for C/20 galvanostatic charging. (a) The
-    model form of \gls{ecd} vs.\ \gls{xLi} used for the
-    simulation. The evolution of the volume-averaged \gls{xLi} in
-    individual particle, $\langle x \rangle$, for (b) the 8-particle
-    system and (c) 30-particle system.}
+  \caption{(a) The model form of the \glsreset{ecd}\gls{ecd} vs.\ the
+    local \glsreset{xLi}\gls{xLi} used for the simulation with a
+    composition-dependent \gls{ecd}. (b) The simulated evolution of
+    the volume-averaged Li-site fraction in individual particles,
+    $\left\langle x_{\rm{Li}}\right\rangle $, for C/20 galvanostatic
+    charging of the 8-particle system. (c) The simulated evolution of
+    the volume-averaged Li-site fraction in individual particles,
+    $\left\langle x_{\rm{Li}}\right\rangle $, for C/20 galvanostatic
+    charging of the 30-particle system.}
   \label{fig:model-1}
 \end{figure}
 
 \newpage
 \begin{figure}[!h]
   \includegraphics[scale =1]{figures/modeling_figure_2.pdf}
-  \caption{Simulation results for C/20 galvanostatic charging. (a) The
-    model form of \gls{D_s} vs.\ \gls{xLi} used for the
-    simulation. Note that the form is the same in terms of the ratio
-    between minimum and maximum values and the transition-zone width
-    as that of \gls{ecd} shown above. (b) The evolution of the
-    volume-averaged \gls{xLi} in individual particle, $\langle x
-    \rangle$, for the 8-particle system. The inset shows the zoomed in
-    version of the section highlighted using the dashed box.}
+  \caption{(a) The model form of \gls{D_s} vs.\ the local
+    \glsreset{xLi}\gls{xLi} used for the simulation with a
+    composition-dependent diffusivity. Note that the form of the
+    function is the same as that of \gls{ecd} shown above, including
+    the ratio between the maximum and minimum values and the width of
+    the transition. (b) The simulated evolution of the volume-averaged
+    \gls{xLi} in individual particles, $\langle x_{\rm{Li}} \rangle$,
+    for C/20 galvanostatic charging of the 8-particle system. The
+    inset shows the magnified view of the section bounded by the
+    dashed box.}
   \label{fig:model-2}
 \end{figure}
 
