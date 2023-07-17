@@ -46,7 +46,7 @@ deploy:
 	${LATEXMK} -jobname=${JOBNAME} main.tex
 	${LATEXMK} -jobname=${SUPPJOBNAME} supplement.tex
 	${PDFTK} ${JOBNAME}.pdf ${FIGDIR}/*.pdf ${SUPPJOBNAME}.pdf cat output ${JOBNAME}-combined.pdf
-	zip ${JOBNAME}.zip main.tex ${FIGDIR}/*.pdf refs-abbrev.bib acronyms.tex macros.tex metadata.tex main..bbl toc-graphic.pdf latexmkrc
+	zip ${JOBNAME}.zip main.tex ${FIGDIR}/*.pdf refs.bib acronyms.tex macros.tex main.bbl latexmkrc
 
 
 odt: main.tex supplement.tex
