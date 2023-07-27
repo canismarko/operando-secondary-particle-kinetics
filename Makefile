@@ -5,8 +5,9 @@ HASH=`git rev-parse --short HEAD`
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 PDFTK=pdftk
 PANDOC=pandoc -s
-JOBNAME=${BASE}-${BRANCH}-${VERSION}-${HASH}
-SUPPJOBNAME=${BASE}-supplement-${BRANCH}-${VERSION}-${HASH}
+BUILDDIR=build
+JOBNAME=${BUILDDIR}/${BASE}-${BRANCH}-${VERSION}-${HASH}
+SUPPJOBNAME=${BUILDDIR}/${BASE}-supplement-${BRANCH}-${VERSION}-${HASH}
 LWARP=lwarpmk
 FIGDIR=figures
 BIBFILE=refs.bib
@@ -46,7 +47,7 @@ deploy:
 	${LATEXMK} -jobname=${JOBNAME} main.tex
 	${LATEXMK} -jobname=${SUPPJOBNAME} supplement.tex
 	${PDFTK} ${JOBNAME}.pdf ${FIGDIR}/*.pdf ${SUPPJOBNAME}.pdf cat output ${JOBNAME}-combined.pdf
-	zip ${JOBNAME}.zip main.tex ${FIGDIR}/*.pdf refs.bib acronyms.tex macros.tex main.bbl latexmkrc
+	zip ${JOBNAME}.zip main.tex ${FIGDIR}/*.pdf ${FIGDIR}/*.png ${FIGDIR}/*.jpg ${FIGDIR}/*.tex refs.bib refs-extra.bib MSP.bst Makefile acronyms.tex macros.tex colors.tex acronyms.tex VCH-logo.png WileyMSP-template.cls main.bbl supplement.tex latexmkrc
 
 
 odt: main.tex supplement.tex
