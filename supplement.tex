@@ -39,7 +39,7 @@
 
 \section{Model Equations}
 
-\subsection{8-Particle Ensemble}
+\subsubsection{8-Particle Ensemble}
 
 The cell used in our 8-particle simulations consists of a Li metal
 anode and an \nca{} cathode, which contains 8 particles ranging from
@@ -59,45 +59,39 @@ of electrolyte. The size of the computational domain is $50\times
 
 Within the \nca{} particles, the mass transport is calculated
 as\cite{newman1993,newman1994}
-
 \begin{equation}
   \frac{\partial c_{p,k}}{\partial t}=\frac 1{r^2}\frac \partial {\partial r}\left(D_pr^2\frac{\partial c_{p,k}}{\partial r}\right)
   \label{eq:1a}
 \end{equation}
-  
 where $c_p$ is the \gls{xLi} in the electrode particles, $t$ is time,
 $r$ is the radial distance, $D_p$ is the Li diffusivity in \nca{}. The
 subscript $k$ represents the particle number from hereon.
 
 The boundary conditions for Equation \ref{eq:1a} are as
 follows\cite{newman1993,newman1994}
-
 \begin{subequations}
     \begin{align}
       -D_p\frac{\partial c_{p,k}}{\partial r}|_{r=R_{p,k}} &= J_{k} \label{eq:1b} \\
       -D_p\frac{\partial c_{p,k}}{\partial r}|_{r=0} &= 0 \label{eq:1c}
     \end{align}
 \end{subequations}
-
 where $R_{p,k}$ represents the particle radius. Furthermore, all the
 particles are set to have an initial \gls{xLi} of $c_p^0$.
 
 The electrochemical reaction flux ($J_k$) at the \nca{}/electrolyte
 interface for each particle is calculated using the Butler-Volmer
 equation as\cite{newman1993,newman1994}
-
 \begin{subequations}
-\begin{equation}
-  J_k = \frac{i_0}{F}\times\left(\exp \left(\frac{0.5F}{RT}\eta{}_k\right)-\exp
-  \left(\frac{-0.5F}{RT}\eta{}_k\right)\right)
-  \label{eq:2a}
-\end{equation}
-\begin{equation}
-  \eta{}_k=\phi{}_{p,k}-\phi{}_e-U_k^0
-  \label{eq:2b}
-\end{equation}
+  \begin{equation}
+    J_k = \frac{i_0}{F}\times\left(\exp \left(\frac{0.5F}{RT}\eta{}_k\right)-\exp
+    \left(\frac{-0.5F}{RT}\eta{}_k\right)\right)
+    \label{eq:2a}
+  \end{equation}
+  \begin{equation}
+    \eta{}_k=\phi{}_{p,k}-\phi{}_e-U_k^0
+    \label{eq:2b}
+  \end{equation}
 \end{subequations}
-
 where $i_0$ is the exchange current density, $F$ is the Faraday
 constant, $R$ is the ideal gas constant, $T$ is absolute temperature,
 $\eta{}_k$ is overpotential on the surface of $k^{\mathit{th}}$
@@ -106,12 +100,10 @@ particle, $\phi{}_e$ is the electrostatic potential of the electrolyte, and
 $U_k^0$ is the \gls{ocv} of \nca{} vs.\ce{Li/Li^+}.
 
 The electrostatic potential of \nca{} particles is obtained as\cite{newman1993,newman1994}
-
 \begin{equation}
   -\sigma{}_p\nabla{}\phi{}_{p,k}=i_{p,k}
   \label{eq:3}
 \end{equation}
-
 where $\sigma{}_p$ is the electronic conductivity of \nca{} and $i_{p,k}$ is
 the current density on the $k^{\mathit{th}}$ particle. It should be
 noted that $i_{p,k}=J_kF$.
@@ -119,7 +111,6 @@ noted that $i_{p,k}=J_kF$.
 The electrochemical reaction flux and the electrostatic potential at
 the Li metal anode is calculated in a similar manner as Equations
 \ref{eq:2a}--\ref{eq:3} as\cite{dasgupta2016}
-
 \begin{subequations}
 \begin{equation}
   J_{\mathrm{Li}}=\frac{i'_0}{F}\times \left(\exp\left(\frac{0.5F}{RT}\eta{}_{\mathrm{Li}}\right)-\exp\left(\frac{-0.5F}{RT}\eta{}_{\mathrm{Li}}\right)\right)
@@ -130,7 +121,6 @@ the Li metal anode is calculated in a similar manner as Equations
   \label{eq:4b}
 \end{equation}
 \end{subequations}
-
 where $J_{\mathrm{Li}}$, $i'_0$, and $\eta{}_{\mathrm{Li}}$ are the
 reaction flux, the exchange current density, and the overpotential at
 the Li metal anode/electrolyte interface, respectively. The
@@ -138,37 +128,32 @@ electrostatic potential and the \gls{ocv} of the electrode are given
 by $\phi{}_{\mathrm{Li}}$ and $U_{\mathrm{Li}}^0$,
 respectively. Furthermore, $\phi{}_{\mathrm{Li}}$ is obtained
 as\cite{newman1993,newman1994}
-
 \begin{equation}
   -\sigma{}_{\mathrm{Li}}\nabla{}\phi{}_{\mathrm{Li}}=i_{\mathrm{app}}
   \label{eq:5}
 \end{equation}
-
-where $\sigma{}_{\mathrm{Li}}$ is the electronic conductivity of Li metal and
-$i_{\mathrm{app}}$ is the applied current density to the cell. It
-should be noted that
-$\sum_k4\pi R_{p,k}^2i_{p,k}=i_{\mathrm{app}}A$, where $A$ is the
-cross-sectional area of both the current collector (in contact with
-the \nca{} cathode) and the Li metal anode. Moreover, we set the top
-surface of the Li metal anode as ground.
+where $\sigma{}_{\mathrm{Li}}$ is the electronic conductivity of Li
+metal and $i_{\mathrm{app}}$ is the applied current density to the
+cell. It should be noted that $\sum_k4\pi
+R_{p,k}^2i_{p,k}=i_{\mathrm{app}}A$, where $A$ is the cross-sectional
+area of both the current collector (in contact with the \nca{}
+cathode) and the Li metal anode. Moreover, we set the top surface of
+the Li metal anode as ground.
 
 The mass transport equation for the electrolyte is written as\cite{newman1993,newman1994}
-
 \begin{equation}
   \frac{\partial c_e}{\partial t} = \nabla \cdot \left(D_e \nabla c_e \right) - \frac{i_e\cdot\nabla{}t_{+}^0}{F}
   \label{eq:6}
 \end{equation}
-
 where $D_e$ represents the electrolyte diffusivity, $i_e$ represents
 the electrolyte current density, and $t_+^0$ represents the
 transference number for \ce{Li^+}. The initial value of $c_e$ is set
-as $c_e^0$. Finally, $i_e$ is calculated as\cite{newman1993,newman1994}
-
+as $c_e^0$. Finally, $i_e$ is calculated
+as\cite{newman1993,newman1994}
 \begin{equation}
   i_e=-\sigma_e\nabla \phi _e+\frac{2RT}{F}\sigma_e\left(1+\frac{\partial \ln \left(f_{\pm}\right)}{\partial \ln \left(c_e\right)}\right)\left(1-t_+^0\right)\nabla \ln c_e
   \label{eq:7}
 \end{equation}
-
 where $\sigma_e$ is the electrolyte conductivity and $\frac{\partial
   \ln \left(f_\pm\right)}{\partial \ln \left(c_e\right)}$ accounts for
 the salt activity coefficient dependence on the electrolyte
@@ -192,14 +177,12 @@ overpotential during C/20 charging.
 We reformulate Equations \ref{eq:1a} and \ref{eq:2b} to a form suitable
 for the smoothed boundary method\cite{thornton2012,thornton2018}. The
 reformulated form is written as\cite{thornton2018}
-
 \begin{equation}
   \frac{\partial c_{p,k}}{\partial t}=\frac 1{\psi{}_k}\nabla \cdot \psi{}_kD_p\nabla c_{p,k}+\frac{\left|\nabla \psi{}_k\right|}{\psi{}_k}J_k
   \label{eq:8}
 \end{equation}
-
-where $\psi{}_k$ \ represents a continuous domain parameter that a value of
-1 within the $k^{\mathit{th}}$ particle and 0 outside the
+where $\psi{}_k$ \ represents a continuous domain parameter that a
+value of 1 within the $k^{\mathit{th}}$ particle and 0 outside the
 particle. The particle/electrolyte interface is defined as the region
 where $ 0 < \psi{}_k < 1 $.
 
@@ -234,7 +217,6 @@ The particle sizes of the \nca{} powders are D10:
 \SI{3.7}{\micro\meter}, D50: \SI{6.5}{\micro\meter}, and D90:
 \SI{9.8}{\micro\meter}. We assume a log-normal distribution to
 describe the particle size distribution:
-
 \begin{subequations}
 \begin{align}
   f(x) & = \frac {1}{\sqrt{2\pi}\sigma x} \exp \left(-\frac{(\ln{x}-\mu )^2}{2\sigma^2}\right)
@@ -243,7 +225,6 @@ describe the particle size distribution:
   \label{eq:10b}
 \end{align}
 \end{subequations}
-
 where $x$ is the random variable satisfying a log-normal distribution,
 $f(x)$ is the probability density function of $x$, $\sigma$ is the
 standard deviation of $x$, $\mu$ is the mean of $x$, $F(x)$ is the
@@ -258,12 +239,10 @@ systematically within each stratum. After determining the particle
 size distribution, we randomly generate the centers of these particles
 and use a hyperbolic tangent function to generate the domain
 parameters for individual particle, $\psi{}_k$:
-
 \begin{equation}
   \psi_k=\frac{1}{2}+\frac{1}{2}\tanh\left(\frac{r-d}{\delta}\right)
   \label{eq:11}
 \end{equation}
-
 where $r$ is the radius of this particle, $d$ is the distance to the
 particle center, $\delta$ determines the interfacial thickness and we
 used $\delta = \sqrt{2}$.
@@ -286,7 +265,9 @@ computational domain for the 30-particle simulations.
 \subsection{Open Circuit Voltage}
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{echem-fit.pdf}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{echem-fit.pdf}
+  \end{center}
   \caption{Parameterized fitting of \gls{ocv} response. Red line
     denotes the measured \gls{ocv} curve, the blue line denotes the
     fitted \gls{ocv} curve.}
@@ -300,20 +281,20 @@ paper\cite{liu2017}.
 
 We fitted the experimentally measured \gls{ocv} data with the
 following equation:
-
 \begin{equation}
   \mathit{OCV}=a\ln \left(\frac x{1-x}\right)+b\left(x-1\right)^2+cx^2+d
   \label{eq:12}
 \end{equation}
-
-Where $a=\SI{-0.06809}{\volt}$, $b=\SI{0.9009}{\volt}$,
+where $a=\SI{-0.06809}{\volt}$, $b=\SI{0.9009}{\volt}$,
 $c=\SI{0.2749}{\volt}$, $d=\SI{3.544}{\volt}$. $x$ represents the
 lithium fraction.
 
 \subsection{Li Diffusivity in \nca{}}
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{diffusivity.pdf}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{diffusivity.pdf}
+  \end{center}
   \caption{$D_s$ as a function of $x$ for the \nca{} material\cite{amin2015}.}
   \label{fig:diffusivity}
 \end{figure}
@@ -326,7 +307,7 @@ the same as the closest data point.
 
 \subsection{Electrolyte Parameters}
 
-Like our previous works\cite{dasgupta2020,dasgupta2020-2}, all the electrolyte parameters,
+As in our previous works\cite{dasgupta2020,dasgupta2020-2}, all the electrolyte parameters,
 namely $\sigma_e$, $D_e$, $\frac{\partial \ln
   \left(f_\pm\right)}{\partial \ln \left(c_e\right)}$, and $t_+^0$ are
 obtained from the report by Nyman et al\cite{lindbergh2008}.
@@ -367,7 +348,7 @@ respect to different forms of \gls{ecd}. We note that we set $D_s>
 solid-state limitation in the simulated system.
 
 
-\section{Selection of $i_0$ Function}
+\subsection{Selection of $i_0$ Function}
 
 Traditionally, $i_0$ is considered to be directly proportional to
 $\sqrt{x\left(1-x\right)}$, where $x$ is the Li site fraction in the
@@ -393,7 +374,9 @@ smooth step function of $x$; the step in the function is described by
 a cubic spline.
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{i0_sensitivity.pdf}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{i0_sensitivity.pdf}
+  \end{center}
   \caption{Log scale comparison of different \gls{ecd} functions used
     in the sensitivity analyses. The literature-reported functions are
     shown in dashed lines.  The plot labeled as ``Literature A'' is
@@ -421,7 +404,7 @@ $i_0^{\mathrm{max}}=\SI{1}{\ampere\per\meter\squared}$. The comparison
 of the literature values with the traditional and model functions of
 $i_0$ \ is provided in Figure \ref{fig:i0_profiles}.
 
-\section{Effect of $i_0$ on the Delithiation Dynamics}
+\subsection{Effect of $i_0$ on the Delithiation Dynamics}
 
 The evolution of the volume average Li-site fraction, $\left\langle
 x\right\rangle $, for the first set of simulations, i.e., with the
@@ -433,14 +416,16 @@ for the sensitivity analyses with respect to $i_0^{\mathrm{min}}$,
 $x^{\ast}$, and $\Delta x$.
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{8-particle-evolution.pdf}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{8-particle-evolution.pdf}
+  \end{center}
   \caption{Evolution of $\langle x \rangle$ for the 8-particle system
     obtained using the traditional function of \gls{ecd}. All the
     particles delithiate at the same rate.}
   \label{fig:x-evolution}
 \end{figure}
 
-\section{Sensitivity Analyses with Respect to $i_0^{\mathrm{min}}$}
+\subsection{Sensitivity Analyses with Respect to $i_0^{\mathrm{min}}$}
 
 We chose four different values of $i_0^{\mathrm{min}}$ ranging from
 \SIrange{0.001}{0.01}{\ampere\per\meter\squared}, while setting the
@@ -464,7 +449,7 @@ few cases originate because of the large difference between
 $i_0^{\mathrm{min}}$ and $i_0^{\mathrm{max}}$.
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{8-particle-evolution-i0min.pdf}
+  \includegraphics[width=\textwidth]{8-particle-evolution-i0min.png}
   \caption{Evolution of $\langle x \rangle$ for the 8-particle system obtained using
     the model form of \gls{ecd} with four different values of
     $i_0^{\mathrm{min}}$: a) \SI{0.01}{\ampere\per\meter\squared}, b)
@@ -476,7 +461,7 @@ $i_0^{\mathrm{min}}$ and $i_0^{\mathrm{max}}$.
   \label{fig:i0-sensitivity}
 \end{figure}
 
-\section{Sensitivity analyses with respect to $x^{\ast}$}
+\subsection{Sensitivity Analyses with Respect to $x^{\ast}$}
 
 We choose four different values of $x^{\ast}$ ranging from 0.9 to 0.6,
 and we set the parameters as
@@ -488,7 +473,7 @@ delithiation is determined by the $x^\ast$ value and $\langle x
 \rangle^\dag$ decreases with a decrease in $x^\ast$.
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{8-particle-evolution-xstar.pdf}
+  \includegraphics[width=\textwidth]{8-particle-evolution-xstar.png}
   \caption{Evolution of $\langle x \rangle$ for the 8-particle system obtained using
     the model form of $i_0$ with four different values of $x^\ast$: a)
     0.9, b) 0.8, c) 0.7, and d) 0.6. The black dashed line in each
@@ -498,7 +483,7 @@ delithiation is determined by the $x^\ast$ value and $\langle x
   \label{fig:x-star-sensitivity}
 \end{figure}
 
-\section{Sensitivity analyses with respect to $\Delta x$}
+\subsection{Sensitivity Analyses with Respect to $\Delta x$}
 
 We choose four different values of $\Delta x$ ranging from 0.05 to
 0.8, and we set other parameters as
@@ -510,7 +495,7 @@ rate of accelerated delithiation are reduced as $\Delta x$ is
 increased.
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{8-particle-evolution-deltax.pdf}
+  \includegraphics[width=\textwidth]{8-particle-evolution-deltax.png}
   \caption{Evolution of $\langle x\rangle$ for the
     8-particle system obtained using the model form of $i_0$ with
     four different values of $\Delta x$: a) 0.05, b) 0.1, c) 0.4, and d)
@@ -544,7 +529,9 @@ increased.
 \end{figure}
 
 \begin{figure}
-  \includegraphics{figures/Kedges.pdf}
+  \begin{center}
+    \includegraphics{figures/Kedges.pdf}
+  \end{center}
   \caption{Ni K-edge absorption spectra for TXM fields of view. Mean
     optical depth of pixels after edge filter for
     (\textcolor{C0}{\mplreduced{}}) most reduced and
@@ -554,7 +541,9 @@ increased.
 \end{figure}
 
 \begin{figure}
-  \includegraphics{figures/isobestic-point.pdf}
+  \begin{center}
+    \includegraphics{figures/isobestic-point.pdf}
+  \end{center}
   \caption{Demonstration of isobestic point for \nmc[333]{} \ce{Ni}
     K-edge. (a) Observed mean optical depth spectra for \gls{txm}
     frames during operando oxidation, with dashed lines added as
@@ -568,7 +557,9 @@ increased.
 \end{figure}
 
 \begin{figure}
-  \includegraphics{figures/bulk-xas-extraction.pdf}
+  \begin{center}
+    \includegraphics{figures/bulk-xas-extraction.pdf}
+  \end{center}
   \caption{Reported changes of \ce{Ni} K-edge whiteline energy. (a)
     In-situ XAS of \nmc[333]{x} and (b) ex-situ XAS of \nca{x}. Data
     extracted from published figures as described in Table
@@ -598,7 +589,9 @@ increased.
 \end{table}
 
 \begin{figure}
-  \includegraphics{figures/kedge-decomposition.pdf}
+  \begin{center}
+    \includegraphics{figures/kedge-decomposition.pdf}
+  \end{center}
   \caption{Sample decomposition of Ni K-edge fitting. Spectrum of mean
     optical depth of a frame of \nca{} particles as
     (\textcolor{C0}{\textbf{+}}) observed optical depth;
@@ -611,7 +604,9 @@ increased.
 \end{figure}
 
 \begin{figure}
-  \includegraphics{figures/echem-derivatives.pdf}
+  \begin{center}
+    \includegraphics{figures/echem-derivatives.pdf}
+  \end{center}
   \caption{Cell potential (\textcolor{C0}{\mplline{}}) and derivative
     of potential with respect to $x$ in \ce{Li_xMO2}
     (\textcolor{C1}{\mpldots}) during galvanostatic
@@ -659,7 +654,9 @@ increased.
 \end{figure}
 
 \begin{figure}
-  \includegraphics{figures/NMC532-particle-echem.pdf}
+  \begin{center}
+    \includegraphics{figures/NMC532-particle-echem.pdf}
+  \end{center}
   \caption{Particle-level oxidation during first charge and discharge
     of \nmc[532]{}. (a) Mean whiteline energies of secondary particles
     during charge discharge. (b) Operando potential
@@ -671,7 +668,9 @@ increased.
 \end{figure}
 
 \begin{figure}
-  \includegraphics{figures/NCA-particles-irradiation.pdf}
+  \begin{center}
+    \includegraphics{figures/NCA-particles-irradiation.pdf}
+  \end{center}
   \caption{Operando \gls{txm} of secondary \nca{} particles during
     first charge. Mean changes in whiteline energies relative to
     \SI{8354.18}{eV} for secondary particles (a) without static X-ray
