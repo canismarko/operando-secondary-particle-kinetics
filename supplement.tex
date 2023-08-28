@@ -5,8 +5,11 @@
 \usepackage[utf8]{inputenc}
 
 %% Tools for drafting the manuscript, remove for publication
-\input{drafting}
+%% \input{drafting}
 
+\usepackage[margin=1.5cm,right=1.5cm]{geometry}
+\usepackage{tikz}
+\usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{booktabs}  % For making tables look nice
 \usepackage[hidelinks]{hyperref}
@@ -19,7 +22,38 @@
 \input{macros}
 \input{colors}
 \input{acronyms}
-\input{metadata}
+
+\usepackage{authblk}
+
+\title{Origin of Rapid Delithiation In Secondary Particles Of \nca{} and \nmc{} Cathodes}
+
+\author[1,2,3]{Mark Wolfman}
+\author[1]{Brian M.\ May}
+\author[4]{Vishwas Goel}
+\author[4]{Sicen Du}
+\author[5,6]{Young-Sang Yu}
+\author[7]{Nicholas V.\ Faenza}
+\author[7]{Nathalie Pereira}
+\author[8]{Antonin Grenier}
+\author[3]{Kamila M.\ Wiaderek}
+\author[3]{Ruqing Xu}
+\author[9]{Jiajun Wang}
+\author[8]{Karena W.\ Chapman}
+\author[7]{Glenn G.\ Amatucci}
+\author[4]{Katsuyo Thornton}
+\author[1]{Jordi Cabana\thanks{Corresponding author: jcabana@uic.edu}}
+
+\affil[1]{Department of Chemistry, University of Illinois at Chicago}
+\affil[2]{Chemical Sciences and Engineering Division, Argonne National Laboratory}
+\affil[3]{X-ray Science Division, Advanced Photon Source, Argonne National Laboratory}
+\affil[4]{Department of Materials Science and Engineering, University of Michigan}
+\affil[5]{Department of Physics, Chungbuk National University}
+\affil[6]{Advanced Light Source, Lawrence Berkeley National Laboratory}
+\affil[7]{Energy Storage Research Group, Department of Materials Science and Engineering, Rutgers, The State University of New Jersey}
+\affil[8]{Department of Chemistry, Stony Brook University}
+\affil[9]{Harbin Institute of Technology}
+
+\date{}
 
 \makeatletter
 \let\mytitle\@title
@@ -498,6 +532,7 @@ rate of accelerated delithiation are reduced as $\Delta x$ is
 increased.
 
 \begin{figure}[hb]
+  \centering
   \includegraphics[width=6.5in]{8-particle-evolution-deltax.png}
   \caption{Evolution of $\langle x\rangle$ for the
     8-particle system obtained using the model form of $i_0$ with
@@ -729,7 +764,7 @@ increased.
 \clearpage
 \pagebreak
 
-\bibliographystyle{plain}
+\bibliographystyle{abbrv}
 \bibliography{refs,refs-extra}
 
 \end{document}
